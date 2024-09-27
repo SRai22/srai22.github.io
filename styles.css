@@ -107,3 +107,14 @@ footer {
 .education-text {
     flex: 1;
 }
+
+.social-links {
+    float: right;
+    margin-top: 10px;
+}
+
+.social-icon {
+    font-size: 24px;
+    color: #fff;
+    margin-left: 10px;
+}
