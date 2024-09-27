@@ -92,3 +92,18 @@ footer {
     from { opacity: 0; }
     to { opacity: 1; }
 }
+.education-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.education-logo {
+    width: 50px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.education-text {
+    flex: 1;
+}
