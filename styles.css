@@ -18,31 +18,58 @@ header {
     padding-top: 30px;
     min-height: 70px;
     border-bottom: #0779e4 3px solid;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
+
 header a {
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 16px;
 }
+
 header ul {
     padding: 0;
     list-style: none;
+    display: flex;
 }
+
 header li {
-    float: left;
-    display: inline;
-    padding: 0 20px 0 20px;
+    margin: 0 20px;
 }
+
 header #branding {
-    float: left;
+    flex: 1;
 }
+
 header #branding h1 {
     margin: 0;
 }
+
 header nav {
-    float: right;
-    margin-top: 10px;
+    flex: 2;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+}
+
+.social-icon {
+    font-size: 24px;
+    color: #fff;
+    margin-left: 10px;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #0779e4;
+}
+
+header nav ul li a:hover {
+    color: #0779e4;
 }
 .showcase {
     min-height: 400px;
@@ -117,4 +144,26 @@ footer {
     font-size: 24px;
     color: #fff;
     margin-left: 10px;
+}
+
+.courses-title {
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+}
+
+.courses-list {
+    list-style: none;
+    padding: 0;
+}
+
+.courses-list li {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.courses-list li i {
+    margin-right: 10px;
+    color: #0779e4;
 }
