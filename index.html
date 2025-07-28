@@ -19,6 +19,7 @@
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#expertise">Expertise</a></li>
+                <li><a href="#education">Education</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -127,6 +128,68 @@
                         <span class="tech-tag">Embedded</span>
                         <span class="tech-tag">Motor Control</span>
                         <span class="tech-tag">FPGA</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-timeline">
+                <div class="education-item">
+                    <div class="education-logo">
+                        <img src="assets/westlciff-logo.png" alt="Westcliff University">
+                    </div>
+                    <div class="education-content">
+                        <div class="education-header">
+                            <h3>Master of Science in Web Development & Health Informatics</h3>
+                            <span class="education-period">May 2024 – May 2026</span>
+                        </div>
+                        <h4>Westcliff University - Irvine, California</h4>
+                        <div class="education-gpa">GPA: 3.86/4.0</div>
+                        <p class="education-courses">
+                            <strong>Key Courses:</strong> Big Data Analytics and Visualization, Information Systems, 
+                            Front-end Web Development, Back-end Web Development
+                        </p>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="education-logo">
+                        <img src="assets/asu-logo.png" alt="Arizona State University">
+                    </div>
+                    <div class="education-content">
+                        <div class="education-header">
+                            <h3>Master of Science in Robotics and Autonomous Systems</h3>
+                            <span class="education-period">Aug 2019 – May 2021</span>
+                        </div>
+                        <h4>Arizona State University - Tempe, Arizona</h4>
+                        <div class="education-gpa">GPA: 3.94/4.0</div>
+                        <p class="education-courses">
+                            <strong>Key Courses:</strong> Vehicle Dynamics & Control, Multivariable Controls, 
+                            Modelling & Control of Robots, Computer Vision & Pattern Recognition, Robot Learning, 
+                            Optimal Control & Reinforcement Learning, Linear Systems Theory
+                        </p>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="education-logo">
+                        <img src="assets/nie-logo.png" alt="The National Institute of Engineering">
+                    </div>
+                    <div class="education-content">
+                        <div class="education-header">
+                            <h3>Bachelor of Engineering, Electronics & Communication Engineering</h3>
+                            <span class="education-period">Aug 2013 – Aug 2017</span>
+                        </div>
+                        <h4>The National Institute of Engineering, Karnataka – India</h4>
+                        <div class="education-gpa">GPA: 4.0/4.0</div>
+                        <p class="education-courses">
+                            <strong>Key Courses:</strong> Robotics, C++ and Data Structures, Control Systems, 
+                            Operating Systems, Computer Vision & Image Processing
+                        </p>
                     </div>
                 </div>
             </div>
@@ -304,7 +367,7 @@
         }, observerOptions);
 
         // Observe all cards for animation
-        document.querySelectorAll('.expertise-card, .project-card').forEach(card => {
+        document.querySelectorAll('.expertise-card, .education-item, .project-card').forEach(card => {
             card.style.opacity = '0';
             card.style.transform = 'translateY(20px)';
             card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
