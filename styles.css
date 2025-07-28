@@ -446,6 +446,156 @@ nav {
     color: #ffffff;
 }
 
+/* Achievements Section */
+.achievements {
+    padding: 100px 0;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.achievement-category {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.achievement-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 212, 255, 0.15);
+    border-color: #00d4ff;
+}
+
+.category-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.4rem;
+    color: #00d4ff;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgba(0, 212, 255, 0.3);
+}
+
+.category-title i {
+    font-size: 1.2rem;
+}
+
+.achievement-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.achievement-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.achievement-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(0, 212, 255, 0.4);
+    transform: translateX(5px);
+}
+
+.achievement-icon {
+    font-size: 2rem;
+    min-width: 50px;
+    text-align: center;
+    filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.3));
+}
+
+.achievement-content {
+    flex: 1;
+}
+
+.achievement-content h4 {
+    color: #ffffff;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.achievement-content p {
+    color: #d0d0d0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.achievement-type {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.achievement-type.volunteer {
+    background: rgba(255, 107, 107, 0.2);
+    color: #ff6b6b;
+    border: 1px solid rgba(255, 107, 107, 0.3);
+}
+
+.achievement-type.judge {
+    background: rgba(0, 255, 255, 0.2);
+    color: #00ffff;
+    border: 1px solid rgba(0, 255, 255, 0.3);
+}
+
+.achievement-type.academic {
+    background: rgba(0, 212, 255, 0.2);
+    color: #00d4ff;
+    border: 1px solid rgba(0, 212, 255, 0.3);
+}
+
+.achievement-type.scholarship {
+    background: rgba(255, 215, 0, 0.2);
+    color: #ffd700;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+.achievement-type.competition {
+    background: rgba(255, 165, 0, 0.2);
+    color: #ffa500;
+    border: 1px solid rgba(255, 165, 0, 0.3);
+}
+
+.achievement-type.hackathon {
+    background: rgba(50, 205, 50, 0.2);
+    color: #32cd32;
+    border: 1px solid rgba(50, 205, 50, 0.3);
+}
+
+.achievement-type.speaker {
+    background: rgba(219, 112, 147, 0.2);
+    color: #db7093;
+    border: 1px solid rgba(219, 112, 147, 0.3);
+}
+
+.achievement-type.award {
+    background: rgba(255, 140, 0, 0.2);
+    color: #ff8c00;
+    border: 1px solid rgba(255, 140, 0, 0.3);
+}
+
 /* Projects Section */
 .projects {
     padding: 100px 0;
@@ -622,6 +772,43 @@ footer {
     .education-gpa {
         font-size: 1rem;
         padding: 6px 12px;
+    }
+    
+    .achievements-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .achievement-category {
+        padding: 20px;
+    }
+    
+    .category-title {
+        font-size: 1.2rem;
+        gap: 10px;
+    }
+    
+    .achievement-item {
+        padding: 15px;
+        gap: 12px;
+    }
+    
+    .achievement-icon {
+        font-size: 1.5rem;
+        min-width: 40px;
+    }
+    
+    .achievement-content h4 {
+        font-size: 1rem;
+    }
+    
+    .achievement-content p {
+        font-size: 0.9rem;
+    }
+    
+    .achievement-type {
+        font-size: 0.75rem;
+        padding: 3px 8px;
     }
     
     .projects-grid {
