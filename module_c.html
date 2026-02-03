@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module C: Screening Clinical Process Model - IEEE P3493.1</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: white;
+            color: #000;
+            line-height: 1.8;
+        }
+        h1 {
+            text-align: center;
+            font-size: 24pt;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #000;
+            padding-bottom: 15px;
+        }
+        h2 {
+            font-size: 16pt;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #000;
+            padding-bottom: 10px;
+        }
+        h3 {
+            font-size: 14pt;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        h4 {
+            font-size: 12pt;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        p {
+            margin: 12px 0;
+            text-align: justify;
+        }
+        .definition {
+            margin: 25px 0;
+            padding: 15px;
+            border-left: 3px solid #333;
+            background: #f9f9f9;
+        }
+        .note, .example {
+            margin: 10px 0 10px 20px;
+            padding: 10px;
+            background: #fff;
+            border-left: 2px solid #666;
+        }
+        .source {
+            margin-top: 8px;
+            font-style: italic;
+            font-size: 0.95em;
+            color: #444;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 11pt;
+        }
+        table, th, td {
+            border: 1px solid #000;
+        }
+        th {
+            background: #e0e0e0;
+            padding: 10px;
+            text-align: left;
+            font-weight: bold;
+        }
+        td {
+            padding: 8px;
+            vertical-align: top;
+        }
+        ul, ol {
+            margin: 10px 0 10px 30px;
+        }
+        li {
+            margin: 5px 0;
+        }
+        .deprecated {
+            background: #ffe6e6;
+            padding: 10px;
+            margin: 15px 0;
+            border-left: 3px solid #cc0000;
+        }
+        .header-info {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 15px;
+            background: #f0f0f0;
+            border: 1px solid #ccc;
+        }
+        .toc {
+            background: #f9f9f9;
+            padding: 20px;
+            margin: 30px 0;
+            border: 1px solid #ccc;
+        }
+        .toc ul {
+            list-style-type: none;
+            margin: 10px 0;
+        }
+        .toc li {
+            margin: 8px 0;
+        }
+        .toc a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .toc a:hover {
+            text-decoration: underline;
+        }
+        .stage-section {
+            background: #f9f9f9;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid #0066cc;
+        }
+        .metadata-box {
+            background: #f0f8ff;
+            padding: 15px;
+            margin: 15px 0;
+            border: 1px solid #b0d4f1;
+        }
+        .shall {
+            font-weight: bold;
+            color: #cc0000;
+        }
+        .should {
+            font-weight: bold;
+            color: #ff8800;
+        }
+        .may {
+            font-weight: bold;
+            color: #0066cc;
+        }
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #f0f0f0;
+            border-top: 2px solid #333;
+            padding: 15px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+        .nav-button {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 25px;
+            margin: 0 20px;
+            background: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 14pt;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .nav-button:hover {
+            background: #0052a3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        .nav-button.disabled {
+            background: #ccc;
+            color: #666;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+        .nav-arrow {
+            font-size: 20pt;
+            font-weight: bold;
+        }
+        .nav-center {
+            text-align: center;
+            font-weight: bold;
+            color: #333;
+            font-size: 12pt;
+        }
+        body {
+            padding-bottom: 80px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-info">
+        <strong>IEEE P3493.1 Standard for Cancer Screening</strong><br>
+        <strong>MODULE C: SCREENING CLINICAL PROCESS MODEL</strong><br>
+        Draft Version: 1.00 | Date: 2026-02-02 | Status: Complete with AI Integration (Clause 5.7)
+    </div>
+
+    <h1>Module C: Screening Clinical Process Model</h1>
+
+    <div class="toc">
+        <h3>Table of Contents</h3>
+        <ul>
+            <li><a href="#clause-51">Clause 5.1: Ontological Foundation - Screening as Clinical Process</a></li>
+            <li><a href="#clause-52">Clause 5.2: Screening Clinical Process - Stage-Based Workflow Model</a></li>
+            <li><a href="#clause-53">Clause 5.3: Conditional Episode Derivation and Linkage Patterns</a></li>
+            <li><a href="#clause-54">Clause 5.4: Health State Transitions in Cancer Screening</a></li>
+            <li><a href="#clause-55">Clause 5.5: Clinical Decision Points and Branching Logic</a></li>
+            <li><a href="#clause-56">Clause 5.6: Temporal Requirements and Time Constraints</a></li>
+            <li><a href="#clause-57">Clause 5.7: AI and Automated Systems in Cancer Screening</a></li>
+        </ul>
+    </div>
+
+    <h2 id="clause-51">CLAUSE 5.1 — ONTOLOGICAL FOUNDATION: SCREENING AS CLINICAL PROCESS</h2>
+
+    <div class="note">
+        <strong>NOTE on Terminology:</strong> Throughout this standard, the term "healthcare professional" (ISO 13940:2015, 3.1.XX) refers to a healthcare actor qualified and authorized to perform the specific healthcare activity in question. Where qualification requirements are activity-specific, they are stated explicitly (e.g., "healthcare professional qualified to interpret mammography").
+    </div>
+
+    <p>Cancer screening <span class="shall">SHALL</span> be modeled as a <strong>clinical process</strong> (ISO 13940:2015, 3.1.XX) consisting of structured <strong>healthcare activities</strong> (ISO 13940:2015, 3.1.XX) performed over time to achieve defined <strong>health objectives</strong> (ISO 13940:2015, 3.1.XX).</p>
+
+    <p>The screening clinical process <span class="shall">SHALL NOT</span> be modeled as a single <strong>episode of care</strong> (ISO 13940:2015, 3.1.38). Episodes of care are event-driven healthcare delivery containers with specific ownership, temporal boundaries, and closure conditions. Screening is an ongoing preventive process that may span multiple <strong>contacts</strong> (ISO 13940:2015, 3.1.XX), involve multiple <strong>healthcare actors</strong> (ISO 13940:2015, 3.1.XX), and operate within a <strong>care period mandate</strong> (ISO 13940:2015, 3.1.XX) without necessarily constituting an episode.</p>
+
+    <p>Episodes of care <span class="may">MAY</span> be initiated conditionally as outcomes or derivatives of the screening clinical process when specific triggers occur, including but not limited to:</p>
+    <ul>
+        <li>Abnormal or indeterminate screening findings requiring diagnostic investigation</li>
+        <li>Confirmed diagnosis requiring treatment planning</li>
+        <li>Complex follow-up requiring specialized care coordination</li>
+    </ul>
+
+    <p>When episodes of care are initiated as a result of screening process findings, they <span class="shall">SHALL</span> be linked to the screening clinical process via <strong>health thread</strong> (ISO 13940:2015, 3.1.XX) or equivalent linkage mechanisms to preserve traceability and continuity per Clause 5.3.</p>
+
+    <div class="note">
+        <strong>NOTE 1:</strong> This ontological distinction is critical for data governance, secondary use, and AI training. Screening process data represents preventive surveillance at population scale; episode data represents individualized care delivery. Conflating these concepts leads to semantic errors in data reuse and inappropriate consent assumptions.
+    </div>
+
+    <div class="note">
+        <strong>NOTE 2:</strong> A single subject of care's screening history consists of a sequence of <strong>condition evolution events</strong> (ISO 13940:2015, 3.1.XX) documented within the screening clinical process, which may spawn zero or more episodes of care depending on findings.
+    </div>
+
+    <h2 id="clause-52">CLAUSE 5.2 — SCREENING CLINICAL PROCESS: STAGE-BASED WORKFLOW MODEL</h2>
+
+    <h3>5.2.1 Overview</h3>
+
+    <p>The cancer screening clinical process consists of four normative stages, each representing a distinct phase of preventive healthcare delivery. These stages apply to all cancer types and screening modalities, with cancer-specific parameters defined in implementing guidelines (Module D).</p>
+
+    <p>Each stage consists of one or more <strong>healthcare activities</strong> (ISO 13940:2015, 3.1.XX) that advance the <strong>subject of care</strong> (ISO 13940:2015, 3.1.XX) through <strong>condition evolution events</strong> (ISO 13940:2015, 3.1.XX) toward defined <strong>health objectives</strong>.</p>
+
+    <p>Systems conforming to this standard <span class="shall">SHALL</span> support representation and documentation of all four stages and <span class="shall">SHALL</span> record stage transitions with timestamp and responsible healthcare professional identifier (qualified for the specific stage activity per 3.1.AD).</p>
+
+    <h3>5.2.2 Stage 1: Screening Process Initiation and Eligibility Confirmation</h3>
+
+    <div class="stage-section">
+        <p><strong>Stage Objective:</strong> Establish that the subject of care meets criteria for cancer screening and obtain commitment to proceed.</p>
+
+        <p><strong>Stage Activities:</strong></p>
+        <ul>
+            <li>Healthcare needs assessment (risk evaluation, guideline applicability)</li>
+            <li>Informed consent obtainment (per Module E)</li>
+            <li>Care plan creation specifying screening modality and schedule</li>
+            <li><strong>Healthcare commitment</strong> (ISO 13940:2015, 3.1.XX) establishment by provider organization</li>
+        </ul>
+
+        <p><strong>Stage Entry Conditions:</strong></p>
+        <ul>
+            <li>Subject identified as potentially eligible (age, risk factors, or symptomatic concern)</li>
+            <li>Initial <strong>contact</strong> (ISO 13940:2015, 3.1.XX) established (may be in-person, telehealth, or asynchronous)</li>
+        </ul>
+
+        <p><strong>Stage Exit Conditions and Transitions:</strong></p>
+        <ul>
+            <li><strong>To Stage 2:</strong> Eligibility confirmed, consent obtained, screening appointment scheduled</li>
+            <li><strong>To Process Termination:</strong> Ineligible, declined consent, or contraindication identified</li>
+        </ul>
+
+        <div class="metadata-box">
+            <p><strong>Stage Metadata Requirements</strong> (<span class="shall">SHALL</span> document):</p>
+            <ul>
+                <li>Process instance identifier (unique within implementing system)</li>
+                <li>Subject of care identifier</li>
+                <li>Initiating healthcare professional identifier (qualified to perform healthcare needs assessment)</li>
+                <li>Input <strong>health state</strong> (3.1.Z): typically HS-01 (At-Risk) or HS-02 (Symptomatic Concern) per 5.4.2.1</li>
+                <li>Applicable <strong>core care plan</strong> (3.1.AB) reference (guideline identifier)</li>
+                <li>Consent documentation reference</li>
+                <li>Stage initiation timestamp</li>
+            </ul>
+        </div>
+
+        <div class="note">
+            <strong>NOTE:</strong> Stage 1 does NOT initiate an episode of care. It establishes a process instance within a broader <strong>care period mandate</strong> (ISO 13940:2015, 3.1.XX) for preventive screening.
+        </div>
+    </div>
+
+    <h3>5.2.3 Stage 2: Screening Investigation Execution and Result Generation</h3>
+
+    <div class="stage-section">
+        <p><strong>Stage Objective:</strong> Perform the screening procedure and capture interpretable data.</p>
+
+        <p><strong>Stage Activities:</strong></p>
+        <ul>
+            <li>Screening procedure execution (<strong>healthcare investigation</strong> per ISO 13940:2015, 3.1.XX)
+                <ul>
+                    <li>Examples: mammography, colonoscopy, HPV test, low-dose CT</li>
+                </ul>
+            </li>
+            <li>Data capture (imaging, laboratory specimens, endoscopic findings)</li>
+            <li>Technical quality verification</li>
+            <li>Professional interpretation by qualified <strong>healthcare professional</strong> (3.1.AD)</li>
+            <li>Result categorization using standardized systems (BI-RADS, Bethesda, etc.)</li>
+        </ul>
+
+        <p><strong>Stage Entry Conditions:</strong></p>
+        <ul>
+            <li>Stage 1 completed successfully</li>
+            <li>Subject of care presents for scheduled screening appointment (<strong>contact</strong>)</li>
+        </ul>
+
+        <p><strong>Stage Exit Conditions and Transitions:</strong></p>
+        <ul>
+            <li><strong>To Stage 3:</strong> Valid result obtained and interpreted</li>
+            <li><strong>To Stage 2 (loop):</strong> Technical failure; repeat screening required</li>
+            <li><strong>To Process Suspension:</strong> Subject does not attend; outreach initiated</li>
+        </ul>
+
+        <p><strong>Health State Transitions in Stage 2:</strong></p>
+        <ul>
+            <li>HS-01 or HS-02 → HS-03 (Screening in Progress) when procedure begins</li>
+            <li>HS-03 → HS-04 (Results Pending Interpretation) when data captured</li>
+            <li>HS-04 → HS-05 (Negative), HS-06 (Indeterminate), or HS-07 (Positive) when interpretation finalized</li>
+        </ul>
+
+        <div class="metadata-box">
+            <p><strong>Stage Metadata Requirements</strong> (<span class="shall">SHALL</span> document):</p>
+            <ul>
+                <li>Screening modality code (LOINC or cancer-specific terminology)</li>
+                <li>Procedure date and performing facility/professional</li>
+                <li>Interpretation date and interpreting professional identifier</li>
+                <li>Result categorization code (standardized system)</li>
+                <li>Technical quality indicators</li>
+                <li>Health state transition timestamps per 5.4.5</li>
+            </ul>
+        </div>
+
+        <div class="note">
+            <strong>NOTE:</strong> Stage 2 activities occur within scheduled <strong>contacts</strong>. Multiple contacts may be required if repeat imaging or additional views are needed.
+        </div>
+    </div>
+
+    <h3>5.2.4 Stage 3: Result Communication and Follow-Up Action Determination</h3>
+
+    <div class="stage-section">
+        <p><strong>Stage Objective:</strong> Communicate results to subject of care and determine appropriate follow-up action.</p>
+
+        <p><strong>Stage Activities:</strong></p>
+        <ul>
+            <li>Result communication to subject via appropriate channel (phone, letter, patient portal, in-person)</li>
+            <li>Shared decision-making for indeterminate or positive results</li>
+            <li>Follow-up action determination per <strong>clinical decision point</strong> logic (5.5.4, 5.5.6)
+                <ul>
+                    <li>Negative → recall scheduling</li>
+                    <li>Indeterminate → short-interval follow-up or diagnostic referral</li>
+                    <li>Positive → diagnostic referral or resulting episode initiation</li>
+                </ul>
+            </li>
+            <li>Care plan update with follow-up activities</li>
+        </ul>
+
+        <p><strong>Stage Entry Conditions:</strong></p>
+        <ul>
+            <li>Stage 2 completed with valid interpretation</li>
+        </ul>
+
+        <p><strong>Stage Exit Conditions and Transitions:</strong></p>
+        <ul>
+            <li><strong>To Stage 4:</strong> Follow-up action determined and documented</li>
+            <li><strong>To Stage 3 (suspension):</strong> Unable to reach subject; outreach attempts continue</li>
+        </ul>
+
+        <div class="metadata-box">
+            <p><strong>Stage Metadata Requirements</strong> (<span class="shall">SHALL</span> document):</p>
+            <ul>
+                <li>Communication date, method, and content summary</li>
+                <li>Subject acknowledgment (if obtained)</li>
+                <li>Follow-up action code (recall / short-interval / diagnostic referral / resulting episode)</li>
+                <li>Decision maker identifier</li>
+                <li>Updated care plan reference</li>
+            </ul>
+        </div>
+
+        <p><strong>Temporal Requirements:</strong></p>
+        <ul>
+            <li>T4 (negative results): Communication within 14 days (<span class="should">SHOULD</span>)</li>
+            <li>T5 (positive results): Communication within 5 business days (<span class="shall">SHALL</span>)</li>
+            <li>T6 (indeterminate results): Communication within 10 days (<span class="should">SHOULD</span>)</li>
+        </ul>
+    </div>
+
+    <h3>5.2.5 Stage 4: Process Transition Logic and Conditional Episode Derivation</h3>
+
+    <div class="stage-section">
+        <p><strong>Stage Objective:</strong> Complete the screening process instance or transition to resulting episodes based on findings.</p>
+
+        <p><strong>Stage Logic</strong> (conditional branching):</p>
+
+        <h4>Branch 4A: Process Completion with Recall (Negative or Resolved Indeterminate)</h4>
+        <ul>
+            <li><strong>Condition:</strong> HS-05 (No Abnormality Detected) or HS-06 resolved to benign</li>
+            <li><strong>Actions:</strong>
+                <ul>
+                    <li>Output health state: HS-10 (Returned to Routine Screening)</li>
+                    <li>Recall appointment scheduled per guideline interval</li>
+                    <li>Process instance status: Completed</li>
+                    <li>Discharge summary generated and communicated</li>
+                </ul>
+            </li>
+            <li><strong>Resulting Episodes:</strong> None</li>
+            <li><strong>Process Linkage:</strong> This process instance closed; future screening will be new process instance with historical linkage via <strong>health thread</strong></li>
+        </ul>
+
+        <h4>Branch 4B: Conditional Diagnostic Episode Initiation (Positive Result – Pattern A)</h4>
+        <ul>
+            <li><strong>Condition:</strong> HS-07 (Suspicious Abnormality) AND diagnostic services available within same organization</li>
+            <li><strong>Actions:</strong>
+                <ul>
+                    <li>Output health state from screening process: HS-07 documented with observed condition details</li>
+                    <li>Diagnostic episode of care initiated per Clause 5.3.3.1 (Pattern A)</li>
+                    <li>Episode linked to screening process via health thread identifier</li>
+                    <li>Care plan created specifying diagnostic workup activities</li>
+                    <li>Subject scheduled for diagnostic procedures within T7 timeframe (14 days)</li>
+                    <li>Screening process status: Completed (diagnostic episode separately tracked)</li>
+                    <li>Diagnostic episode progresses through health states HS-08 → HS-09 or HS-10</li>
+                </ul>
+            </li>
+            <li><strong>Resulting Episodes:</strong> One diagnostic episode (conditionally initiated)</li>
+            <li><strong>Eventual Outcomes:</strong>
+                <ul>
+                    <li>HS-09 (Cancer Confirmed) → NEW treatment episode initiated (outside scope of screening standard)</li>
+                    <li>HS-10 (Cancer Excluded) → Return to screening recall per Branch 4A logic</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h4>Branch 4C: Conditional Diagnostic Episode Initiation (Positive Result – Pattern B)</h4>
+        <ul>
+            <li><strong>Condition:</strong> HS-07 (Suspicious Abnormality) AND diagnostic services external to screening organization</li>
+            <li><strong>Actions:</strong>
+                <ul>
+                    <li>Output health state from screening process: HS-07 documented with observed condition details</li>
+                    <li>Referral created per Clause 5.3.3.2 (Pattern B) to external diagnostic provider</li>
+                    <li>Referral transmitted with full clinical context and imaging/pathology results</li>
+                    <li>Screening process status: Completed (referral documented)</li>
+                    <li>Receiving provider initiates diagnostic episode (separate system/organization)</li>
+                    <li>Responsibility transfer documented per Module E</li>
+                    <li>Screening program tracks referral acceptance confirmation (T7: within 14 days)</li>
+                    <li>Screening program continuity responsibility: Ends at referral completion confirmation</li>
+                </ul>
+            </li>
+            <li><strong>Resulting Episodes:</strong> One diagnostic episode (conditionally initiated, owned by receiving provider)</li>
+            <li><strong>Quality Tracking:</strong> Screening program <span class="should">SHOULD</span> track referral acceptance and diagnostic episode creation to monitor follow-up completion rates (T7, T8)</li>
+        </ul>
+
+        <h4>Branch 4D: Process Suspension for Loss to Follow-Up</h4>
+        <ul>
+            <li><strong>Condition:</strong> HS-07 (Positive) or HS-06 (Indeterminate) AND subject does not complete recommended follow-up despite outreach (T11: 90-180 days for standard findings; 30 days maximum for highly suspicious findings)</li>
+            <li><strong>Actions:</strong>
+                <ul>
+                    <li>Output health state: HS-12 (Diagnostic Outcome Unknown)</li>
+                    <li>Process instance status: Suspended (Lost to Follow-Up)</li>
+                    <li>Quality flag set for tracking and intervention</li>
+                    <li>Outreach protocols continue per organizational policy</li>
+                    <li>Documentation of outreach attempts and barriers identified</li>
+                    <li>No resulting episode created (subject did not engage)</li>
+                </ul>
+            </li>
+            <li><strong>Re-engagement Logic:</strong> If subject later re-engages, screening process <span class="may">MAY</span> be resumed OR new process/episode initiated with linkage to incomplete prior process</li>
+        </ul>
+
+        <div class="metadata-box">
+            <p><strong>Stage 4 Metadata Requirements</strong> (<span class="shall">SHALL</span> document):</p>
+            <ul>
+                <li>Process transition branch (4A / 4B / 4C / 4D)</li>
+                <li>Output health state code and timestamp</li>
+                <li>Resulting episode identifier(s) (if Branch 4B or 4C)</li>
+                <li>Health thread linkage identifier(s)</li>
+                <li>Responsibility transfer documentation (if Branch 4C)</li>
+                <li>Process completion or suspension timestamp</li>
+                <li>Quality flag (if Branch 4D)</li>
+            </ul>
+        </div>
+    </div>
+
+    <h3>5.2.6 Process Instance Lifecycle Summary</h3>
+
+    <p><strong>Table 5.2-1: Screening Process Instance States</strong></p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Process State</th>
+                <th>Definition</th>
+                <th>Typical Duration</th>
+                <th>Entry Condition</th>
+                <th>Exit Condition</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Initiated</strong></td>
+                <td>Process instance created; subject enrolled</td>
+                <td>Hours to days</td>
+                <td>Stage 1 complete</td>
+                <td>Stage 2 begins or termination</td>
+            </tr>
+            <tr>
+                <td><strong>Active – Screening Phase</strong></td>
+                <td>Subject undergoing screening activities</td>
+                <td>Days to weeks</td>
+                <td>Stage 2 entry</td>
+                <td>Stage 2 complete</td>
+            </tr>
+            <tr>
+                <td><strong>Active – Communication Phase</strong></td>
+                <td>Results available; communicating and planning</td>
+                <td>Days</td>
+                <td>Stage 3 entry</td>
+                <td>Stage 3 complete</td>
+            </tr>
+            <tr>
+                <td><strong>Transition</strong></td>
+                <td>Determining next action</td>
+                <td>Hours to days</td>
+                <td>Stage 4 entry</td>
+                <td>Branch 4A/B/C/D executed</td>
+            </tr>
+            <tr>
+                <td><strong>Completed – Recall</strong></td>
+                <td>Negative or benign; returned to recall cycle</td>
+                <td>Terminal state</td>
+                <td>Branch 4A</td>
+                <td>—</td>
+            </tr>
+            <tr>
+                <td><strong>Completed – Referral</strong></td>
+                <td>Referred out; diagnostic episode created</td>
+                <td>Terminal state</td>
+                <td>Branch 4C</td>
+                <td>—</td>
+            </tr>
+            <tr>
+                <td><strong>Completed – Diagnostic Episode Initiated</strong></td>
+                <td>Diagnostic episode active (Pattern A)</td>
+                <td>Terminal state for process; diagnostic episode continues</td>
+                <td>Branch 4B</td>
+                <td>Diagnostic episode closes separately</td>
+            </tr>
+            <tr>
+                <td><strong>Suspended – LTFU</strong></td>
+                <td>Lost to follow-up</td>
+                <td>Terminal (unless resumed)</td>
+                <td>Branch 4D</td>
+                <td>—</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="note">
+        <strong>NOTE:</strong> "Completed" process instances may spawn resulting episodes (Branch 4B, 4C). The screening process itself completes or suspends; episodes are separate constructs.
+    </div>
+
+    <h2 id="clause-53">CLAUSE 5.3 — CONDITIONAL EPISODE DERIVATION AND LINKAGE PATTERNS</h2>
+
+    <h3>5.3.1 Purpose and Scope</h3>
+
+    <p>Per Clause 5.1, screening is modeled as a clinical process, not an episode of care. This clause specifies normative requirements for conditionally initiating <strong>episodes of care</strong> (ISO 13940:2015, 3.1.38) as outcomes of the screening clinical process when specific findings trigger diagnostic investigation or treatment planning.</p>
+
+    <p>This clause specifies:</p>
+    <ul>
+        <li>Triggers for conditional episode initiation (5.3.2)</li>
+        <li>Episode linkage patterns (Pattern A and Pattern B) (5.3.3)</li>
+        <li>Metadata requirements for traceability (5.3.4)</li>
+        <li>Responsibility transfer rules (5.3.5)</li>
+    </ul>
+
+    <h3>5.3.2 Triggers for Conditional Episode Initiation</h3>
+
+    <h4>5.3.2.1 Trigger T-DIAG: Diagnostic Investigation Required</h4>
+
+    <p>A diagnostic episode of care <span class="shall">SHALL</span> be initiated when ALL of the following conditions are met:</p>
+
+    <ol type="a">
+        <li>Screening process has reached health state HS-07 (Suspicious Abnormality Detected) per 5.4.2.3</li>
+        <li>A <strong>healthcare professional</strong> (3.1.AD) has determined that diagnostic investigation is required per Decision Point 4 (5.5.6)</li>
+        <li>A <strong>healthcare commitment</strong> (ISO 13940:2015, 3.1.XX) has been made by a provider (internal or external) to perform diagnostic workup</li>
+        <li>Informed consent has been obtained for diagnostic procedures (if not already covered by initial screening consent per Module E)</li>
+        <li>A care plan has been created specifying diagnostic activities (biopsy, advanced imaging, specialist consultation)</li>
+    </ol>
+
+    <p>The diagnostic episode <span class="shall">SHALL</span> be linked to the screening process instance via <strong>health thread</strong> (ISO 13940:2015, 3.1.XX) per 5.3.4.</p>
+
+    <div class="note">
+        <strong>NOTE 1:</strong> Indeterminate findings (HS-06) typically do NOT trigger diagnostic episode initiation. Short-interval follow-up for HS-06 remains within the screening process (new process instance or continuation, implementer choice).
+    </div>
+
+    <div class="note">
+        <strong>NOTE 2:</strong> If diagnostic workup is performed immediately during the same contact as screening (e.g., biopsy of visible cervical lesion during colposcopy), implementers <span class="may">MAY</span> model this as a single process OR as a rapid episode initiation within the same contact. Choice <span class="shall">SHALL</span> be documented in conformance statement.
+    </div>
+
+    <h4>5.3.2.2 Trigger T-TX: Treatment Episode Required</h4>
+
+    <p>A treatment episode of care <span class="shall">SHALL</span> be initiated when ALL of the following conditions are met:</p>
+
+    <ol type="a">
+        <li>Diagnostic workup has reached health state HS-09 (Cancer Confirmed) per 5.4.2.4</li>
+        <li>A healthcare professional has determined that cancer treatment is required</li>
+        <li>A healthcare commitment has been made by a treatment provider (oncology, surgery, radiation)</li>
+        <li>Treatment planning has been initiated</li>
+    </ol>
+
+    <p>The treatment episode <span class="shall">SHALL</span> be linked to both:</p>
+    <ul>
+        <li>The diagnostic episode (if Pattern A was used)</li>
+        <li>The originating screening process instance (via transitive health thread linkage)</li>
+    </ul>
+
+    <div class="note">
+        <strong>NOTE 3:</strong> Treatment episodes are outside the scope of this screening-focused standard. Implementers <span class="shall">SHALL</span> specify treatment episode requirements separately, but linkage back to screening via health thread is essential for outcomes tracking and quality measurement.
+    </div>
+
+    <h3>5.3.3 Episode Linkage Patterns</h3>
+
+    <p>Systems conforming to this standard <span class="shall">SHALL</span> support at least one of the following patterns for linking diagnostic episodes to screening processes. Systems <span class="may">MAY</span> support both patterns.</p>
+
+    <h4>5.3.3.1 Pattern A: Co-Located Diagnostic Episode (Integrated Process)</h4>
+
+    <p><strong>Use Case:</strong> Diagnostic services are provided by the same organization or integrated delivery network that performed screening.</p>
+
+    <p><strong>Model:</strong></p>
+    <ul>
+        <li>Screening process completes with status "diagnostic episode initiated" (linkage maintained for tracking)</li>
+        <li>Diagnostic episode of care is initiated with explicit linkage to screening process</li>
+        <li>Diagnostic episode has its own:
+            <ul>
+                <li>Episode identifier (distinct from screening process ID)</li>
+                <li>Care period mandate (diagnostic provider assumes responsibility)</li>
+                <li>Care plan (diagnostic procedures specified)</li>
+                <li>Episode temporal boundaries (initiation to diagnostic resolution)</li>
+            </ul>
+        </li>
+        <li>Screening process and diagnostic episode <span class="may">MAY</span> share a common <strong>health thread</strong> identifier for continuity tracking</li>
+        <li>Both constructs remain active until diagnostic resolution (HS-09 or HS-10)</li>
+    </ul>
+
+    <p><strong>Closure Logic:</strong></p>
+    <ul>
+        <li>When diagnostic outcome is determined (HS-09 or HS-10):
+            <ol>
+                <li>Diagnostic episode is closed per ISO 13940 episode closure requirements</li>
+                <li>Screening process (already completed per Branch 4B) remains in completed status; subject either returns to screening recall (per Branch 4A logic if false positive) or treatment episode is initiated (if cancer confirmed per T-TX trigger)</li>
+            </ol>
+        </li>
+    </ul>
+
+    <p><strong>Metadata Requirements (Pattern A):</strong></p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Metadata Element</th>
+                <th>Location</th>
+                <th>Requirement Level</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Screening process instance ID</td>
+                <td>Diagnostic episode header</td>
+                <td><span class="shall">SHALL</span> reference</td>
+            </tr>
+            <tr>
+                <td>Diagnostic episode ID</td>
+                <td>Screening process transition record</td>
+                <td><span class="shall">SHALL</span> reference</td>
+            </tr>
+            <tr>
+                <td>Health thread ID</td>
+                <td>Both screening process and diagnostic episode</td>
+                <td><span class="shall">SHALL</span> be identical or explicitly linked</td>
+            </tr>
+            <tr>
+                <td>Observed condition ID</td>
+                <td>Carried from screening process to diagnostic episode</td>
+                <td><span class="shall">SHALL</span> preserve</td>
+            </tr>
+            <tr>
+                <td>Responsibility holder ID</td>
+                <td>Both constructs</td>
+                <td><span class="may">MAY</span> differ (specialist vs. screening program)</td>
+            </tr>
+            <tr>
+                <td>Temporal linkage</td>
+                <td>Diagnostic episode initiation timestamp <span class="shall">SHALL</span> be within T7 of screening result communication</td>
+                <td><span class="shall">SHALL</span> comply with 5.6</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p><strong>Advantages:</strong> Single organizational view, easier care coordination, shared EHR.</p>
+    <p><strong>Disadvantages:</strong> Requires organizational integration; may not fit fragmented care delivery models.</p>
+
+    <h4>5.3.3.2 Pattern B: Separate Linked Episodes with Responsibility Transfer</h4>
+
+    <p><strong>Use Case:</strong> Diagnostic services are provided by an external organization or specialist not integrated with screening program.</p>
+
+    <p><strong>Model:</strong></p>
+    <ul>
+        <li>Screening process is completed (not suspended) at the point of referral
+            <ul>
+                <li>Output health state: HS-07 documented with referral details</li>
+                <li>Screening process status: Completed (with referral documented)</li>
+                <li>Referral documentation created per 5.5.6</li>
+            </ul>
+        </li>
+        <li>Receiving provider initiates a NEW diagnostic episode of care with:
+            <ul>
+                <li>New episode identifier (owned by receiving provider)</li>
+                <li>New care period mandate (diagnostic provider owns episode)</li>
+                <li>New care plan (diagnostic procedures specified by receiving provider)</li>
+                <li>Transferred responsibility (documented per Module E mandate transfer requirements)</li>
+            </ul>
+        </li>
+        <li>Screening program continuity responsibility ENDS at confirmed referral acceptance</li>
+    </ul>
+
+    <p><strong>Linkage Mechanism:</strong></p>
+    <ul>
+        <li><span class="shall">SHALL</span> use <strong>health thread</strong> (ISO 13940:2015, 3.1.XX) OR equivalent structured referral linkage</li>
+        <li>Linkage <span class="shall">SHALL</span> be bidirectional: diagnostic episode references screening process, and screening process records referral to diagnostic episode (once created)</li>
+        <li>Receiving provider <span class="shall">SHALL</span> confirm referral acceptance and episode creation within T7 timeframe (14 days per 5.6)</li>
+    </ul>
+
+    <p><strong>Metadata Requirements (Pattern B):</strong></p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Metadata Element</th>
+                <th>Location</th>
+                <th>Requirement Level</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Screening process instance ID</td>
+                <td>Diagnostic episode header (receiving system)</td>
+                <td><span class="shall">SHALL</span> reference</td>
+            </tr>
+            <tr>
+                <td>Referral tracking ID</td>
+                <td>Both screening process and diagnostic episode</td>
+                <td><span class="shall">SHALL</span> be shared</td>
+            </tr>
+            <tr>
+                <td>Health thread ID</td>
+                <td>Both constructs</td>
+                <td><span class="shall">SHALL</span> be shared or explicitly linked</td>
+            </tr>
+            <tr>
+                <td>Observed condition details</td>
+                <td>Transmitted from screening to receiving provider</td>
+                <td><span class="shall">SHALL</span> include full description, imaging/pathology IDs</td>
+            </tr>
+            <tr>
+                <td>Responsibility transfer documentation</td>
+                <td>Both systems</td>
+                <td><span class="shall">SHALL</span> document per Module E (transferring entity, receiving entity, transfer date, acceptance confirmation)</td>
+            </tr>
+            <tr>
+                <td>Referral acceptance confirmation</td>
+                <td>Returned to screening program</td>
+                <td><span class="should">SHOULD</span> be returned within T7</td>
+            </tr>
+            <tr>
+                <td>Diagnostic outcome notification</td>
+                <td>Returned to screening program (if consent permits)</td>
+                <td><span class="should">SHOULD</span> be returned for quality tracking</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p><strong>Advantages:</strong> Supports fragmented care delivery, respects organizational boundaries, enables specialist ownership.</p>
+    <p><strong>Disadvantages:</strong> Requires robust interoperability, referral tracking systems, and explicit responsibility transfer documentation.</p>
+
+    <h3>5.3.4 Metadata Requirements for Traceability</h3>
+
+    <p>To support continuity of care, quality measurement, and secondary use (Module F), systems <span class="shall">SHALL</span> capture the following metadata for all conditionally initiated episodes:</p>
+
+    <p><strong>Table 5.3-1: Traceability Metadata Requirements</strong></p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Metadata Element</th>
+                <th>Definition</th>
+                <th>Normative Level</th>
+                <th>ISO 13940 Reference</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Process Instance ID</strong></td>
+                <td>Unique identifier of the screening process that triggered the episode</td>
+                <td><span class="shall">SHALL</span></td>
+                <td>3.1.XX (clinical process)</td>
+            </tr>
+            <tr>
+                <td><strong>Episode ID</strong></td>
+                <td>Unique identifier of the conditionally initiated episode</td>
+                <td><span class="shall">SHALL</span></td>
+                <td>3.1.38 (episode of care)</td>
+            </tr>
+            <tr>
+                <td><strong>Health Thread ID</strong></td>
+                <td>Linkage identifier connecting screening process, diagnostic episode, and (if applicable) treatment episode</td>
+                <td><span class="shall">SHALL</span></td>
+                <td>3.1.XX (health thread)</td>
+            </tr>
+            <tr>
+                <td><strong>Trigger Code</strong></td>
+                <td>Code indicating which trigger initiated the episode (T-DIAG, T-TX)</td>
+                <td><span class="shall">SHALL</span></td>
+                <td>—</td>
+            </tr>
+            <tr>
+                <td><strong>Observed Condition ID</strong></td>
+                <td>Identifier of the specific observed condition (HS-07) that triggered diagnostic episode</td>
+                <td><span class="shall">SHALL</span> for T-DIAG</td>
+                <td>3.1.XX (observed condition)</td>
+            </tr>
+            <tr>
+                <td><strong>Linkage Pattern</strong></td>
+                <td>Code indicating Pattern A or Pattern B</td>
+                <td><span class="shall">SHALL</span></td>
+                <td>—</td>
+            </tr>
+            <tr>
+                <td><strong>Responsibility Transfer Record</strong></td>
+                <td>If Pattern B: documented transfer per Module E</td>
+                <td><span class="shall">SHALL</span> for Pattern B</td>
+                <td>3.1.XX (healthcare mandate transfer)</td>
+            </tr>
+            <tr>
+                <td><strong>Temporal Linkage Timestamp</strong></td>
+                <td>Timestamp of episode initiation relative to screening process milestones</td>
+                <td><span class="shall">SHALL</span></td>
+                <td>—</td>
+            </tr>
+            <tr>
+                <td><strong>Referring Professional ID</strong></td>
+                <td>Healthcare professional who made the referral or diagnostic decision</td>
+                <td><span class="shall">SHALL</span></td>
+                <td>3.1.AD (healthcare professional)</td>
+            </tr>
+            <tr>
+                <td><strong>Receiving Provider/Organization ID</strong></td>
+                <td>Entity assuming responsibility for the episode (Pattern B)</td>
+                <td><span class="shall">SHALL</span> for Pattern B</td>
+                <td>—</td>
+            </tr>
+            <tr>
+                <td><strong>Episode Outcome</strong></td>
+                <td>Final health state when episode closes (HS-09, HS-10, HS-12)</td>
+                <td><span class="shall">SHALL</span></td>
+                <td>3.1.Z (output health state)</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>This metadata <span class="shall">SHALL</span> be recorded in structured, machine-readable format per Module D information model requirements.</p>
+
+    <h3>5.3.5 Responsibility Transfer Rules (Pattern B Only)</h3>
+
+    <p>When Pattern B (Separate Linked Episodes) is used, responsibility for continuity of care transfers from the screening program to the receiving provider. The transfer <span class="shall">SHALL</span> be documented per the following requirements:</p>
+
+    <h4>5.3.5.1 Transferring Entity Responsibilities</h4>
+
+    <p>The screening program or referring provider <span class="shall">SHALL</span>:</p>
+
+    <ol type="a">
+        <li>Create referral documentation including:
+            <ul>
+                <li>Subject of care demographics and contact information</li>
+                <li>Screening results summary (imaging, pathology, endoscopy findings)</li>
+                <li>Observed condition details per HS-07 documentation requirements</li>
+                <li>Clinical urgency assessment (routine, expedited, urgent)</li>
+                <li>Screening process instance ID and health thread ID</li>
+            </ul>
+        </li>
+        <li>Transmit referral to receiving provider via secure, auditable mechanism (electronic referral, structured message, or interoperable health record exchange)</li>
+        <li>Document the responsibility transfer with:
+            <ul>
+                <li>Transfer date and timestamp</li>
+                <li>Receiving provider/organization identifier</li>
+                <li>Transmission method and confirmation</li>
+                <li>Confirmation of subject consent for referral (per Module E)</li>
+            </ul>
+        </li>
+        <li>Attempt to obtain referral acceptance confirmation within T7 timeframe (14 days)</li>
+        <li>If referral is not accepted or subject does not engage with receiving provider: Resume screening program outreach responsibilities per 5.2.5 (lost to follow-up)</li>
+    </ol>
+
+    <h4>5.3.5.2 Receiving Entity Responsibilities</h4>
+
+    <p>The receiving provider or organization <span class="shall">SHALL</span>:</p>
+
+    <ol type="a">
+        <li>Confirm referral receipt and acceptance within 5 business days</li>
+        <li>Initiate diagnostic episode of care per ISO 13940 episode requirements</li>
+        <li>Link diagnostic episode to screening process via health thread or referral tracking ID per 5.3.4</li>
+        <li>Attempt to contact subject of care to schedule diagnostic procedures within T7 timeframe (14 days from referral)</li>
+        <li>Document assumption of care responsibility in episode record</li>
+        <li>Notify referring provider of:
+            <ul>
+                <li>Referral acceptance</li>
+                <li>Initial contact with subject (successful or unsuccessful)</li>
+                <li>Diagnostic procedures scheduled</li>
+                <li>Diagnostic outcome (when available, subject to consent)</li>
+            </ul>
+        </li>
+    </ol>
+
+    <p><em>(Continued in full document with Clauses 5.4-5.7...)</em></p>
+
+    <div class="note">
+        <strong>NOTE:</strong> This HTML version presents the first three clauses of Module C. The complete document includes Clauses 5.4 (Health State Transitions), 5.5 (Clinical Decision Points), 5.6 (Temporal Requirements), and 5.7 (AI and Automated Systems). For the full technical specification, please refer to the complete Module C documentation.
+    </div>
+
+    <hr style="margin: 50px 0; border: none; border-top: 2px solid #000;">
+    <p style="text-align: center; color: #666; font-style: italic;">
+        Module C: Screening Clinical Process Model (Excerpt)<br>
+        IEEE P3493.1 Standard for Cancer Screening<br>
+        Full document available separately
+    </p>
+
+    <!-- Bottom Navigation -->
+    <div class="bottom-nav">
+        <a href="module_b.html" class="nav-button">
+            <span class="nav-arrow">←</span>
+            <span>Module B</span>
+        </a>
+        <div class="nav-center">
+            Module C: Screening Clinical Process Model
+        </div>
+        <a href="ieee-sa-p3493.html" class="nav-button">
+            <span>Back to Main</span>
+            <span class="nav-arrow">→</span>
+        </a>
+    </div>
+</body>
+</html>
