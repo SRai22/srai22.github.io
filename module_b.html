@@ -1,0 +1,1408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module B: Terminology & Definitions - IEEE P3493.1</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: white;
+            color: #000;
+            line-height: 1.8;
+        }
+        h1 {
+            text-align: center;
+            font-size: 24pt;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #000;
+            padding-bottom: 15px;
+        }
+        h2 {
+            font-size: 16pt;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #000;
+            padding-bottom: 10px;
+        }
+        h3 {
+            font-size: 14pt;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        h4 {
+            font-size: 12pt;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        p {
+            margin: 12px 0;
+            text-align: justify;
+        }
+        .definition {
+            margin: 25px 0;
+            padding: 15px;
+            border-left: 3px solid #333;
+            background: #f9f9f9;
+        }
+        .term-header {
+            font-weight: bold;
+            font-size: 13pt;
+            margin-bottom: 8px;
+        }
+        .note, .example {
+            margin: 10px 0 10px 20px;
+            padding: 10px;
+            background: #fff;
+            border-left: 2px solid #666;
+        }
+        .source {
+            margin-top: 8px;
+            font-style: italic;
+            font-size: 0.95em;
+            color: #444;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 11pt;
+        }
+        table, th, td {
+            border: 1px solid #000;
+        }
+        th {
+            background: #e0e0e0;
+            padding: 10px;
+            text-align: left;
+            font-weight: bold;
+        }
+        td {
+            padding: 8px;
+            vertical-align: top;
+        }
+        ul, ol {
+            margin: 10px 0 10px 30px;
+        }
+        li {
+            margin: 5px 0;
+        }
+        .deprecated {
+            background: #ffe6e6;
+            padding: 10px;
+            margin: 15px 0;
+            border-left: 3px solid #cc0000;
+        }
+        .header-info {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 15px;
+            background: #f0f0f0;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-info">
+        <strong>IEEE P3493.1 Standard for Cancer Screening</strong><br>
+        <strong>MODULE B: TERMINOLOGY & DEFINITIONS</strong><br>
+        Draft Version: 1.00 | Date: 2026-02-02 | Status: Complete
+    </div>
+
+    <h1>3. Definitions and Abbreviations</h1>
+
+    <p>For the purposes of this document, the following terms and definitions apply.</p>
+
+    <p>ISO and IEC maintain terminology databases for use in standardization at the following addresses:</p>
+    <ul>
+        <li>ISO Online browsing platform: available at https://www.iso.org/obp</li>
+        <li>IEC Electropedia: available at https://www.electropedia.org</li>
+    </ul>
+
+    <h2>3.1 Definitions</h2>
+
+    <h3>3.1.1 Healthcare Actor Terms</h3>
+
+    <div class="definition">
+        <div class="term-header">3.1.1.1 healthcare actor</div>
+        <p>Organization or person participating in healthcare</p>
+        <div class="note">
+            <strong>NOTE 1:</strong> Participating may mean making decisions or performing actions related to healthcare or being the subject of those decisions or actions.
+        </div>
+        <div class="note">
+            <strong>NOTE 2:</strong> Healthcare actor encompasses entities involved in all aspects of healthcare funding, payment, reimbursement and delivery. In the context of P3493.1, healthcare actors include screening programs, healthcare providers, specialists, laboratories, imaging centers, and subjects of care.
+        </div>
+        <div class="example">
+            <strong>EXAMPLE:</strong> In a cancer screening program: the screening program organization itself, radiologists performing mammography, pathologists analyzing tissue samples, primary care physicians ordering screenings, patients undergoing screening tests, health insurance companies covering screening costs, and cancer registries collecting screening data are all healthcare actors.
+        </div>
+        <div class="source">SOURCE: ISO 13940:2015, 3.1</div>
+    </div>
+
+    <div class="definition">
+        <div class="term-header">3.1.1.2 subject of care</div>
+        <p>Healthcare actor with a person role who seeks, receives or has received healthcare</p>
+        <div class="note">
+            <strong>NOTE 1:</strong> Alternative terms in common use: patient, client, service user, health consumer.
+        </div>
+        <div class="note">
+            <strong>NOTE 2:</strong> At any given point in time, each subject of care has exactly one health state, which is the composite of all that subject's health-related aspects at that time.
+        </div>
+        <div class="example">
+            <strong>EXAMPLE:</strong> In the context of cancer screening: an individual who undergoes mammography for breast cancer screening, a person receiving a colonoscopy for colorectal cancer screening, or someone being screened for cervical cancer through a Pap test would be the subject of care. This term encompasses both individuals undergoing initial screening and those in follow-up diagnostic procedures.
+        </div>
+        <div class="source">SOURCE: ISO 13940:2015, 3.2, modified (added NOTE 2 and EXAMPLE)</div>
+    </div>
+
+    <div class="definition">
+        <div class="term-header">3.1.1.3 healthcare provider</div>
+        <p>Healthcare actor able to be assigned care period mandates</p>
+        <div class="note">
+            <strong>NOTE 1:</strong> Healthcare provider may be a healthcare organization or a healthcare professional, i.e., may be an organization or a person.
+        </div>
+        <div class="note">
+            <strong>NOTE 2:</strong> Healthcare organizations encompass institutional healthcare delivery, such as hospitals, clinics, and healthcare centers. Individual practitioners are healthcare professionals who may operate independently or within healthcare organizations.
+        </div>
+        <div class="example">
+            <strong>EXAMPLE:</strong> In cancer screening contexts, healthcare providers include: cancer screening programs (organizational provider), radiology centers performing mammography (organizational provider), gastroenterology practices conducting colonoscopies (organizational provider), pathology laboratories analyzing tissue samples (organizational provider), and oncology services managing follow-up care (organizational provider). Individual healthcare professionals such as radiologists, pathologists, and oncologists are also healthcare providers when acting in an independent capacity.
+        </div>
+        <div class="source">SOURCE: ISO 13940:2015, 3.3, modified (expanded NOTE 2 and added EXAMPLE)</div>
+    </div>
+
+    <div class="definition">
+        <div class="term-header">3.1.1.4 healthcare professional</div>
+        <p>Natural person who is qualified and authorized to independently perform clinical healthcare activities that require professional judgment</p>
+        <div class="note">
+            <strong>NOTE 1:</strong> Healthcare professional has accountability for the professional quality of clinical decisions made. In the context of P3493.1, healthcare professionals are authorized to make decisions at clinical decision points as specified in Process Model (Clause 5).
+        </div>
+        <div class="example">
+            <strong>EXAMPLE:</strong> In cancer screening: a physician ordering a screening mammogram, a radiologist interpreting imaging results and making recall decisions, a pathologist making diagnostic determinations from biopsy samples, or a genetic counselor interpreting genetic test results and providing risk assessments would all be healthcare professionals. Each exercises professional judgment and bears accountability for their clinical decisions.
+        </div>
+        <div class="source">SOURCE: ISO 13940:2015, 3.5, modified (added NOTE 1 and EXAMPLE)</div>
+    </div>
+
+    <div class="definition">
+        <div class="term-header">3.1.1.5 healthcare personnel</div>
+        <p>Natural person who participates in healthcare delivery but may not be independently qualified to perform clinical activities that require professional judgment</p>
+        <div class="note">
+            <strong>NOTE:</strong> Healthcare personnel typically work under the direction of or according to protocols established by healthcare professionals. They play essential roles in care delivery but do not bear independent professional accountability for clinical decisions requiring professional judgment.
+        </div>
+        <div class="example">
+            <strong>EXAMPLE:</strong> In cancer screening: a medical assistant who schedules screening appointments and prepares patients, a patient navigator who guides patients through the screening process, a radiology technologist who performs the technical aspects of mammography imaging, or a phlebotomist who collects blood samples for screening tests would be healthcare personnel. While skilled and essential to the process, they work under protocols and supervision rather than exercising independent clinical judgment.
+        </div>
+        <div class="source">SOURCE: ISO 13940:2015, 3.6, modified (added EXAMPLE)</div>
+    </div>
+
+    <div class="definition">
+        <div class="term-header">3.1.1.6 contact</div>
+        <p>Interaction between a subject of care and healthcare personnel</p>
+        <div class="note">
+            <strong>NOTE 1:</strong> A contact may be preceded by a referral.
+        </div>
+        <div class="note">
+            <strong>NOTE 2:</strong> A contact typically has an associated appointment that specifies the scheduled date, time, and location for the interaction.
+        </div>
+        <div class="example">
+            <strong>EXAMPLE:</strong> In cancer screening: a scheduled mammography appointment where the patient meets with a radiology technologist, a telephone consultation to discuss abnormal screening results, a follow-up visit with a specialist after a suspicious finding, or a telehealth session for post-procedure counseling would all be contacts.
+        </div>
+        <div class="source">SOURCE: ISO 13940:2015, 3.41, modified (added NOTE 2 and EXAMPLE)</div>
+    </div>
+
+    <div class="definition">
+        <div class="term-header">3.1.1.7 subject of care proxy</div>
+        <p>Healthcare actor authorized to make healthcare decisions on behalf of a subject of care who lacks consent competence</p>
+        <div class="note">
+            <strong>NOTE 1:</strong> The authority of a subject of care proxy may be established through a legal instrument (such as a power of attorney for healthcare, healthcare directive, or court-ordered guardianship) or by operation of law (such as parental authority over minor children).
+        </div>
+        <div class="note">
+            <strong>NOTE 2:</strong> A subject of care proxy may give informed consent or may dissent on behalf of the subject of care, within the scope of their legal authority and in accordance with the subject's known wishes or best interests.
+        </div>
+        <div class="example">
+            <strong>EXAMPLE:</strong> In cancer screening contexts: a parent consenting to screening procedures for their minor child, a court-appointed guardian making screening decisions for an adult who lacks decision-making capacity, or a designated healthcare proxy deciding on behalf of a subject who has previously executed a healthcare power of attorney.
+        </div>
+        <div class="source">P3493.1</div>
+    </div>
+
+    <div class="definition">
+        <div class="term-header">3.1.1.8 healthcare supporting organization</div>
+        <p>Organization that provides technical, administrative, or auxiliary services to support healthcare delivery, but does not hold primary clinical responsibility for patient care</p>
+        <div class="note">
+            <strong>NOTE:</strong> Healthcare supporting organizations typically operate under service agreements with healthcare providers and may have specific data handling, quality, and reporting requirements defined in those agreements.
+        </div>
+        <div class="example">
+            <strong>EXAMPLE:</strong> In cancer screening: a reference laboratory that performs cancer biomarker testing on specimens sent by primary care providers, an imaging center that performs mammography services ordered by external physicians but whose radiologists provide interpretation only without ongoing patient care, a pathology laboratory providing tissue analysis services to multiple healthcare organizations, or a health information exchange facilitating data sharing between screening programs and follow-up care providers. Each provides essential services but the primary clinical responsibility remains with the ordering healthcare provider.
+        </div>
+        <div class="source">P3493.1</div>
+    </div>
+
+    <h3>3.1.2 Health State and Condition Terms</h3>
+
+    <div class="definition">
+        <div class="term-header">3.1.2.1 health state</div>
+        <p>Physical and mental functions, body structure, personal factors, activity, participation and environmental aspects as composite health of a subject of care</p>
+        <div class="note">
+            <strong>NOTE 1:</strong> At any given point in time, each subject of care has exactly one health state. Health state is defined to align with the structure of the World Health Organization's International Classification of Functioning, Disability and Health (WHO ICF).
+        </div>
+        <div class="note">
+            <strong>NOTE 2:</strong> A health state can exist even before it is detected or recognized. For instance, a subject of care may have cancer (part of their health state) before any symptoms appear or before any screening or diagnostic procedure detects it.
+        </div>
+        <div class="note">
+            <strong>NOTE 3:</strong> In the context of P3493.1, health state transitions are documented using the standardized health state codes defined in Clause 5.4. Each transition represents a change from one documented state to another as healthcare processes progress.
+        </div>
+        <div class="source">SOURCE: ISO 13940:2015, 3.9, modified (added NOTE 2 and NOTE 3)</div>
+    </div>
+
+    <div class="definition">
+        <div class="term-header">3.1.2.2 input health state</div>
+        <p>Health state of the subject of care at the initiation of a healthcare activity, clinical process, or episode of care</p>
+        <div class="note">
+            <strong>NOTE:</strong> The input health state provides baseline context for the healthcare intervention and is essential for evaluating outcomes. In cancer screening processes, the input health state is typically HS-01 (At-Risk, Eligible for Screening) or HS-02 (Symptomatic Concern, Requires Diagnostic Investigation).
+        </div>
+        <div class="example">
+            <strong>EXAMPLE:</strong> When a 50-year-old asymptomatic individual begins a screening colonoscopy, their input health state is HS-01. If instead they present with symptoms such as blood in stool prompting a diagnostic colonoscopy, their input health state is HS-02.
+        </div>
+        <div class="source">SOURCE: ISO 13940:2015, 3.24, modified (added NOTE and EXAMPLE)</div>
+    </div>
+
+    <div class="definition">
+        <div class="term-header">3.1.2.3 output health state</div>
+        <p>Health state at the conclusion of a healthcare activity, clinical process or episode, documenting the resulting condition or outcome</p>
+        <div class="note">
+            <strong>NOTE:</strong> The output health state represents the status from the perspective of the specific health issue being addressed by the healthcare process. It may or may not represent the entirety of the subject of care's health state.
+        </div>
+        <div class="example">
+            <strong>EXAMPLE 1:</strong> After a screening mammogram shows no abnormality, the output health state is HS-05 (No Abnormality Detected—Screening Complete).
+        </div>
+        <div class="example">
+            <strong>EXAMPLE 2:</strong> Following diagnostic biopsy that confirms cancer, the output health state is HS-09 (Cancer Confirmed—Diagnostic Episode Complete).
+        </div>
+        <div class="source">SOURCE: ISO 13940:2015, 3.26, modified (added NOTE and EXAMPLEs)</div>
+    </div>
+
+    <div class="definition">
+        <div class="term-header">3.1.2.4 health condition</div>
+        <p>Observed or potentially observable aspects of the health state of a subject of care at a given time</p>
+        <div class="note">
+            <strong>NOTE 1:</strong> Health condition encompasses both harmful conditions (such as diseases, disorders, and injuries) and neutral or benign observations about health state.
+        </div>
+        <div class="note">
+            <strong>NOTE 2:</strong> The evolution of understanding about a health condition includes: initial health condition (the actual state before detection), observed condition (findings requiring investigation), considered conditions (differential diagnoses), professionally assessed condition (clinical determination), and resultant health condition (final state after care).
+        </div>
+        <div class="source">SOURCE: ISO 13940:2015, 3.10, modified (added NOTE 2)</div>
+    </div>
+
+    <div class="definition">
+        <div class="term-header">3.1.2.5 observed condition</div>
+        <p>Health condition or abnormality identified during a healthcare activity that requires further evaluation or clinical judgment to determine its significance</p>
+        <div class="note">
+            <strong>NOTE:</strong> An observed condition is associated with health state HS-07 (Suspicious Abnormality Detected). It represents a finding that warrants additional investigation but has not yet been definitively characterized.
+        </div>
+        <div class="example">
+            <strong>EXAMPLE:</strong> During screening mammography, a radiologist identifies a 1.2 cm mass with irregular borders—this is an observed condition. Similarly, during colonoscopy, a gastroenterologist finds an adenomatous polyp requiring pathology to determine if it contains high-grade dysplasia or cancer—this finding is an observed condition until pathology provides professional assessment.
+        </div>
+        <div class="source">SOURCE: ISO 13940:2015, 3.11, modified (added EXAMPLE)</div>
+    </div>
+
+    <div class="definition">
+        <div class="term-header">3.1.2.6 potential health condition</div>
+        <p>Health condition that may develop in the future based on current risk factors, genetic predisposition, or health trajectory</p>
+        <div class="note">
+            <strong>NOTE:</strong> Potential health conditions form the basis for preventive healthcare interventions, including screening programs designed to detect disease before it becomes symptomatic.
+        </div>
+        <div class="example">
+            <strong>EXAMPLE:</strong> A 55-year-old with a family history of colorectal cancer and personal history of adenomatous polyps has a potential health condition of developing colorectal cancer. This potential condition justifies enrollment in a surveillance colonoscopy program with shorter intervals than standard screening. Similarly, an individual with BRCA1 mutation has a potential health condition of developing breast or ovarian cancer, which may warrant enhanced screening protocols.
+        </div>
+        <div class="source">SOURCE: ISO 13940:2015, 3.13, modified (added EXAMPLE)</div>
+    </div>
+
+    <div class="definition">
+        <div class="term-header">3.1.2.7 health issue</div>
+        <p>Representation of an issue related to health as identified by one or more healthcare actors</p>
+        <div class="note">
+            <strong>NOTE 1:</strong> A health issue can be a diagnosed health condition, an observed condition requiring investigation, or even a symptomatic concern that has not yet been clinically characterized.
+        </div>
+        <div class="note">
+            <strong>NOTE 2:</strong> The health issue determines the relevant healthcare activity elements and is what a clinical process or care plan is designed to address.
+        </div>
+        <div class="source">SOURCE: ISO 13940:2015, 3.15, modified (added NOTE 2)</div>
+    </div>
+
+    <div class="definition">
+        <div class="term-header">3.1.2.8 risk condition</div>
+        <p>Condition or set of factors that increase the probability of a health issue occurring, thereby warranting preventive or surveillance healthcare activities</p>
+        <div class="note">
+            <strong>NOTE 1:</strong> Risk condition is not itself a health condition, but rather circumstances that indicate screening or other preventive measures are appropriate.
+        </div>
+        <div class="note">
+            <strong>NOTE 2:</strong> Risk conditions are essential for determining screening eligibility and intervals. They may include demographic factors (age, sex), genetic factors (family history, genetic mutations), behavioral factors (smoking, diet), or medical history (previous findings, comorbidities).
+        </div>
+        <div class="example">
+            <strong>EXAMPLE:</strong> Risk conditions for cancer screening include: age ≥45 years for average-risk colorectal cancer screening, BRCA1/BRCA2 mutation for enhanced breast cancer screening, heavy tobacco use for lung cancer screening, family history of colorectal cancer for earlier or more frequent colonoscopy, or personal history of adenomatous polyps for surveillance colonoscopy.
+        </div>
+        <div class="source">P3493.1</div>
+    </div>
+
+    <div class="definition">
+        <div class="term-header">3.1.2.9 health objective</div>
+        <p>Desired ultimate achievement of a healthcare process designed to address healthcare needs</p>
+        <div class="note">
+            <strong>NOTE:</strong> Alternative term: intended outcome. Health objective provides the purpose and goal against which process effectiveness is evaluated.
+        </div>
+        <div class="example">
+            <strong>EXAMPLE:</strong> In cancer screening, health objectives include: early detection of cancer at a treatable stage, reduction of cancer-specific mortality through early intervention, maintenance of cancer-free status through continued surveillance, or prevention of cancer development through detection and removal of precancerous lesions.
+        </div>
+        <div class="source">SOURCE: ISO 13940:2015, 3.16, modified (added EXAMPLE)</div>
+    </div>
+
+    <div class="definition">
+        <div class="term-header">3.1.2.10 professionally assessed condition</div>
+        <p>Health condition that has been evaluated and characterized by a healthcare professional using clinical judgment, diagnostic criteria, and evidence-based assessment methods</p>
+        <div class="note">
+            <strong>NOTE:</strong> Professionally assessed conditions require healthcare professional expertise and involve accountability for clinical decision-making. The assessment may confirm, refine, or rule out suspected conditions.
+        </div>
+        <div class="source">SOURCE: ISO 13940:2015, 3.17</div>
+    </div>
+
+    <h3>3.1.3 Process and Episode Terms</h3>
+
+    <div class="definition">
+        <div class="term-header">3.1.3.1 clinical process</div>
+        <p>Healthcare process which is intended to maintain or change the health state of an individual subject of care</p>
+        <div class="note">
+            <strong>NOTE 1:</strong> A clinical process is defined by four elements: (1) input health state, (2) intended output health state, (3) a health issue being addressed, and (4) healthcare goal. These elements form the basis for determining what healthcare activities constitute the process.
+        </div>
+        <div class="note">
+            <strong>NOTE 2:</strong> In P3493.1, the primary clinical processes are the Screening Process (Clause 5.2) for subjects in health state HS-01, and the Diagnostic Episode (Clause 5.3) for subjects in health states HS-02 or HS-07.
+        </div>
+        <div class="source">SOURCE: ISO 13940:2015, 3.30, modified (added NOTE 2)</div>
+    </div>
+
+    <div class="definition">
+        <div class="term-header">3.1.3.2 healthcare activity</div>
+        <p>Action performed with or for a subject of care by one or more healthcare actors with the intention of improving, maintaining, or otherwise affecting that subject's health state</p>
+        <div class="note">
+            <strong>NOTE:</strong> Healthcare activities are the atomic units of clinical processes. Each activity has an input health state and produces an output health state from the perspective of the health issue being addressed.
+        </div>
+        <div class="example">
+            <strong>EXAMPLE:</strong> In a cancer screening process: scheduling a screening appointment, performing a mammography examination, interpreting imaging results, conducting a biopsy, analyzing tissue samples, communicating results to the subject of care, and documenting findings are all healthcare activities.
+        </div>
+        <div class="source">SOURCE: ISO 13940:2015, 3.31, modified (added EXAMPLE)</div>
+    </div>
+
+    <div class="definition">
+        <div class="term-header">3.1.3.3 healthcare investigation</div>
+        <p>Healthcare activity performed to obtain further information about a subject of care's health state</p>
+        <div class="note">
+            <strong>NOTE:</strong> Healthcare investigation includes both screening procedures (performed when there is no current indication of disease) and diagnostic procedures (performed to evaluate suspected abnormalities or symptomatic concerns).
+        </div>
+        <div class="example">
+            <strong>EXAMPLE:</strong> Screening mammography in an asymptomatic subject, diagnostic mammography with additional views following a suspicious screening result, ultrasound-guided biopsy of a mass detected on imaging, and pathological examination of tissue samples are all healthcare investigations.
+        </div>
+        <div class="source">SOURCE: ISO 13940:2015, 3.33, modified (added NOTE and EXAMPLE)</div>
+    </div>
+
+    <div class="definition">
+        <div class="term-header">3.1.3.4 episode of care</div>
+        <p>Set of healthcare activities performed for a subject of care in the context of addressing a specific health issue, with a defined beginning and end</p>
+        <div class="note">
+            <strong>NOTE 1:</strong> An episode of care is bounded by a trigger event (beginning) and a termination condition (end). The episode may span multiple contacts, healthcare providers, and healthcare activities.
+        </div>
+        <div class="note">
+            <strong>NOTE 2:</strong> In P3493.1, the primary episode types are: Screening Episode (from eligibility determination through screening result communication) and Diagnostic Episode (from detection of abnormality through diagnostic resolution).
+        </div>
+        <div class="source">SOURCE: ISO 13940:2015, 3.37, modified (added NOTE 2)</div>
+    </div>
+
+    <div class="definition">
+        <div class="term-header">3.1.3.5 care plan</div>
+        <p>Documented coordination of all healthcare activities intended for a subject of care, specifying the activities, their sequence, responsible healthcare providers, and planned timing</p>
+        <div class="note">
+            <strong>NOTE:</strong> A care plan translates clinical protocols and professional judgment into a specific plan for an individual subject of care. The plan may be revised as the subject's health state changes or new information becomes available.
+        </div>
+        <div class="example">
+            <strong>EXAMPLE:</strong> Following detection of a suspicious mass on screening mammogram, a care plan might specify: (1) diagnostic mammogram with additional views within 7 days, (2) ultrasound evaluation if mass characteristics warrant, (3) biopsy consultation if imaging remains indeterminate, (4) communication of all results within 48 hours of each procedure, and (5) multidisciplinary tumor board review if cancer is confirmed.
+        </div>
+        <div class="source">SOURCE: ISO 13940:2015, 3.39, modified (added EXAMPLE)</div>
+    </div>
+
+    <div class="definition">
+        <div class="term-header">3.1.3.6 core care plan</div>
+        <p>Care plan which is a specific instantiation of a generic pathway or protocol, specialized based on the specifics of the subject of care's health state, health issue, and individual characteristics</p>
+        <div class="note">
+            <strong>NOTE:</strong> A core care plan provides structured consistency while allowing for individualization based on clinical judgment and subject-specific factors.
+        </div>
+        <div class="example">
+            <strong>EXAMPLE:</strong> A cancer screening program may have a standardized pathway for BRCA1-positive individuals that specifies annual mammography plus MRI. The core care plan for a specific 35-year-old BRCA1-positive woman would instantiate this pathway, scheduling specific appointments, assigning specific providers, and documenting her individual risk factors and preferences.
+        </div>
+        <div class="source">SOURCE: ISO 13940:2015, 3.40, modified (added EXAMPLE)</div>
+    </div>
+
+    <div class="definition">
+        <div class="term-header">3.1.3.7 health thread</div>
+        <p>Longitudinal sequence of healthcare activities and episodes addressing a specific health issue across time, potentially spanning multiple healthcare providers and care settings</p>
+        <div class="note">
+            <strong>NOTE 1:</strong> A health thread maintains continuity of clinical context even when care is delivered by different healthcare providers or organizations. It provides the historical and prognostic perspective necessary for clinical decision-making.
+        </div>
+        <div class="note">
+            <strong>NOTE 2:</strong> In cancer screening, a health thread might span decades and include: initial screening, periodic surveillance, diagnostic evaluation of abnormalities, treatment if cancer is detected, post-treatment surveillance, and management of recurrence if applicable.
+        </div>
+        <div class="source">SOURCE: ISO 13940:2015, 3.21, modified (added NOTE 2)</div>
+    </div>
+
+    <div class="definition">
+        <div class="term-header">3.1.3.8 screening process instance</div>
+        <p>Single complete execution of the Screening Process (as defined in Clause 5.2) for an individual subject of care, from determination of screening eligibility through communication of screening results</p>
+        <div class="note">
+            <strong>NOTE:</strong> Each screening process instance represents one cycle in what may be a lifelong pattern of periodic cancer screening for a subject of care. Successful completion results in either health state HS-05 (no abnormality detected), HS-06 (benign/non-suspicious abnormality), or HS-07 (suspicious abnormality requiring diagnostic evaluation).
+        </div>
+        <div class="example">
+            <strong>EXAMPLE:</strong> A 52-year-old woman's annual screening mammogram, from appointment scheduling through result communication, constitutes one screening process instance. If screening is negative (HS-05), she will enter a new screening process instance the following year. If suspicious findings are detected (HS-07), a diagnostic episode begins.
+        </div>
+        <div class="source">P3493.1</div>
+    </div>
+
+    <div class="definition">
+        <div class="term-header">3.1.3.9 healthcare needs assessment</div>
+        <p>Systematic evaluation of a subject of care's health state, risk factors, and circumstances to determine what healthcare activities are appropriate and necessary</p>
+        <div class="note">
+            <strong>NOTE:</strong> Healthcare needs assessment is foundational to clinical decision-making. It considers not only the immediate health issue but also the subject's overall health state, preferences, values, social circumstances, and ability to participate in recommended care.
+        </div>
+        <div class="example">
+            <strong>EXAMPLE:</strong> Before recommending a screening colonoscopy, a healthcare professional assesses: the subject's age and risk factors (family history, personal history of polyps), ability to undergo bowel preparation, any contraindications (anticoagulation therapy, severe cardiac disease), the subject's preferences regarding screening method (colonoscopy vs. alternative screening), and logistical factors (transportation, need for someone to accompany them).
+        </div>
+        <div class="source">SOURCE: ISO 13940:2015, 3.34, modified (added EXAMPLE)</div>
+    </div>
+
+    <div class="definition">
+        <div class="term-header">3.1.3.10 referral</div>
+        <p>Process by which one healthcare provider requests another healthcare provider to assess or provide care for a subject of care</p>
+        <div class="note">
+            <strong>NOTE 1:</strong> A referral typically includes clinical information about the subject's health state, the reason for referral (health issue), any relevant healthcare investigations already performed, and urgency of the requested evaluation.
+        </div>
+        <div class="note">
+            <strong>NOTE 2:</strong> In cancer screening pathways, referrals occur at several points: primary care to screening program, screening program to diagnostic specialist, diagnostic specialist to subspecialist (e.g., interventional radiology for complex biopsy), diagnostic program to treatment services.
+        </div>
+        <div class="source">SOURCE: ISO 13940:2015, 3.43, modified (added NOTE 2)</div>
+    </div>
+
+    <div class="definition">
+        <div class="term-header">3.1.3.11 healthcare communication</div>
+        <p>Exchange of healthcare information between healthcare actors for purposes of coordinating care, providing information, or supporting clinical decision-making</p>
+        <div class="note">
+            <strong>NOTE:</strong> Healthcare communication may occur between providers (consultation, referral), between provider and subject of care (results disclosure, shared decision-making), or between provider and other healthcare actors (reporting to registry, communication with payer).
+        </div>
+        <div class="example">
+            <strong>EXAMPLE:</strong> A radiologist's phone call to discuss abnormal mammography findings with the patient, a pathology report transmitted to the ordering physician, a multidisciplinary tumor board discussion, or a screening program's notification letter to a subject of care are all healthcare communications.
+        </div>
+        <div class="source">P3493.1</div>
+    </div>
+
+    <div class="definition">
+        <div class="term-header">3.1.3.12 healthcare documentation</div>
+        <p>Process of creating, maintaining, and transmitting records that describe healthcare activities, decisions, and their clinical rationale</p>
+        <div class="note">
+            <strong>NOTE 1:</strong> Documentation serves multiple purposes: supporting continuity of care, enabling care coordination, providing evidence for clinical and administrative decision-making, meeting legal and regulatory requirements, and supporting quality improvement and research.
+        </div>
+        <div class="note">
+            <strong>NOTE 2:</strong> In P3493.1, documentation requirements are specified for each clinical decision point and process outcome to ensure adequate information is available for subsequent care, quality monitoring, and data recycling.
+        </div>
+        <div class="source">P3493.1</div>
+    </div>
+
+    <div class="definition">
+        <div class="term-header">3.1.3.13 healthcare process evaluation</div>
+        <p>Systematic assessment of healthcare processes to determine whether they are being executed as intended and whether they are achieving their defined health objectives</p>
+        <div class="note">
+            <strong>NOTE:</strong> Process evaluation examines both fidelity (adherence to protocols and standards) and effectiveness (achievement of desired health outcomes). In cancer screening, this includes metrics such as screening participation rates, recall rates, detection rates, interval cancer rates, and stage distribution of detected cancers.
+        </div>
+        <div class="source">P3493.1</div>
+    </div>
+
+    <div class="definition">
+        <div class="term-header">3.1.3.14 outcome evaluation</div>
+        <p>Assessment of the actual health state changes achieved by healthcare processes, compared to the intended health objectives</p>
+        <div class="note">
+            <strong>NOTE:</strong> In cancer screening, outcome evaluation includes measures such as: cancer detection rate, positive predictive value of screening, stage distribution of screen-detected cancers, interval cancer rates, cancer-specific mortality reduction, and overall mortality effects. Outcome evaluation requires longitudinal data and population-level analysis.
+        </div>
+        <div class="source">P3493.1</div>
+    </div>
+
+    <div class="definition">
+        <div class="term-header">3.1.3.15 healthcare goals</div>
+        <p>Specific, measurable objectives established for healthcare processes at individual, program, or population levels</p>
+        <div class="note">
+            <strong>NOTE:</strong> Healthcare goals provide targets against which performance can be evaluated. They should be evidence-based, achievable, and aligned with health objectives.
+        </div>
+        <div class="example">
+            <strong>EXAMPLE:</strong> For a colorectal cancer screening program: achieve ≥75% screening participation among eligible population, maintain colonoscopy completion rate ≥90%, achieve adenoma detection rate ≥25% for average-risk individuals, complete diagnostic evaluation within 60 days for 90% of subjects with positive screening results.
+        </div>
+        <div class="source">P3493.1</div>
+    </div>
+
+    <div class="definition">
+        <div class="term-header">3.1.3.16 medical device</div>
+        <p>Instrument, apparatus, implement, machine, appliance, implant, in vitro reagent or calibrator, software, material or other similar or related article intended by the manufacturer to be used for human beings for purposes including diagnosis, prevention, monitoring, treatment, or alleviation of disease</p>
+        <div class="note">
+            <strong>NOTE:</strong> In cancer screening contexts, medical devices include imaging equipment (mammography units, CT scanners, MRI machines), laboratory analyzers for biomarker testing, biopsy instruments, and software systems used for image interpretation or clinical decision support.
+        </div>
+        <div class="source">SOURCE: Based on definitions from ISO 13485:2016 and regulatory frameworks (FDA, EU MDR)</div>
+    </div>
+
+    <div class="definition">
+        <div class="term-header">3.1.3.17 automated medical device</div>
+        <p>Medical device that performs its intended medical function with minimal or no human intervention once initiated</p>
+        <div class="note">
+            <strong>NOTE 1:</strong> Automated medical devices may use algorithms, artificial intelligence, or other computational methods to perform diagnostic, monitoring, or therapeutic functions.
+        </div>
+        <div class="note">
+            <strong>NOTE 2:</strong> In cancer screening, automated medical devices include AI-assisted image analysis systems for mammography interpretation, automated cytology screeners for cervical cancer screening, and computerized decision support systems that identify subjects eligible for screening based on electronic health record data.
+        </div>
+        <div class="note">
+            <strong>NOTE 3:</strong> Healthcare professionals retain ultimate responsibility for clinical decisions even when automated devices provide recommendations or interpretations. The level of human oversight required depends on the device's regulatory classification and intended use.
+        </div>
+        <div class="source">P3493.1</div>
+    </div>
+
+    <h3>3.1.4 Governance and Mandate Terms</h3>
+
+    <div class="definition">
+        <div class="term-header">3.1.4.1 healthcare mandate</div>
+        <p>Formal authorization that defines scope, authority, and responsibilities for healthcare actors to participate in care delivery or make healthcare decisions</p>
+        <div class="note">
+            <strong>NOTE 1:</strong> Mandates establish the legal and ethical framework within which healthcare occurs. They define who is authorized to do what, for whom, and under what circumstances.
+        </div>
+        <div class="note">
+            <strong>NOTE 2:</strong> In P3493.1, mandates are essential for determining which healthcare actors have authority to make decisions at clinical decision points, access healthcare data, and bear responsibility for care coordination.
+        </div>
+        <div class="source">SOURCE: ISO 13940:2015, 3.46</div>
+    </div>
+
+    <div class="definition">
+        <div class="term-header">3.1.4.2 care period mandate</div>
+        <p>Healthcare mandate that establishes a healthcare provider's scope of authority and responsibility for a subject of care over a defined period</p>
+        <div class="note">
+            <strong>NOTE 1:</strong> A care period mandate may be comprehensive (e.g., primary care provider with broad ongoing responsibility) or specific to a particular health issue or episode (e.g., specialist managing diagnostic workup).
+        </div>
+        <div class="note">
+            <strong>NOTE 2:</strong> The care period mandate defines which healthcare provider has authority to access healthcare data, make clinical decisions, coordinate care, and be held accountable for care quality during that period.
+        </div>
+        <div class="example">
+            <strong>EXAMPLE:</strong> When a subject of care is referred for diagnostic mammography following a suspicious screening result, the radiology practice receives a care period mandate for the diagnostic imaging episode. This mandate authorizes them to perform imaging, make recall and biopsy recommendations, coordinate with pathology if biopsy is performed, and communicate results. The mandate terminates when diagnostic resolution is achieved and care is transitioned back to the referring provider or to treatment services.
+        </div>
+        <div class="source">SOURCE: ISO 13940:2015, 3.47, modified (added EXAMPLE)</div>
+    </div>
+
+    <div class="definition">
+        <div class="term-header">3.1.4.3 healthcare commitment</div>
+        <p>Undertaking by a healthcare actor to perform specified healthcare activities or to be available to perform such activities under defined circumstances</p>
+        <div class="note">
+            <strong>NOTE:</strong> Healthcare commitments form the basis of care coordination and care planning. They establish expectations about what will be done, by whom, and when.
+        </div>
+        <div class="example">
+            <strong>EXAMPLE:</strong> A screening program's commitment to notify subjects of screening results within 14 days, a radiology practice's commitment to provide diagnostic mammography appointments within 7 days for recalled subjects, or a pathology laboratory's commitment to complete tissue analysis within 5 business days are all healthcare commitments that support reliable cancer screening processes.
+        </div>
+        <div class="source">SOURCE: ISO 13940:2015, 3.48, modified (added EXAMPLE)</div>
+    </div>
+
+    <div class="definition">
+        <div class="term-header">3.1.4.4 informed consent</div>
+        <p>Subject of care's voluntary agreement to undergo a proposed healthcare intervention, given after receiving and comprehending relevant information about the intervention's nature, purpose, risks, benefits, and alternatives</p>
+        <div class="note">
+            <strong>NOTE 1:</strong> Valid informed consent requires: (1) provision of material information in comprehensible form, (2) subject's competence to make the decision, (3) voluntary decision free from coercion, and (4) explicit authorization to proceed.
+        </div>
+        <div class="note">
+            <strong>NOTE 2:</strong> In cancer screening, informed consent is particularly important for invasive procedures (biopsy, surgery) and when screening involves significant risks, radiation exposure, or trade-offs between benefits and harms that require value judgments.
+        </div>
+        <div class="note">
+            <strong>NOTE 3:</strong> For subjects lacking consent competence, informed consent may be provided by a subject of care proxy in accordance with legal requirements and the subject's known preferences or best interests.
+        </div>
+        <div class="source">SOURCE: Based on ISO 13940:2015, 3.50, and biomedical ethics principles</div>
+    </div>
+
+    <div class="definition">
+        <div class="term-header">3.1.4.5 consent competence</div>
+        <p>Subject of care's capacity to understand information relevant to a healthcare decision, appreciate the consequences of alternative choices, reason about options in the context of their own values and circumstances, and communicate a choice</p>
+        <div class="note">
+            <strong>NOTE 1:</strong> Consent competence is decision-specific. A subject may have competence for some decisions but not others, depending on the complexity of the decision and the subject's cognitive and emotional state at the time.
+        </div>
+        <div class="note">
+            <strong>NOTE 2:</strong> Temporary or permanent lack of consent competence may result from developmental stage (childhood), cognitive impairment (dementia, intellectual disability), mental health conditions, or acute illness. When a subject lacks consent competence, decisions are made by a subject of care proxy.
+        </div>
+        <div class="source">P3493.1</div>
+    </div>
+
+    <div class="definition">
+        <div class="term-header">3.1.4.6 dissent</div>
+        <p>Subject of care's refusal of a proposed healthcare intervention, or withdrawal of previously given consent</p>
+        <div class="note">
+            <strong>NOTE 1:</strong> A competent subject of care has the right to dissent from any healthcare intervention, even interventions that healthcare professionals believe are beneficial. This right is fundamental to respect for autonomy.
+        </div>
+        <div class="note">
+            <strong>NOTE 2:</strong> Documentation of dissent is important for care coordination and for respecting the subject's wishes in future healthcare encounters. Dissent from screening does not preclude offering screening at future opportunities, but repeated offers should be made respectfully and in a manner that honors the subject's autonomy.
+        </div>
+        <div class="source">P3493.1</div>
+    </div>
+
+    <div class="definition">
+        <div class="term-header">3.1.4.7 continuity facilitator mandate</div>
+        <p>Healthcare mandate authorizing a healthcare provider to coordinate care across multiple episodes, healthcare providers, or care settings to ensure coherent and continuous healthcare delivery</p>
+        <div class="note">
+            <strong>NOTE:</strong> The continuity facilitator typically has broad access to healthcare information across episodes and providers, responsibility for care plan coordination, and authority to facilitate communication and care transitions. In cancer screening, this role might be filled by a primary care provider, patient navigator, or care coordinator.
+        </div>
+        <div class="source">SOURCE: ISO 13940:2015, 3.49</div>
+    </div>
+
+    <div class="definition">
+        <div class="term-header">3.1.4.8 responsibility transfer</div>
+        <p>Explicit transition of clinical accountability and care authority from one healthcare provider to another, typically accompanied by communication of relevant healthcare information</p>
+        <div class="note">
+            <strong>NOTE 1:</strong> Responsibility transfer is a critical moment in care coordination. Incomplete or unclear transfers contribute to care gaps, duplicated services, and adverse events.
+        </div>
+        <div class="note">
+            <strong>NOTE 2:</strong> In cancer screening processes, responsibility transfer occurs at several key points: from screening program to diagnostic provider when suspicious findings are detected, from diagnostic provider to treatment services when cancer is confirmed, and from active treatment back to surveillance and primary care following treatment completion.
+        </div>
+        <div class="example">
+            <strong>EXAMPLE:</strong> When a screening mammogram identifies a suspicious mass (HS-07), responsibility transfers from the screening program to a diagnostic radiology practice. This transfer should include: notification of the finding, transmission of imaging studies, communication of clinical context (risk factors, symptoms), and confirmation that the patient has been contacted and scheduled for diagnostic evaluation. The transfer is complete when the diagnostic provider acknowledges receipt of information and acceptance of care responsibility.
+        </div>
+        <div class="source">P3493.1</div>
+    </div>
+
+    <div class="definition">
+        <div class="term-header">3.1.4.9 adverse event</div>
+        <p>Unintended harm to a subject of care resulting from healthcare activities or from failure to provide appropriate care, rather than from the underlying health condition</p>
+        <div class="note">
+            <strong>NOTE 1:</strong> Adverse events may result from errors (failures in planning or execution), complications (known risks of procedures that occur despite appropriate care), or system failures (breakdowns in coordination, communication, or resources).
+        </div>
+        <div class="note">
+            <strong>NOTE 2:</strong> In cancer screening, adverse events include: false positive results leading to unnecessary invasive procedures, false negative results delaying cancer diagnosis, complications from screening or diagnostic procedures (perforation during colonoscopy, bleeding from biopsy), psychological distress from prolonged diagnostic uncertainty, and radiation exposure from repeated imaging.
+        </div>
+        <div class="note">
+            <strong>NOTE 3:</strong> Systematic tracking and analysis of adverse events is essential for quality improvement and for accurately assessing the balance of screening benefits and harms.
+        </div>
+        <div class="source">Based on patient safety literature and quality improvement frameworks</div>
+    </div>
+
+    <h3>3.1.5 Information and Data Terms</h3>
+
+    <div class="definition">
+        <div class="term-header">3.1.5.1 health record</div>
+        <p>Repository of healthcare information concerning a single subject of care</p>
+        <div class="note">
+            <strong>NOTE 1:</strong> A health record may be maintained by a single healthcare provider or organization (organizational record) or may be a longitudinal record aggregating information from multiple providers (integrated record, personal health record).
+        </div>
+        <div class="note">
+            <strong>NOTE 2:</strong> In the context of P3493.1, health records serve as the source of data for cancer screening data recycling. The record must contain sufficient information to document: subject's health state transitions, clinical decision points and decisions made, screening and diagnostic results, adverse events, and outcomes.
+        </div>
+        <div class="source">SOURCE: ISO 13940:2015, 3.61, modified (added NOTE 2)</div>
+    </div>
+
+    <div class="definition">
+        <div class="term-header">3.1.5.2 healthcare information</div>
+        <p>Information generated through or relevant to healthcare processes, including information about health states, healthcare activities, healthcare actors, mandates, and administrative aspects of healthcare delivery</p>
+        <div class="note">
+            <strong>NOTE:</strong> Healthcare information encompasses: clinical data (observations, test results, diagnoses, treatment plans), administrative data (appointments, billing, insurance), operational data (workflow status, resource utilization), and governance data (consents, mandates, authorizations). All of these types may be relevant to cancer screening data recycling as defined in P3493.1.
+        </div>
+        <div class="source">SOURCE: ISO 13940:2015, 3.62, modified (added NOTE)</div>
+    </div>
+
+    <div class="definition">
+        <div class="term-header">3.1.5.3 healthcare data</div>
+        <p>Healthcare information that has been encoded, structured, or formatted for processing, storage, transmission, or analysis</p>
+        <div class="note">
+            <strong>NOTE:</strong> Healthcare data may exist in various forms: structured (coded diagnoses, laboratory values), semi-structured (clinical narratives with standardized sections), or unstructured (free text notes, imaging studies). Data quality, standardization, and interoperability are critical considerations for data recycling.
+        </div>
+        <div class="source">P3493.1</div>
+    </div>
+
+    <div class="definition">
+        <div class="term-header">3.1.5.4 metadata</div>
+        <p>Data that describes the characteristics, context, quality, provenance, and management of healthcare data</p>
+        <div class="note">
+            <strong>NOTE 1:</strong> Metadata includes information such as: when data was created, who created it, what healthcare activity or process generated it, what clinical context it pertains to, how it was captured or measured, what standards or terminologies were used, and any transformations or quality assessments applied to it.
+        </div>
+        <div class="note">
+            <strong>NOTE 2:</strong> In P3493.1, metadata is essential for data recycling because it provides the context necessary to interpret and appropriately use healthcare data for quality improvement, research, and population health applications.
+        </div>
+        <div class="source">P3493.1</div>
+    </div>
+
+    <div class="definition">
+        <div class="term-header">3.1.5.5 non-ratified healthcare information</div>
+        <p>Healthcare information documented in a health record but not yet reviewed and verified by the responsible healthcare professional</p>
+        <div class="note">
+            <strong>NOTE:</strong> Non-ratified information may include preliminary interpretations, draft notes, or automated outputs that await professional review before being considered final. Use of non-ratified information for clinical decision-making or data recycling requires appropriate safeguards and awareness of its preliminary status.
+        </div>
+        <div class="example">
+            <strong>EXAMPLE:</strong> A preliminary radiology interpretation generated by an AI-assisted detection system that has not yet been reviewed and signed by a radiologist, or a draft pathology report awaiting final review by the pathologist, would be non-ratified healthcare information.
+        </div>
+        <div class="source">SOURCE: ISO 13940:2015, 3.68, modified (added EXAMPLE)</div>
+    </div>
+
+    <h2>3.2 Terminology Mapping Tables</h2>
+
+    <h3>Table 3.2-1: Core Terminology Mapping</h3>
+    <p>This table maps key concepts from P3493.1 to their corresponding terms in ISO 13940:2015, showing alignment with international healthcare informatics standards.</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>P3493.1 Concept</th>
+                <th>P3493.1 Term</th>
+                <th>ISO 13940:2015 Reference</th>
+                <th>ISO 13940:2015 Term</th>
+                <th>Mapping Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Person receiving care</td>
+                <td>subject of care</td>
+                <td>3.2</td>
+                <td>subject of care</td>
+                <td>Identical</td>
+            </tr>
+            <tr>
+                <td>Person providing care</td>
+                <td>healthcare professional</td>
+                <td>3.5</td>
+                <td>healthcare professional</td>
+                <td>Identical</td>
+            </tr>
+            <tr>
+                <td>Organization providing care</td>
+                <td>healthcare provider</td>
+                <td>3.3</td>
+                <td>healthcare provider</td>
+                <td>Identical</td>
+            </tr>
+            <tr>
+                <td>Overall health status</td>
+                <td>health state</td>
+                <td>3.9</td>
+                <td>health state</td>
+                <td>Identical</td>
+            </tr>
+            <tr>
+                <td>Specific health problem</td>
+                <td>health issue</td>
+                <td>3.15</td>
+                <td>health issue</td>
+                <td>Identical</td>
+            </tr>
+            <tr>
+                <td>Observed abnormality</td>
+                <td>observed condition</td>
+                <td>3.11</td>
+                <td>observed condition</td>
+                <td>Identical</td>
+            </tr>
+            <tr>
+                <td>Clinical determination</td>
+                <td>professionally assessed condition</td>
+                <td>3.17</td>
+                <td>professionally assessed condition</td>
+                <td>Identical</td>
+            </tr>
+            <tr>
+                <td>Care process</td>
+                <td>clinical process</td>
+                <td>3.30</td>
+                <td>clinical process</td>
+                <td>Identical</td>
+            </tr>
+            <tr>
+                <td>Care episode</td>
+                <td>episode of care</td>
+                <td>3.37</td>
+                <td>episode of care</td>
+                <td>Identical</td>
+            </tr>
+            <tr>
+                <td>Healthcare action</td>
+                <td>healthcare activity</td>
+                <td>3.31</td>
+                <td>healthcare activity</td>
+                <td>Identical</td>
+            </tr>
+            <tr>
+                <td>Investigation procedure</td>
+                <td>healthcare investigation</td>
+                <td>3.33</td>
+                <td>healthcare investigation</td>
+                <td>Identical</td>
+            </tr>
+            <tr>
+                <td>Clinical plan</td>
+                <td>care plan</td>
+                <td>3.39</td>
+                <td>care plan</td>
+                <td>Identical</td>
+            </tr>
+            <tr>
+                <td>Care authority</td>
+                <td>care period mandate</td>
+                <td>3.47</td>
+                <td>care period mandate</td>
+                <td>Identical</td>
+            </tr>
+            <tr>
+                <td>Clinical record</td>
+                <td>health record</td>
+                <td>3.61</td>
+                <td>health record</td>
+                <td>Identical</td>
+            </tr>
+            <tr>
+                <td>Patient interaction</td>
+                <td>contact</td>
+                <td>3.41</td>
+                <td>contact</td>
+                <td>Identical</td>
+            </tr>
+            <tr>
+                <td>Care transfer</td>
+                <td>referral</td>
+                <td>3.43</td>
+                <td>referral</td>
+                <td>Identical</td>
+            </tr>
+            <tr>
+                <td>Health objective</td>
+                <td>health objective</td>
+                <td>3.16</td>
+                <td>health objective</td>
+                <td>Identical</td>
+            </tr>
+            <tr>
+                <td>Possible future condition</td>
+                <td>potential health condition</td>
+                <td>3.13</td>
+                <td>potential health condition</td>
+                <td>Identical</td>
+            </tr>
+            <tr>
+                <td>Preliminary information</td>
+                <td>non-ratified healthcare information</td>
+                <td>3.68</td>
+                <td>non-ratified healthcare information</td>
+                <td>Identical</td>
+            </tr>
+            <tr>
+                <td>Longitudinal care sequence</td>
+                <td>health thread</td>
+                <td>3.21</td>
+                <td>health thread</td>
+                <td>Identical</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Table 3.2-2: Terminology Corrections and Clarifications</h3>
+    <p>This table identifies where P3493.1 adapts, extends, or clarifies ISO 13940 terminology for cancer screening specificity.</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>P3493.1 Term</th>
+                <th>Modification Type</th>
+                <th>ISO 13940 Source</th>
+                <th>Description of Change</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>subject of care</td>
+                <td>Extended</td>
+                <td>3.2</td>
+                <td>Added NOTE 2 clarifying that each subject has exactly one health state at any time; added EXAMPLE specific to cancer screening contexts</td>
+            </tr>
+            <tr>
+                <td>healthcare provider</td>
+                <td>Extended</td>
+                <td>3.3</td>
+                <td>Expanded NOTE 2 to distinguish organizational and individual providers; added screening-specific EXAMPLE</td>
+            </tr>
+            <tr>
+                <td>healthcare professional</td>
+                <td>Extended</td>
+                <td>3.5</td>
+                <td>Added NOTE 1 linking to P3493.1 Process Model clinical decision points; added cancer screening EXAMPLE</td>
+            </tr>
+            <tr>
+                <td>healthcare personnel</td>
+                <td>Extended</td>
+                <td>3.6</td>
+                <td>Added cancer screening EXAMPLE with specific role examples</td>
+            </tr>
+            <tr>
+                <td>contact</td>
+                <td>Extended</td>
+                <td>3.41</td>
+                <td>Added NOTE 2 about appointments; added screening-specific EXAMPLE</td>
+            </tr>
+            <tr>
+                <td>subject of care proxy</td>
+                <td>New</td>
+                <td>N/A</td>
+                <td>New term defined for P3493.1 to address consent governance for subjects lacking consent competence</td>
+            </tr>
+            <tr>
+                <td>healthcare supporting organization</td>
+                <td>New</td>
+                <td>N/A</td>
+                <td>New term distinguishing organizations providing auxiliary services from primary care providers</td>
+            </tr>
+            <tr>
+                <td>health state</td>
+                <td>Extended</td>
+                <td>3.9</td>
+                <td>Added NOTE 2 about undetected health states; added NOTE 3 linking to P3493.1 health state transition model</td>
+            </tr>
+            <tr>
+                <td>input health state</td>
+                <td>Extended</td>
+                <td>3.24</td>
+                <td>Added NOTE with screening-specific typical input states (HS-01, HS-02); added EXAMPLE</td>
+            </tr>
+            <tr>
+                <td>output health state</td>
+                <td>Extended</td>
+                <td>3.26</td>
+                <td>Added NOTE about health issue specificity; added two screening-specific EXAMPLEs</td>
+            </tr>
+            <tr>
+                <td>health condition</td>
+                <td>Extended</td>
+                <td>3.10</td>
+                <td>Added NOTE 2 describing evolution of condition understanding through care process</td>
+            </tr>
+            <tr>
+                <td>observed condition</td>
+                <td>Extended</td>
+                <td>3.11</td>
+                <td>Added NOTE linking to HS-07; added detailed screening EXAMPLE</td>
+            </tr>
+            <tr>
+                <td>potential health condition</td>
+                <td>Extended</td>
+                <td>3.13</td>
+                <td>Added cancer screening EXAMPLE with specific risk scenarios</td>
+            </tr>
+            <tr>
+                <td>health issue</td>
+                <td>Extended</td>
+                <td>3.15</td>
+                <td>Added NOTE 2 linking to healthcare activity determination</td>
+            </tr>
+            <tr>
+                <td>risk condition</td>
+                <td>New</td>
+                <td>N/A</td>
+                <td>New term critical for screening eligibility and interval determination</td>
+            </tr>
+            <tr>
+                <td>health objective</td>
+                <td>Extended</td>
+                <td>3.16</td>
+                <td>Added cancer screening-specific EXAMPLE</td>
+            </tr>
+            <tr>
+                <td>automated medical device</td>
+                <td>New</td>
+                <td>N/A</td>
+                <td>New term addressing AI and automated decision support in screening</td>
+            </tr>
+            <tr>
+                <td>healthcare communication</td>
+                <td>New</td>
+                <td>N/A</td>
+                <td>New term essential for care coordination documentation in P3493.1</td>
+            </tr>
+            <tr>
+                <td>healthcare documentation</td>
+                <td>New</td>
+                <td>N/A</td>
+                <td>New term addressing documentation requirements for data recycling</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>3.3 ISO 13940 Full Citation Table</h2>
+    <p>This table provides complete citation information for all ISO 13940:2015 terms used in P3493.1, enabling traceability and alignment verification.</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ISO 13940 Clause</th>
+                <th>ISO 13940 Term</th>
+                <th>ConceptSystem.org Reference</th>
+                <th>P3493.1 Usage</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>3.1</td>
+                <td>healthcare actor</td>
+                <td>http://contsys.org/concept/healthcare_actor</td>
+                <td>3.1.1.1 (foundation term)</td>
+            </tr>
+            <tr>
+                <td>3.2</td>
+                <td>subject of care</td>
+                <td>http://contsys.org/concept/subject_of_care</td>
+                <td>3.1.1.2 (extended)</td>
+            </tr>
+            <tr>
+                <td>3.3</td>
+                <td>healthcare provider</td>
+                <td>http://contsys.org/concept/healthcare_provider</td>
+                <td>3.1.1.3 (extended)</td>
+            </tr>
+            <tr>
+                <td>3.5</td>
+                <td>healthcare professional</td>
+                <td>http://contsys.org/concept/healthcare_professional</td>
+                <td>3.1.1.4 (extended)</td>
+            </tr>
+            <tr>
+                <td>3.6</td>
+                <td>healthcare personnel</td>
+                <td>http://contsys.org/concept/healthcare_personnel</td>
+                <td>3.1.1.5 (extended)</td>
+            </tr>
+            <tr>
+                <td>3.41</td>
+                <td>contact</td>
+                <td>http://contsys.org/concept/contact</td>
+                <td>3.1.1.6 (extended)</td>
+            </tr>
+            <tr>
+                <td>3.9</td>
+                <td>health state</td>
+                <td>http://contsys.org/concept/health_state</td>
+                <td>3.1.2.1 (extended)</td>
+            </tr>
+            <tr>
+                <td>3.24</td>
+                <td>input health state</td>
+                <td>http://contsys.org/concept/input_health_state</td>
+                <td>3.1.2.2 (extended)</td>
+            </tr>
+            <tr>
+                <td>3.26</td>
+                <td>output health state</td>
+                <td>http://contsys.org/concept/output_health_state</td>
+                <td>3.1.2.3 (extended)</td>
+            </tr>
+            <tr>
+                <td>3.10</td>
+                <td>health condition</td>
+                <td>http://contsys.org/concept/health_condition</td>
+                <td>3.1.2.4 (extended)</td>
+            </tr>
+            <tr>
+                <td>3.11</td>
+                <td>observed condition</td>
+                <td>http://contsys.org/concept/observed_condition</td>
+                <td>3.1.2.5 (extended)</td>
+            </tr>
+            <tr>
+                <td>3.13</td>
+                <td>potential health condition</td>
+                <td>http://contsys.org/concept/potential_health_condition</td>
+                <td>3.1.2.6 (extended)</td>
+            </tr>
+            <tr>
+                <td>3.15</td>
+                <td>health issue</td>
+                <td>http://contsys.org/concept/health_issue</td>
+                <td>3.1.2.7 (extended)</td>
+            </tr>
+            <tr>
+                <td>3.16</td>
+                <td>health objective</td>
+                <td>http://contsys.org/concept/health_objective</td>
+                <td>3.1.2.9 (extended)</td>
+            </tr>
+            <tr>
+                <td>3.17</td>
+                <td>professionally assessed condition</td>
+                <td>http://contsys.org/concept/professionally_assessed_condition</td>
+                <td>3.1.2.10 (identical)</td>
+            </tr>
+            <tr>
+                <td>3.30</td>
+                <td>clinical process</td>
+                <td>http://contsys.org/concept/clinical_process</td>
+                <td>3.1.3.1 (extended)</td>
+            </tr>
+            <tr>
+                <td>3.31</td>
+                <td>healthcare activity</td>
+                <td>http://contsys.org/concept/healthcare_activity</td>
+                <td>3.1.3.2 (extended)</td>
+            </tr>
+            <tr>
+                <td>3.33</td>
+                <td>healthcare investigation</td>
+                <td>http://contsys.org/concept/healthcare_investigation</td>
+                <td>3.1.3.3 (extended)</td>
+            </tr>
+            <tr>
+                <td>3.37</td>
+                <td>episode of care</td>
+                <td>http://contsys.org/concept/episode_of_care</td>
+                <td>3.1.3.4 (extended)</td>
+            </tr>
+            <tr>
+                <td>3.39</td>
+                <td>care plan</td>
+                <td>http://contsys.org/concept/care_plan</td>
+                <td>3.1.3.5 (extended)</td>
+            </tr>
+            <tr>
+                <td>3.40</td>
+                <td>core care plan</td>
+                <td>http://contsys.org/concept/core_care_plan</td>
+                <td>3.1.3.6 (extended)</td>
+            </tr>
+            <tr>
+                <td>3.21</td>
+                <td>health thread</td>
+                <td>http://contsys.org/concept/health_thread</td>
+                <td>3.1.3.7 (extended)</td>
+            </tr>
+            <tr>
+                <td>3.34</td>
+                <td>healthcare needs assessment</td>
+                <td>http://contsys.org/concept/healthcare_needs_assessment</td>
+                <td>3.1.3.9 (extended)</td>
+            </tr>
+            <tr>
+                <td>3.43</td>
+                <td>referral</td>
+                <td>http://contsys.org/concept/referral</td>
+                <td>3.1.3.10 (extended)</td>
+            </tr>
+            <tr>
+                <td>3.46</td>
+                <td>healthcare mandate</td>
+                <td>http://contsys.org/concept/healthcare_mandate</td>
+                <td>3.1.4.1 (identical)</td>
+            </tr>
+            <tr>
+                <td>3.47</td>
+                <td>care period mandate</td>
+                <td>http://contsys.org/concept/care_period_mandate</td>
+                <td>3.1.4.2 (extended)</td>
+            </tr>
+            <tr>
+                <td>3.48</td>
+                <td>healthcare commitment</td>
+                <td>http://contsys.org/concept/healthcare_commitment</td>
+                <td>3.1.4.3 (extended)</td>
+            </tr>
+            <tr>
+                <td>3.50</td>
+                <td>informed consent</td>
+                <td>http://contsys.org/concept/informed_consent</td>
+                <td>3.1.4.4 (extended)</td>
+            </tr>
+            <tr>
+                <td>3.49</td>
+                <td>continuity facilitator mandate</td>
+                <td>http://contsys.org/concept/continuity_facilitator_mandate</td>
+                <td>3.1.4.7 (identical)</td>
+            </tr>
+            <tr>
+                <td>3.61</td>
+                <td>health record</td>
+                <td>http://contsys.org/concept/health_record</td>
+                <td>3.1.5.1 (extended)</td>
+            </tr>
+            <tr>
+                <td>3.62</td>
+                <td>healthcare information</td>
+                <td>http://contsys.org/concept/healthcare_information</td>
+                <td>3.1.5.2 (extended)</td>
+            </tr>
+            <tr>
+                <td>3.68</td>
+                <td>non-ratified healthcare information</td>
+                <td>http://contsys.org/concept/non_ratified_information</td>
+                <td>3.1.5.5 (extended)</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>3.4 Deprecated Terms</h2>
+    <p>The following terms were considered during Module B development but are deprecated. They should not be used in P3493.1 implementations.</p>
+
+    <div class="deprecated">
+        <strong>3.4.1 "patient"</strong><br>
+        Status: Deprecated in favor of "subject of care"<br>
+        Reason: ISO 13940 uses "subject of care" as the preferred term to encompass all roles an individual may have in healthcare, not just the passive "patient" role. "Subject of care" better reflects person-centered care principles and is more inclusive of individuals receiving preventive services like screening.<br>
+        Legacy Usage: Common in clinical practice and existing systems.<br>
+        Migration: Replace with "subject of care" in all P3493.1 documentation and implementations.
+    </div>
+
+    <div class="deprecated">
+        <strong>3.4.2 "doctor" or "physician"</strong><br>
+        Status: Deprecated in favor of "healthcare professional"<br>
+        Reason: Cancer screening involves many types of healthcare professionals beyond physicians (radiologists, pathologists, genetic counselors, nurse practitioners). "Healthcare professional" is inclusive and aligns with ISO 13940 while maintaining the distinction of requiring independent professional judgment.<br>
+        Legacy Usage: Common in general discourse.<br>
+        Migration: Use "healthcare professional" when professional judgment is required, "healthcare personnel" when it is not, or specific role names when precision is needed.
+    </div>
+
+    <div class="deprecated">
+        <strong>3.4.3 "test result"</strong><br>
+        Status: Deprecated in favor of "output health state" or "observed condition"<br>
+        Reason: "Test result" is imprecise and doesn't capture the conceptual distinction between the finding itself (observed condition) and the subject's health status after the finding (output health state). P3493.1 requires this precision for health state tracking.<br>
+        Legacy Usage: Ubiquitous in clinical and lay communication.<br>
+        Migration: Use "observed condition" for the finding itself, "output health state" for the health status after investigation.
+    </div>
+
+    <div class="deprecated">
+        <strong>3.4.4 "false positive" and "false negative"</strong><br>
+        Status: Use with caution; not primary P3493.1 terminology<br>
+        Reason: These terms presume knowledge of "truth" which may not be available in real-time clinical practice. P3493.1 health state model tracks observed states and professional assessments without requiring retrospective outcome knowledge. However, these terms remain valid for quality metrics and research contexts.<br>
+        Preferred P3493.1 Terminology: Document actual health state transitions and clinical findings; evaluate accuracy through outcome evaluation (3.1.3.14).<br>
+        Acceptable Usage: Quality metrics, research publications, discussion of screening test characteristics.
+    </div>
+
+    <div class="deprecated">
+        <strong>3.4.5 "screening failure"</strong><br>
+        Status: Deprecated; use specific health state and process terminology<br>
+        Reason: Ambiguous term that could mean: subject declined screening (dissent), screening test not completed due to technical issues, subject was found ineligible, or cancer was not detected despite being present (interval cancer). Each of these scenarios has specific P3493.1 health states and process outcomes.<br>
+        Legacy Usage: Sometimes used in quality discussions.<br>
+        Migration: Use specific health state codes (HS-04 for dissent, HS-08 for incomplete process) and outcome evaluation terminology for interval cancers.
+    </div>
+
+    <h2>3.5 Notes for Implementers</h2>
+
+    <h3>3.5.1 Health State vs. Health Condition</h3>
+    <p>Health state (3.1.2.1) and health condition (3.1.2.4) are related but distinct concepts that are frequently confused:</p>
+    <ul>
+        <li><strong>Health state</strong> is the complete composite of a subject's physical and mental functions, body structure, activities, participation, and environmental aspects at a given time. It is singular - each subject has exactly one health state at any time, though that state is multidimensional.</li>
+        <li><strong>Health condition</strong> refers to specific observable or potentially observable aspects of that health state. A subject may have multiple health conditions simultaneously (e.g., diabetes, hypertension, suspicious breast mass).</li>
+    </ul>
+    <p>In P3493.1 implementation: Health state codes (HS-01 through HS-11) represent the subject's status with respect to the cancer screening health issue. Other health conditions the subject may have provide context but are not directly represented in the screening health state unless they affect screening eligibility or process execution.</p>
+
+    <h3>3.5.2 Responsibility vs. Accountability</h3>
+    <p>The terms "responsibility" and "accountability" are used precisely in P3493.1:</p>
+    <ul>
+        <li><strong>Responsibility</strong> refers to the assignment of tasks or activities to healthcare actors. Multiple actors may share responsibility for different aspects of care.</li>
+        <li><strong>Accountability</strong> refers to ultimate answerability for decisions and outcomes, particularly for professional judgments. Accountability typically rests with a single healthcare professional.</li>
+    </ul>
+    <p>Example: In a screening mammography process, a radiology technologist has responsibility for performing the imaging procedure according to protocol, but the radiologist has accountability for the clinical interpretation and recall decision. Both contribute to care, but only the radiologist exercises independent professional judgment.</p>
+
+    <h3>3.5.3 Mapping to Existing Clinical Terminologies</h3>
+    <p>P3493.1 terminology is designed to align with, not replace, established clinical coding systems:</p>
+    <ul>
+        <li><strong>SNOMED CT:</strong> Health conditions, procedures, and findings documented in P3493.1 processes should use SNOMED CT codes where applicable. The P3493.1 health state model provides process context for interpreting those codes.</li>
+        <li><strong>ICD-10/11:</strong> Diagnoses and procedures may be coded in ICD for billing and reporting purposes. The P3493.1 health states provide finer-grained process states than ICD diagnostic codes.</li>
+        <li><strong>LOINC:</strong> Laboratory and imaging results should use LOINC codes for test identification. P3493.1 health states indicate the clinical process context in which those results were obtained.</li>
+        <li><strong>HL7 FHIR:</strong> P3493.1 concepts map to FHIR resources. For example, health state codes can be represented as Observation resources, episodes as EpisodeOfCare resources, and mandates as CareTeam or PractitionerRole resources.</li>
+    </ul>
+
+    <h3>3.5.4 Consent vs. Authorization vs. Mandate</h3>
+    <p>These governance concepts have distinct meanings in P3493.1:</p>
+    <ul>
+        <li><strong>Informed consent (3.1.4.4):</strong> Subject of care's agreement to undergo a specific healthcare intervention, given after receiving adequate information. Subject-focused.</li>
+        <li><strong>Authorization:</strong> Permission for data access or data use, which may be provided by the subject of care, by legal/regulatory framework, or by healthcare mandate. Data-focused.</li>
+        <li><strong>Healthcare mandate (3.1.4.1) and care period mandate (3.1.4.2):</strong> Formal authority for healthcare providers to provide care and make clinical decisions. Provider-focused.</li>
+    </ul>
+    <p>Implementation note: Consent governs whether a procedure is performed; mandate governs who has authority to perform it and access related data; authorization governs specific data uses, particularly for secondary purposes like data recycling.</p>
+
+    <h3>3.5.5 Health State Transitions and Clinical Decision Points</h3>
+    <p>The health state model (Clause 5.4) and clinical decision points defined in Process Models (Clause 5.2 and 5.3) are interconnected:</p>
+    <ul>
+        <li>Each clinical decision point is an opportunity for health state transition</li>
+        <li>Some health states can only be reached via specific clinical decision points</li>
+        <li>Documentation of the decision rationale at each decision point provides essential context for the resulting health state</li>
+    </ul>
+    <p>For data recycling purposes: Recording both the health state transition and the decision point that led to it enables more sophisticated quality analysis than recording either alone. The decision point provides the clinical logic; the health state provides the outcome.</p>
+
+    <h3>3.5.6 Use of "Subject of Care" vs. "Patient"</h3>
+    <p>While "patient" is deprecated in favor of "subject of care" (3.4.1), implementers should recognize that legacy systems and clinical workflows universally use "patient." P3493.1 implementations should:</p>
+    <ul>
+        <li>Use "subject of care" in all formal documentation, data models, and interfaces specified by P3493.1</li>
+        <li>Support mapping between "patient" identifiers in existing systems and "subject of care" concepts in P3493.1 implementations</li>
+        <li>Recognize that user interfaces for healthcare professionals may continue to use "patient" for familiarity, while the underlying data model uses "subject of care"</li>
+        <li>Ensure that governance and privacy frameworks apply consistently regardless of which term is used in user-facing contexts</li>
+    </ul>
+
+    <h2>Appendix A: Alphabetical Index of Defined Terms</h2>
+    <p>Quick reference index of all terms defined in Module B, with clause references.</p>
+
+    <table style="font-size: 10pt;">
+        <thead>
+            <tr>
+                <th>Term</th>
+                <th>Clause</th>
+                <th>Category</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>adverse event</td><td>3.1.4.9</td><td>Governance</td></tr>
+            <tr><td>automated medical device</td><td>3.1.3.17</td><td>Process/Technology</td></tr>
+            <tr><td>care period mandate</td><td>3.1.4.2</td><td>Governance</td></tr>
+            <tr><td>care plan</td><td>3.1.3.5</td><td>Process</td></tr>
+            <tr><td>clinical process</td><td>3.1.3.1</td><td>Process</td></tr>
+            <tr><td>consent competence</td><td>3.1.4.5</td><td>Governance</td></tr>
+            <tr><td>contact</td><td>3.1.1.6</td><td>Healthcare Actor</td></tr>
+            <tr><td>continuity facilitator mandate</td><td>3.1.4.7</td><td>Governance</td></tr>
+            <tr><td>core care plan</td><td>3.1.3.6</td><td>Process</td></tr>
+            <tr><td>dissent</td><td>3.1.4.6</td><td>Governance</td></tr>
+            <tr><td>episode of care</td><td>3.1.3.4</td><td>Process</td></tr>
+            <tr><td>health condition</td><td>3.1.2.4</td><td>Health State</td></tr>
+            <tr><td>health issue</td><td>3.1.2.7</td><td>Health State</td></tr>
+            <tr><td>health objective</td><td>3.1.2.9</td><td>Health State</td></tr>
+            <tr><td>health record</td><td>3.1.5.1</td><td>Information</td></tr>
+            <tr><td>health state</td><td>3.1.2.1</td><td>Health State</td></tr>
+            <tr><td>health thread</td><td>3.1.3.7</td><td>Process</td></tr>
+            <tr><td>healthcare activity</td><td>3.1.3.2</td><td>Process</td></tr>
+            <tr><td>healthcare actor</td><td>3.1.1.1</td><td>Healthcare Actor</td></tr>
+            <tr><td>healthcare commitment</td><td>3.1.4.3</td><td>Governance</td></tr>
+            <tr><td>healthcare communication</td><td>3.1.3.11</td><td>Process</td></tr>
+            <tr><td>healthcare data</td><td>3.1.5.3</td><td>Information</td></tr>
+            <tr><td>healthcare documentation</td><td>3.1.3.12</td><td>Process</td></tr>
+            <tr><td>healthcare goals</td><td>3.1.3.15</td><td>Process</td></tr>
+            <tr><td>healthcare information</td><td>3.1.5.2</td><td>Information</td></tr>
+            <tr><td>healthcare investigation</td><td>3.1.3.3</td><td>Process</td></tr>
+            <tr><td>healthcare mandate</td><td>3.1.4.1</td><td>Governance</td></tr>
+            <tr><td>healthcare needs assessment</td><td>3.1.3.9</td><td>Process</td></tr>
+            <tr><td>healthcare personnel</td><td>3.1.1.5</td><td>Healthcare Actor</td></tr>
+            <tr><td>healthcare process evaluation</td><td>3.1.3.13</td><td>Process</td></tr>
+            <tr><td>healthcare professional</td><td>3.1.1.4</td><td>Healthcare Actor</td></tr>
+            <tr><td>healthcare provider</td><td>3.1.1.3</td><td>Healthcare Actor</td></tr>
+            <tr><td>healthcare supporting organization</td><td>3.1.1.8</td><td>Healthcare Actor</td></tr>
+            <tr><td>informed consent</td><td>3.1.4.4</td><td>Governance</td></tr>
+            <tr><td>input health state</td><td>3.1.2.2</td><td>Health State</td></tr>
+            <tr><td>medical device</td><td>3.1.3.16</td><td>Process/Technology</td></tr>
+            <tr><td>metadata</td><td>3.1.5.4</td><td>Information</td></tr>
+            <tr><td>non-ratified healthcare information</td><td>3.1.5.5</td><td>Information</td></tr>
+            <tr><td>observed condition</td><td>3.1.2.5</td><td>Health State</td></tr>
+            <tr><td>outcome evaluation</td><td>3.1.3.14</td><td>Process</td></tr>
+            <tr><td>output health state</td><td>3.1.2.3</td><td>Health State</td></tr>
+            <tr><td>potential health condition</td><td>3.1.2.6</td><td>Health State</td></tr>
+            <tr><td>professionally assessed condition</td><td>3.1.2.10</td><td>Health State</td></tr>
+            <tr><td>referral</td><td>3.1.3.10</td><td>Process</td></tr>
+            <tr><td>responsibility transfer</td><td>3.1.4.8</td><td>Governance</td></tr>
+            <tr><td>risk condition</td><td>3.1.2.8</td><td>Health State</td></tr>
+            <tr><td>screening process instance</td><td>3.1.3.8</td><td>Process</td></tr>
+            <tr><td>subject of care</td><td>3.1.1.2</td><td>Healthcare Actor</td></tr>
+            <tr><td>subject of care proxy</td><td>3.1.1.7</td><td>Healthcare Actor</td></tr>
+        </tbody>
+    </table>
+
+    <hr style="margin: 50px 0; border: none; border-top: 2px solid #000;">
+    <p style="text-align: center; color: #666; font-style: italic;">
+        End of Module B: Terminology & Definitions<br>
+        IEEE P3493.1 Standard Usecase for Cancer Screening
+    </p>
+</body>
+</html>
