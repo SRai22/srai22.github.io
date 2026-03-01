@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Person-Following Robot — Shravan S Rai</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="nav-left">
+                <a href="../" style="text-decoration:none"><div class="logo">Shravan S Rai</div></a>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../">Home</a></li>
+                <li><a href="../#experience">Experience</a></li>
+                <li><a href="./index.html">All Projects</a></li>
+                <li><a href="../#publications">Publications</a></li>
+                <li><a href="../#contact">Contact</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </header>
+
+    <section class="project-page-hero">
+        <div class="hero-bg">
+            <div class="circuit-line"></div>
+            <div class="circuit-line"></div>
+        </div>
+        <div class="container">
+            <a href="./index.html" class="back-btn"><i class="fas fa-arrow-left"></i> All Projects</a>
+            <div class="breadcrumb">
+                <a href="../">Home</a> <span>/</span> <a href="./index.html">Projects</a> <span>/</span> Person-Following Robot
+            </div>
+            <div class="project-page-badges">
+                <span class="badge badge-production">Production</span>
+            </div>
+            <h1>Person-Following System for Tele-Presence Robot</h1>
+            <p class="project-tagline">Real-time person detection, tracking, and re-identification integrated into a commercial telepresence robot — maintaining 1.2m following distance at production scale</p>
+            <div class="tech-tags">
+                <span class="tech-tag">TensorFlow Lite</span>
+                <span class="tech-tag">Person Re-identification</span>
+                <span class="tech-tag">Depth Sensors</span>
+                <span class="tech-tag">ROS</span>
+                <span class="tech-tag">C++</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Edge Computer Vision</span>
+                <span class="tech-tag">Autonomous Navigation</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="project-page-content">
+        <div class="container">
+            <div class="project-layout">
+                <div class="project-main">
+                    <div class="project-section">
+                        <h2><i class="fas fa-info-circle"></i> Overview</h2>
+                        <p>Crafted a state-of-the-art person-following system for Teladoc Health's commercial tele-presence robot. The system was integrated into the existing autonomous navigation stack, enabling the robot to autonomously follow a designated person through hospital environments while avoiding obstacles and maintaining safe distance.</p>
+                        <p>The system was deployed as a production feature in a commercial product used in hospital environments across the United States, making the engineering constraints around reliability, latency, and robustness non-negotiable.</p>
+                    </div>
+
+                    <div class="project-section">
+                        <h2><i class="fas fa-exclamation-triangle"></i> The Challenge</h2>
+                        <p>Person following in real hospital environments is significantly harder than lab conditions. Challenges include: crowded corridors with many people present, frequent occlusions as the target passes doorways and corners, varied lighting conditions across different hospital zones, and the need to distinguish the target person from other hospital staff wearing similar attire.</p>
+                        <p>The system also needed to integrate seamlessly with the existing navigation stack without degrading obstacle avoidance performance — the robot had to follow its target while still safely navigating around patients, carts, and other obstacles. All inference had to run in real-time on onboard compute without a dedicated GPU.</p>
+                    </div>
+
+                    <div class="project-section">
+                        <h2><i class="fas fa-cogs"></i> Technical Approach</h2>
+                        <ul>
+                            <li><span class="highlight-text">Real-time person detection</span> using edge-optimized computer vision models with TensorFlow Lite (TFLite) for efficient onboard inference</li>
+                            <li><span class="highlight-text">Depth camera integration</span> for 3D person position estimation, enabling precise distance control independent of camera zoom or image scale</li>
+                            <li><span class="highlight-text">Person re-identification (ReID) system</span> to recover tracking after occlusions — when the target disappears behind a corner or door, the system re-acquires the correct person upon reappearance</li>
+                            <li><span class="highlight-text">Target person lock-on</span> at initial selection, maintained robustly through crowd and occlusion scenarios using appearance features</li>
+                            <li><span class="highlight-text">1.2-meter following distance</span> maintained continuously using depth-based control loop integrated with the navigation stack</li>
+                            <li><span class="highlight-text">Tight integration</span> with the autonomous navigation stack for simultaneous obstacle avoidance and person following without performance degradation</li>
+                            <li><span class="highlight-text">Real-time performance</span> on onboard compute without GPU acceleration — optimized model architecture and inference pipeline for edge deployment</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-section">
+                        <h2><i class="fas fa-chart-bar"></i> Key Outcomes</h2>
+                        <div class="outcomes-grid">
+                            <div class="outcome-box">
+                                <span class="outcome-number">1.2m</span>
+                                <span class="outcome-label">Maintained Continuously</span>
+                            </div>
+                            <div class="outcome-box">
+                                <span class="outcome-number">Real-time</span>
+                                <span class="outcome-label">Edge Device (No GPU)</span>
+                            </div>
+                            <div class="outcome-box">
+                                <span class="outcome-number">Commercial</span>
+                                <span class="outcome-label">Production Product</span>
+                            </div>
+                            <div class="outcome-box">
+                                <span class="outcome-number">Detection + ReID</span>
+                                <span class="outcome-label">+ Depth Tracking</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-sidebar">
+                    <div class="sidebar-card">
+                        <h3>Project Info</h3>
+                        <div class="sidebar-info-item">
+                            <span class="sidebar-label">Status</span>
+                            <span class="sidebar-value">Production (Commercial Product)</span>
+                        </div>
+                        <div class="sidebar-info-item">
+                            <span class="sidebar-label">Year</span>
+                            <span class="sidebar-value">2020–2021</span>
+                        </div>
+                        <div class="sidebar-info-item">
+                            <span class="sidebar-label">Organization</span>
+                            <span class="sidebar-value">Teladoc Health</span>
+                        </div>
+                        <div class="sidebar-info-item">
+                            <span class="sidebar-label">Role</span>
+                            <span class="sidebar-value">Robotics Research Intern</span>
+                        </div>
+                        <div class="sidebar-info-item">
+                            <span class="sidebar-label">Hardware</span>
+                            <span class="sidebar-value">Onboard Edge Compute</span>
+                        </div>
+                        <div class="sidebar-info-item">
+                            <span class="sidebar-label">Category</span>
+                            <span class="sidebar-value">Robotics / Computer Vision</span>
+                        </div>
+                    </div>
+                    <div class="sidebar-card">
+                        <h3>Tech Stack</h3>
+                        <div class="tech-stack-grid">
+                            <span class="tech-tag">TensorFlow Lite</span>
+                            <span class="tech-tag">Person Re-identification</span>
+                            <span class="tech-tag">Depth Sensors</span>
+                            <span class="tech-tag">ROS</span>
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Edge Computer Vision</span>
+                            <span class="tech-tag">Autonomous Navigation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="related-projects">
+        <div class="container">
+            <h2 class="section-title">Related Projects</h2>
+            <div class="related-projects-grid">
+                <a href="icra-barn-challenge.html" class="related-card">
+                    <span class="related-card-icon">🏆</span>
+                    <h4>ICRA BARN Challenge</h4>
+                    <p>AMR navigation 3rd place global</p>
+                </a>
+                <a href="greenhouse-cobot.html" class="related-card">
+                    <span class="related-card-icon">🌱</span>
+                    <h4>Greenhouse Cobot</h4>
+                    <p>Human detection for agricultural robot</p>
+                </a>
+                <a href="virtual-sitter.html" class="related-card">
+                    <span class="related-card-icon">🏥</span>
+                    <h4>Virtual Sitter AI</h4>
+                    <p>Computer vision patient safety system</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Shravan S Rai &nbsp;|&nbsp; <a href="../" style="color:#00d4ff;text-decoration:none">← Back to Portfolio</a></p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('open');
+        });
+        window.addEventListener('scroll', () => {
+            document.querySelector('header').style.background = window.scrollY > 100 ? 'rgba(8,8,18,0.99)' : 'rgba(10,10,20,0.95)';
+        });
+    </script>
+</body>
+</html>

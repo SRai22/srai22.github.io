@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Hospital Room Voice AI Assistant — Shravan S Rai</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="nav-left">
+                <a href="../" style="text-decoration:none"><div class="logo">Shravan S Rai</div></a>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../">Home</a></li>
+                <li><a href="../#experience">Experience</a></li>
+                <li><a href="./index.html">All Projects</a></li>
+                <li><a href="../#publications">Publications</a></li>
+                <li><a href="../#contact">Contact</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </header>
+
+    <section class="project-page-hero">
+        <div class="hero-bg">
+            <div class="circuit-line"></div>
+            <div class="circuit-line"></div>
+        </div>
+        <div class="container">
+            <a href="./index.html" class="back-btn"><i class="fas fa-arrow-left"></i> All Projects</a>
+            <div class="breadcrumb">
+                <a href="../">Home</a> <span>/</span> <a href="./index.html">Projects</a> <span>/</span> Smart Room Voice Assistant
+            </div>
+            <div class="project-page-badges">
+                <span class="badge badge-production">Production</span>
+            </div>
+            <h1>Smart Hospital Room Voice AI Assistant</h1>
+            <p class="project-tagline">Always-on Whisper + BERT on edge devices for ambient listening — enabling voice-triggered nurse calls and real-time staff safety alerts</p>
+            <div class="tech-tags">
+                <span class="tech-tag">Whisper</span>
+                <span class="tech-tag">BERT</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Edge AI</span>
+                <span class="tech-tag">NLP</span>
+                <span class="tech-tag">Audio Processing</span>
+                <span class="tech-tag">On-device Inference</span>
+                <span class="tech-tag">Speech Recognition</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="project-page-content">
+        <div class="container">
+            <div class="project-layout">
+                <div class="project-main">
+                    <div class="project-section">
+                        <h2><i class="fas fa-info-circle"></i> Overview</h2>
+                        <p>Developed a real-time voice assistant for smart hospital rooms using Whisper and BERT running entirely on edge devices. The system provides ambient listening that detects verbal distress from patients and enables voice-triggered nurse calls — while ensuring complete audio privacy since no audio ever leaves the room. This always-on intelligence layer augments caregiving capacity without requiring additional staff, and gives patients a natural, spoken interface to reach their care team instantly.</p>
+                    </div>
+
+                    <div class="project-section">
+                        <h2><i class="fas fa-exclamation-triangle"></i> The Challenge</h2>
+                        <p>Hospital rooms need always-on intelligence without constant manual monitoring. Cloud-based voice processing introduces unacceptable latency and privacy risks in healthcare — patient audio sent to remote servers is a compliance liability and a patient trust issue. The system needed to run entirely locally, detect specific verbal cues accurately in noisy hospital environments (with medical equipment hum, ambient hallway noise, and overlapping voices), and integrate seamlessly with existing nurse call infrastructure. The challenge of running continuous, accurate speech recognition on resource-constrained edge hardware without cloud assistance required significant optimization work.</p>
+                    </div>
+
+                    <div class="project-section">
+                        <h2><i class="fas fa-cogs"></i> Technical Approach</h2>
+                        <ul>
+                            <li><span class="highlight-text">Whisper (OpenAI)</span> for continuous on-device speech recognition — optimized for low-latency, always-on processing without cloud upload</li>
+                            <li><span class="highlight-text">BERT-based intent classifier</span> for keyword and phrase detection, distinguishing meaningful clinical utterances from ambient conversation</li>
+                            <li><span class="highlight-text">Local inference pipeline</span> with no cloud audio upload — all speech data processed and discarded on-device</li>
+                            <li><span class="highlight-text">Detection categories</span> including patient distress calls, verbal abuse toward staff, specific patient request phrases, and emergency keywords</li>
+                            <li><span class="highlight-text">Always-on low-power listening mode</span> using voice activity detection to trigger full inference only when speech is present</li>
+                            <li><span class="highlight-text">Integration triggers</span> wired into nurse call system and staff alert notification infrastructure for immediate escalation</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-section">
+                        <h2><i class="fas fa-chart-bar"></i> Key Outcomes</h2>
+                        <div class="outcomes-grid">
+                            <div class="outcome-box">
+                                <span class="outcome-number">On-device</span>
+                                <span class="outcome-label">Latency</span>
+                            </div>
+                            <div class="outcome-box">
+                                <span class="outcome-number">Zero cloud audio</span>
+                                <span class="outcome-label">Privacy</span>
+                            </div>
+                            <div class="outcome-box">
+                                <span class="outcome-number">Keywords &amp; Intent</span>
+                                <span class="outcome-label">Detection</span>
+                            </div>
+                            <div class="outcome-box">
+                                <span class="outcome-number">Staff + Patient</span>
+                                <span class="outcome-label">Safety</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-sidebar">
+                    <div class="sidebar-card">
+                        <h3>Project Info</h3>
+                        <div class="sidebar-info-item">
+                            <span class="sidebar-label">Status</span>
+                            <span class="sidebar-value project-status published">Production</span>
+                        </div>
+                        <div class="sidebar-info-item">
+                            <span class="sidebar-label">Year</span>
+                            <span class="sidebar-value">2024 – Present</span>
+                        </div>
+                        <div class="sidebar-info-item">
+                            <span class="sidebar-label">Organization</span>
+                            <span class="sidebar-value">Teladoc Health</span>
+                        </div>
+                        <div class="sidebar-info-item">
+                            <span class="sidebar-label">Hardware</span>
+                            <span class="sidebar-value">Edge Device</span>
+                        </div>
+                        <div class="sidebar-info-item">
+                            <span class="sidebar-label">Models</span>
+                            <span class="sidebar-value">Whisper + BERT</span>
+                        </div>
+                        <div class="sidebar-info-item">
+                            <span class="sidebar-label">Category</span>
+                            <span class="sidebar-value">Healthcare AI</span>
+                        </div>
+                    </div>
+                    <div class="sidebar-card">
+                        <h3>Tech Stack</h3>
+                        <div class="tech-stack-grid">
+                            <span class="tech-tag">Whisper</span>
+                            <span class="tech-tag">BERT</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Edge AI</span>
+                            <span class="tech-tag">NLP</span>
+                            <span class="tech-tag">Audio Processing</span>
+                            <span class="tech-tag">On-device Inference</span>
+                            <span class="tech-tag">Speech Recognition</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="related-projects">
+        <div class="container">
+            <h2 class="section-title">Related Projects</h2>
+            <div class="related-projects-grid">
+                <a href="virtual-sitter.html" class="related-card">
+                    <span class="related-card-icon">🏥</span>
+                    <h4>Virtual Sitter AI</h4>
+                    <p>Computer vision patient safety system — real-time fall risk detection deployed across US hospital systems</p>
+                </a>
+                <a href="hospital-frontdesk-ai.html" class="related-card">
+                    <span class="related-card-icon">🤖</span>
+                    <h4>Hospital Front-Desk AI</h4>
+                    <p>Fully offline edge conversational AI on NVIDIA Jetson — complete pipeline without any cloud dependency</p>
+                </a>
+                <a href="translator-voice-agent.html" class="related-card">
+                    <span class="related-card-icon">🌐</span>
+                    <h4>Translator Voice Agent</h4>
+                    <p>Real-time multilingual healthcare AI enabling live voice-to-voice translation in telehealth consultations</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Shravan S Rai &nbsp;|&nbsp; <a href="../" style="color:#00d4ff;text-decoration:none">← Back to Portfolio</a></p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('open');
+        });
+        window.addEventListener('scroll', () => {
+            document.querySelector('header').style.background = window.scrollY > 100 ? 'rgba(8,8,18,0.99)' : 'rgba(10,10,20,0.95)';
+        });
+    </script>
+</body>
+</html>

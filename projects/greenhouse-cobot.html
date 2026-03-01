@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greenhouse Cobot Perception — Shravan S Rai</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="nav-left">
+                <a href="../" style="text-decoration:none"><div class="logo">Shravan S Rai</div></a>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../">Home</a></li>
+                <li><a href="../#experience">Experience</a></li>
+                <li><a href="./index.html">All Projects</a></li>
+                <li><a href="../#publications">Publications</a></li>
+                <li><a href="../#contact">Contact</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </header>
+
+    <section class="project-page-hero">
+        <div class="hero-bg">
+            <div class="circuit-line"></div>
+            <div class="circuit-line"></div>
+        </div>
+        <div class="container">
+            <a href="./index.html" class="back-btn"><i class="fas fa-arrow-left"></i> All Projects</a>
+            <div class="breadcrumb">
+                <a href="../">Home</a> <span>/</span> <a href="./index.html">Projects</a> <span>/</span> Greenhouse Cobot Perception
+            </div>
+            <div class="project-page-badges">
+                <span class="badge badge-research">Research</span>
+            </div>
+            <h1>Human Pose &amp; Object Detection for Greenhouse Collaborative Robot</h1>
+            <p class="project-tagline">ROS2-based perception system enabling safe human-robot collaboration in agricultural greenhouse environments — TensorRT on NVIDIA Jetson TX2</p>
+            <div class="tech-tags">
+                <span class="tech-tag">ROS2</span>
+                <span class="tech-tag">C++</span>
+                <span class="tech-tag">TensorRT</span>
+                <span class="tech-tag">NVIDIA Jetson TX2</span>
+                <span class="tech-tag">Human Pose Detection</span>
+                <span class="tech-tag">Object Detection</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">ONNX</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="project-page-content">
+        <div class="container">
+            <div class="project-layout">
+                <div class="project-main">
+                    <div class="project-section">
+                        <h2><i class="fas fa-info-circle"></i> Overview</h2>
+                        <p>Collaborated with the University of Almería Robotics Lab (Spain) to develop perception systems for a collaborative robot (cobot) operating in greenhouse environments alongside human workers. The project built the real-time sensing foundation that enables a robot arm to safely operate near humans while performing agricultural tasks like fruit harvesting.</p>
+                        <p>The work addressed a core challenge in agricultural automation: how do you deploy a capable robotic arm in an environment shared with human workers, without requiring costly safety cages or extensive workspace separation? The answer is perception — giving the robot the ability to see and respond to human presence in real time.</p>
+                    </div>
+
+                    <div class="project-section">
+                        <h2><i class="fas fa-exclamation-triangle"></i> The Challenge</h2>
+                        <p>Agricultural robots operating near humans require perception systems that are simultaneously accurate, real-time, and reliable — a single failure in human proximity detection could cause injury. The challenge is compounded by the greenhouse environment itself: varying natural and artificial lighting throughout the day, partial occlusions from plant foliage, dust accumulation on lenses, and the visual complexity of the scene.</p>
+                        <p>The system also needed to run efficiently on the embedded NVIDIA Jetson TX2 hardware mounted on the robot — a constrained platform compared to a desktop GPU. TensorRT optimization was essential to meet latency requirements within the available compute budget.</p>
+                    </div>
+
+                    <div class="project-section">
+                        <h2><i class="fas fa-cogs"></i> Technical Approach</h2>
+                        <ul>
+                            <li><span class="highlight-text">Human pose detection ROS2 node</span> implemented in C++ for low-latency human proximity awareness — provides the robot arm control system with real-time human body position data</li>
+                            <li><span class="highlight-text">Fruit detection ROS2 node</span> in C++ for automated harvesting target identification — enables the robot to locate and approach fruit without manual guidance</li>
+                            <li><span class="highlight-text">TensorRT model optimization</span> for deployment on NVIDIA Jetson TX2 — models converted and optimized for maximum throughput on constrained embedded hardware</li>
+                            <li><span class="highlight-text">Real-time inference</span> achieving safe human detection latency on the Jetson TX2, meeting the timing requirements for safe collaborative operation</li>
+                            <li><span class="highlight-text">ROS2 node architecture</span> enabling modular integration with the existing robot arm control system — perception nodes publish to standard ROS2 topics consumed by motion planning</li>
+                            <li><span class="highlight-text">Safe proximity zones</span> defined based on detected human pose positions — robot arm automatically pauses or modifies trajectory when a worker enters a defined safety radius</li>
+                            <li><span class="highlight-text">Perception-driven automation</span>: fruit detection drives harvesting targets while human detection continuously monitors for safety override conditions</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-section">
+                        <h2><i class="fas fa-chart-bar"></i> Key Outcomes</h2>
+                        <div class="outcomes-grid">
+                            <div class="outcome-box">
+                                <span class="outcome-number">Jetson TX2</span>
+                                <span class="outcome-label">Embedded Hardware</span>
+                            </div>
+                            <div class="outcome-box">
+                                <span class="outcome-number">Real-time</span>
+                                <span class="outcome-label">TensorRT Optimized</span>
+                            </div>
+                            <div class="outcome-box">
+                                <span class="outcome-number">2 ROS2 Nodes</span>
+                                <span class="outcome-label">Human + Fruit Detection</span>
+                            </div>
+                            <div class="outcome-box">
+                                <span class="outcome-number">Human-aware</span>
+                                <span class="outcome-label">Safe Collaboration</span>
+                            </div>
+                        </div>
+
+                        <div class="note-box">
+                            <i class="fas fa-info-circle"></i>
+                            <p>This project was conducted in collaboration with the same team at the University of Almería whose MVSim simulation software was used in Teladoc's autonomous navigation development — a productive ongoing research relationship.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-sidebar">
+                    <div class="sidebar-card">
+                        <h3>Project Info</h3>
+                        <div class="sidebar-info-item">
+                            <span class="sidebar-label">Status</span>
+                            <span class="sidebar-value">Research</span>
+                        </div>
+                        <div class="sidebar-info-item">
+                            <span class="sidebar-label">Year</span>
+                            <span class="sidebar-value">2022–2023</span>
+                        </div>
+                        <div class="sidebar-info-item">
+                            <span class="sidebar-label">Collaboration</span>
+                            <span class="sidebar-value">University of Almería, Spain</span>
+                        </div>
+                        <div class="sidebar-info-item">
+                            <span class="sidebar-label">Hardware</span>
+                            <span class="sidebar-value">NVIDIA Jetson TX2</span>
+                        </div>
+                        <div class="sidebar-info-item">
+                            <span class="sidebar-label">Framework</span>
+                            <span class="sidebar-value">ROS2</span>
+                        </div>
+                        <div class="sidebar-info-item">
+                            <span class="sidebar-label">Category</span>
+                            <span class="sidebar-value">Robotics / Computer Vision</span>
+                        </div>
+                    </div>
+                    <div class="sidebar-card">
+                        <h3>Tech Stack</h3>
+                        <div class="tech-stack-grid">
+                            <span class="tech-tag">ROS2</span>
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">TensorRT</span>
+                            <span class="tech-tag">NVIDIA Jetson TX2</span>
+                            <span class="tech-tag">Human Pose Detection</span>
+                            <span class="tech-tag">Object Detection</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">ONNX</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="related-projects">
+        <div class="container">
+            <h2 class="section-title">Related Projects</h2>
+            <div class="related-projects-grid">
+                <a href="person-following-robot.html" class="related-card">
+                    <span class="related-card-icon">🚶</span>
+                    <h4>Person-Following Robot</h4>
+                    <p>Real-time person tracking and ReID</p>
+                </a>
+                <a href="icra-barn-challenge.html" class="related-card">
+                    <span class="related-card-icon">🏆</span>
+                    <h4>ICRA BARN Challenge</h4>
+                    <p>AMR navigation competition</p>
+                </a>
+                <a href="mrpt-ros.html" class="related-card">
+                    <span class="related-card-icon">⚡</span>
+                    <h4>MRPT ROS Package</h4>
+                    <p>Open-source SLAM and navigation contributions</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Shravan S Rai &nbsp;|&nbsp; <a href="../" style="color:#00d4ff;text-decoration:none">← Back to Portfolio</a></p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('open');
+        });
+        window.addEventListener('scroll', () => {
+            document.querySelector('header').style.background = window.scrollY > 100 ? 'rgba(8,8,18,0.99)' : 'rgba(10,10,20,0.95)';
+        });
+    </script>
+</body>
+</html>

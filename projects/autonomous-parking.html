@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autonomous Parking Controller — Shravan S Rai</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="nav-left">
+                <a href="../" style="text-decoration:none"><div class="logo">Shravan S Rai</div></a>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../">Home</a></li>
+                <li><a href="../#experience">Experience</a></li>
+                <li><a href="./index.html">All Projects</a></li>
+                <li><a href="../#publications">Publications</a></li>
+                <li><a href="../#contact">Contact</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </header>
+
+    <section class="project-page-hero">
+        <div class="hero-bg">
+            <div class="circuit-line"></div>
+            <div class="circuit-line"></div>
+        </div>
+        <div class="container">
+            <a href="./index.html" class="back-btn"><i class="fas fa-arrow-left"></i> All Projects</a>
+            <div class="breadcrumb">
+                <a href="../">Home</a> <span>/</span> <a href="./index.html">Projects</a> <span>/</span> Autonomous Parking
+            </div>
+            <div class="project-page-badges">
+                <span class="badge badge-research">Research</span>
+            </div>
+            <h1>Autonomous Parallel Parking Controller — Self-Driving Car</h1>
+            <p class="project-tagline">Three-controller comparison study for autonomous parallel parking — modified Sliding Mode Controller achieves 21% performance improvement over baseline</p>
+            <div class="tech-tags">
+                <span class="tech-tag">MATLAB</span>
+                <span class="tech-tag">Simulink</span>
+                <span class="tech-tag">CarSim</span>
+                <span class="tech-tag">Feedback Linearization</span>
+                <span class="tech-tag">LQR</span>
+                <span class="tech-tag">Sliding Mode Control</span>
+                <span class="tech-tag">Nonlinear Control</span>
+                <span class="tech-tag">Vehicle Dynamics</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="project-page-content">
+        <div class="container">
+            <div class="project-layout">
+                <div class="project-main">
+                    <div class="project-section">
+                        <h2><i class="fas fa-info-circle"></i> Overview</h2>
+                        <p>Designed and compared three control strategies for autonomous parallel parking: Feedback Linearization, LQR (Linear Quadratic Regulator), and Sliding Mode Control. The modified Sliding Mode Controller (with chattering reduction) achieved a 21% performance improvement over the baseline, validated in MATLAB–CarSim co-simulation with realistic vehicle dynamics.</p>
+                        <p>The study provides a systematic, quantitative comparison of classical and modern control approaches applied to a real autonomous driving task, contributing insight into which controller properties matter most for tight geometric maneuvers like parallel parking.</p>
+                    </div>
+
+                    <div class="project-section">
+                        <h2><i class="fas fa-exclamation-triangle"></i> The Challenge</h2>
+                        <p>Parallel parking is a challenging autonomous driving task — it requires precise path following in tight spaces with hard geometric constraints. The parking slot dimensions allow little margin for error, and the reverse maneuver requires accurate lateral and longitudinal control simultaneously. Controller design must balance tracking accuracy, smoothness (chattering in SMC is a well-known problem), and robustness to disturbances.</p>
+                        <p>Standard controllers often fail to satisfy all constraints simultaneously: Feedback Linearization requires an accurate dynamic model, LQR is optimal only near the linearization point, and standard SMC produces chattering that causes mechanical wear and passenger discomfort. These limitations motivated a comparative study that also explored modifications to address the chattering problem.</p>
+                    </div>
+
+                    <div class="project-section">
+                        <h2><i class="fas fa-cogs"></i> Technical Approach</h2>
+                        <ul>
+                            <li><span class="highlight-text">Feedback Linearization controller</span>: exact linearization of the nonlinear vehicle kinematic model, transforming the parking path-following problem into a linear control design task</li>
+                            <li><span class="highlight-text">LQR controller</span>: optimal linear controller minimizing a quadratic cost function on state deviation and control input — balances tracking accuracy against control effort</li>
+                            <li><span class="highlight-text">Sliding Mode Controller (SMC)</span>: robust nonlinear controller with guaranteed finite-time convergence to the sliding surface, providing strong disturbance rejection at the cost of chattering</li>
+                            <li><span class="highlight-text">Modified SMC with boundary layer</span>: chattering reduction via a smooth saturation function replacing the discontinuous sign function, improving practical smoothness while retaining robustness</li>
+                            <li><span class="highlight-text">MATLAB–CarSim co-simulation</span>: MATLAB/Simulink controller driving the CarSim vehicle dynamics model for realistic validation — CarSim provides high-fidelity tire and suspension models beyond simple kinematic models</li>
+                            <li><span class="highlight-text">Performance metrics</span>: path tracking RMS error, maneuver execution time, control input smoothness, and robustness to initial position perturbations</li>
+                            <li><span class="highlight-text">21% performance improvement</span> measured for the modified SMC versus the unmodified SMC baseline, quantified across the full set of performance metrics</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-section">
+                        <h2><i class="fas fa-chart-bar"></i> Key Outcomes</h2>
+                        <div class="outcomes-grid">
+                            <div class="outcome-box">
+                                <span class="outcome-number">21%</span>
+                                <span class="outcome-label">Over Baseline Controller</span>
+                            </div>
+                            <div class="outcome-box">
+                                <span class="outcome-number">3</span>
+                                <span class="outcome-label">Compared (FL, LQR, SMC)</span>
+                            </div>
+                            <div class="outcome-box">
+                                <span class="outcome-number">MATLAB + CarSim</span>
+                                <span class="outcome-label">Co-simulation</span>
+                            </div>
+                            <div class="outcome-box">
+                                <span class="outcome-number">Chattering Eliminated</span>
+                                <span class="outcome-label">Modified SMC</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-sidebar">
+                    <div class="sidebar-card">
+                        <h3>Project Info</h3>
+                        <div class="sidebar-info-item">
+                            <span class="sidebar-label">Status</span>
+                            <span class="sidebar-value">Research</span>
+                        </div>
+                        <div class="sidebar-info-item">
+                            <span class="sidebar-label">Year</span>
+                            <span class="sidebar-value">2019–2021</span>
+                        </div>
+                        <div class="sidebar-info-item">
+                            <span class="sidebar-label">Institution</span>
+                            <span class="sidebar-value">Arizona State University</span>
+                        </div>
+                        <div class="sidebar-info-item">
+                            <span class="sidebar-label">Simulation</span>
+                            <span class="sidebar-value">MATLAB–CarSim</span>
+                        </div>
+                        <div class="sidebar-info-item">
+                            <span class="sidebar-label">Techniques</span>
+                            <span class="sidebar-value">Feedback Linearization, LQR, SMC</span>
+                        </div>
+                        <div class="sidebar-info-item">
+                            <span class="sidebar-label">Category</span>
+                            <span class="sidebar-value">Control Systems / Autonomous Vehicles</span>
+                        </div>
+                    </div>
+                    <div class="sidebar-card">
+                        <h3>Tech Stack</h3>
+                        <div class="tech-stack-grid">
+                            <span class="tech-tag">MATLAB</span>
+                            <span class="tech-tag">Simulink</span>
+                            <span class="tech-tag">CarSim</span>
+                            <span class="tech-tag">Feedback Linearization</span>
+                            <span class="tech-tag">LQR</span>
+                            <span class="tech-tag">Sliding Mode Control</span>
+                            <span class="tech-tag">Nonlinear Control</span>
+                            <span class="tech-tag">Vehicle Dynamics</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="related-projects">
+        <div class="container">
+            <h2 class="section-title">Related Projects</h2>
+            <div class="related-projects-grid">
+                <a href="reinforcement-learning-nav.html" class="related-card">
+                    <span class="related-card-icon">🧠</span>
+                    <h4>RL Obstacle Avoidance</h4>
+                    <p>DDPG-based mobile robot navigation</p>
+                </a>
+                <a href="icra-barn-challenge.html" class="related-card">
+                    <span class="related-card-icon">🏆</span>
+                    <h4>ICRA BARN Challenge</h4>
+                    <p>AMR navigation competition</p>
+                </a>
+                <a href="person-following-robot.html" class="related-card">
+                    <span class="related-card-icon">🚶</span>
+                    <h4>Person-Following Robot</h4>
+                    <p>Real-time person tracking</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Shravan S Rai &nbsp;|&nbsp; <a href="../" style="color:#00d4ff;text-decoration:none">← Back to Portfolio</a></p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('open');
+        });
+        window.addEventListener('scroll', () => {
+            document.querySelector('header').style.background = window.scrollY > 100 ? 'rgba(8,8,18,0.99)' : 'rgba(10,10,20,0.95)';
+        });
+    </script>
+</body>
+</html>

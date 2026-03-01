@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Services Assistant — Shravan S Rai</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="nav-left">
+                <a href="../" style="text-decoration:none"><div class="logo">Shravan S Rai</div></a>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../">Home</a></li>
+                <li><a href="../#experience">Experience</a></li>
+                <li><a href="./index.html">All Projects</a></li>
+                <li><a href="../#publications">Publications</a></li>
+                <li><a href="../#contact">Contact</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </header>
+
+    <section class="project-page-hero">
+        <div class="hero-bg">
+            <div class="circuit-line"></div>
+            <div class="circuit-line"></div>
+        </div>
+        <div class="container">
+            <a href="./index.html" class="back-btn"><i class="fas fa-arrow-left"></i> All Projects</a>
+            <div class="breadcrumb">
+                <a href="../">Home</a> <span>/</span> <a href="./index.html">Projects</a> <span>/</span> Student Services Assistant
+            </div>
+            <div class="project-page-badges">
+                <span class="badge badge-production">Production</span>
+            </div>
+            <h1>Student Services Assistant — Human-in-the-Loop AI</h1>
+            <p class="project-tagline">Secure AI-assisted SPA converting free-text student requests into structured, staff-reviewed service tickets &mdash; responsible AI with humans in the loop</p>
+            <div class="tech-tags">
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">SPA</span>
+                <span class="tech-tag">AI/NLP</span>
+                <span class="tech-tag">Natural Language Processing</span>
+                <span class="tech-tag">Human-in-the-loop AI</span>
+                <span class="tech-tag">REST API</span>
+                <span class="tech-tag">Authentication</span>
+                <span class="tech-tag">Role-based Access</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="project-page-content">
+        <div class="container">
+            <div class="project-layout">
+                <div class="project-main">
+                    <div class="project-section">
+                        <h2><i class="fas fa-info-circle"></i> Overview</h2>
+                        <p>Built a secure, AI-assisted single-page application for universities that converts unstructured free-text student requests into structured, actionable service tickets reviewed by staff before any action is taken. The system is designed on the principle that AI should augment human judgment, not replace it &mdash; especially in high-stakes institutional contexts.</p>
+                    </div>
+                    <div class="project-section">
+                        <h2><i class="fas fa-exclamation-triangle"></i> The Challenge</h2>
+                        <p>University service desks deal with thousands of unstructured student requests: financial aid questions, housing disputes, transcript requests, registration issues. Staff spend significant time deciphering what students actually need before they can help. Fully automated chatbots lack accountability and miss nuance. The challenge was to capture AI's language understanding capability while keeping the human firmly in the decision loop.</p>
+                    </div>
+                    <div class="project-section">
+                        <h2><i class="fas fa-cogs"></i> Technical Approach</h2>
+                        <ul>
+                            <li>AI-powered NLP layer to parse free-text student requests into structured categories and sub-categories</li>
+                            <li>Ticket generation: extracts entity information (student ID, course, issue type) automatically</li>
+                            <li>Staff review queue: all AI-generated tickets require human review before action</li>
+                            <li>Human-in-the-loop design: AI handles classification and structuring, staff handle decisions</li>
+                            <li>Secure SPA architecture: authentication, role-based access, audit logging</li>
+                            <li>Designed for operational efficiency: faster intake, clearer requests, better staff focus on solutions</li>
+                            <li>No autonomous chatbot responses &mdash; no AI-generated answers sent to students directly</li>
+                        </ul>
+                    </div>
+                    <div class="project-section">
+                        <h2><i class="fas fa-chart-bar"></i> Key Outcomes</h2>
+                        <div class="outcomes-grid">
+                            <div class="outcome-box">
+                                <span class="outcome-number">Human-in-loop</span>
+                                <span class="outcome-label">Responsible AI</span>
+                            </div>
+                            <div class="outcome-box">
+                                <span class="outcome-number">Structured</span>
+                                <span class="outcome-label">From Free-Text</span>
+                            </div>
+                            <div class="outcome-box">
+                                <span class="outcome-number">Staff Review</span>
+                                <span class="outcome-label">Before Any Action</span>
+                            </div>
+                            <div class="outcome-box">
+                                <span class="outcome-number">University-scale</span>
+                                <span class="outcome-label">Institutional AI</span>
+                            </div>
+                        </div>
+                        <div class="note-box">
+                            <strong>Note:</strong> This project demonstrates that responsible AI deployment doesn't mean avoiding AI &mdash; it means designing systems where AI handles what it's good at (pattern recognition, classification, structuring) while humans retain authority over decisions that affect people's lives.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-sidebar">
+                    <div class="sidebar-card">
+                        <h3>Project Info</h3>
+                        <div class="sidebar-info-item">
+                            <span class="sidebar-label">Status</span>
+                            <span class="sidebar-value">Production</span>
+                        </div>
+                        <div class="sidebar-info-item">
+                            <span class="sidebar-label">Category</span>
+                            <span class="sidebar-value">AI + Web</span>
+                        </div>
+                        <div class="sidebar-info-item">
+                            <span class="sidebar-label">Architecture</span>
+                            <span class="sidebar-value">SPA</span>
+                        </div>
+                        <div class="sidebar-info-item">
+                            <span class="sidebar-label">AI</span>
+                            <span class="sidebar-value">NLP / Classification</span>
+                        </div>
+                        <div class="sidebar-info-item">
+                            <span class="sidebar-label">Design Pattern</span>
+                            <span class="sidebar-value">Human-in-the-loop</span>
+                        </div>
+                        <div class="sidebar-info-item">
+                            <span class="sidebar-label">Sector</span>
+                            <span class="sidebar-value">Higher Education</span>
+                        </div>
+                        <div class="sidebar-info-item">
+                            <span class="sidebar-label">Access Control</span>
+                            <span class="sidebar-value">Role-based + Audit Logging</span>
+                        </div>
+                    </div>
+                    <div class="sidebar-card">
+                        <h3>Tech Stack</h3>
+                        <div class="tech-stack-grid">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">SPA</span>
+                            <span class="tech-tag">AI/NLP</span>
+                            <span class="tech-tag">Natural Language Processing</span>
+                            <span class="tech-tag">Human-in-the-loop AI</span>
+                            <span class="tech-tag">REST API</span>
+                            <span class="tech-tag">Authentication</span>
+                            <span class="tech-tag">Role-based Access</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="related-projects">
+        <div class="container">
+            <h2 class="section-title">Related Projects</h2>
+            <div class="related-projects-grid">
+                <a href="./bitescan.html" class="related-card">
+                    <span class="related-card-icon">&#127822;</span>
+                    <h4>BiteScan</h4>
+                    <p>AI nutrition assistant built in 48 hours for Teladoc hackathon.</p>
+                </a>
+                <a href="./ecommerce-platform.html" class="related-card">
+                    <span class="related-card-icon">&#128722;</span>
+                    <h4>E-Commerce Platform</h4>
+                    <p>Full-stack marketplace with JWT auth and role-based access.</p>
+                </a>
+                <a href="./ai-capabilities-demo.html" class="related-card">
+                    <span class="related-card-icon">&#128202;</span>
+                    <h4>AI Capabilities Demo</h4>
+                    <p>Enterprise AI demonstration platform for production sales.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Shravan S Rai &nbsp;|&nbsp; <a href="../" style="color:#00d4ff;text-decoration:none">&larr; Back to Portfolio</a></p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('open');
+        });
+        window.addEventListener('scroll', () => {
+            document.querySelector('header').style.background = window.scrollY > 100 ? 'rgba(8,8,18,0.99)' : 'rgba(10,10,20,0.95)';
+        });
+    </script>
+</body>
+</html>

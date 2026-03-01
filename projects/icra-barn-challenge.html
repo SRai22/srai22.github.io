@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICRA 2023 BARN Challenge — Shravan S Rai</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="nav-left">
+                <a href="../" style="text-decoration:none"><div class="logo">Shravan S Rai</div></a>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../">Home</a></li>
+                <li><a href="../#experience">Experience</a></li>
+                <li><a href="./index.html">All Projects</a></li>
+                <li><a href="../#publications">Publications</a></li>
+                <li><a href="../#contact">Contact</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </header>
+
+    <section class="project-page-hero">
+        <div class="hero-bg">
+            <div class="circuit-line"></div>
+            <div class="circuit-line"></div>
+        </div>
+        <div class="container">
+            <a href="./index.html" class="back-btn"><i class="fas fa-arrow-left"></i> All Projects</a>
+            <div class="breadcrumb">
+                <a href="../">Home</a> <span>/</span> <a href="./index.html">Projects</a> <span>/</span> ICRA BARN Challenge
+            </div>
+            <div class="project-page-badges">
+                <span class="badge badge-competition">3rd Place Global</span>
+                <span class="badge badge-published">Published</span>
+            </div>
+            <h1>ICRA 2023 BARN Challenge — 3rd Place Global</h1>
+            <p class="project-tagline">Autonomous mobile robot navigation in highly constrained, obstacle-dense environments — ranked 3rd globally in both simulation and real-world rounds</p>
+            <div class="tech-tags">
+                <span class="tech-tag">ROS</span>
+                <span class="tech-tag">ROS2</span>
+                <span class="tech-tag">C++</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Autonomous Navigation</span>
+                <span class="tech-tag">Path Planning</span>
+                <span class="tech-tag">A* Algorithm</span>
+                <span class="tech-tag">Gazebo Simulation</span>
+                <span class="tech-tag">Navigation Stack</span>
+                <span class="tech-tag">Parameter Optimization</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="project-page-content">
+        <div class="container">
+            <div class="project-layout">
+                <div class="project-main">
+                    <div class="project-section">
+                        <h2><i class="fas fa-info-circle"></i> Overview</h2>
+                        <p>Achieved 3rd place globally in both the simulation and real-world rounds of the ICRA 2023 BARN Challenge (Benchmark Autonomous Robot Navigation). The BARN challenge tests autonomous navigation in highly constrained environments — narrow corridors, cluttered spaces, and dense obstacle configurations that cause conventional navigation stacks to fail.</p>
+                        <p>Competing against teams from leading robotics institutions worldwide, the system successfully demonstrated robust navigation performance across all BARN benchmark environment categories, culminating in a published paper in the ICRA 2023 proceedings.</p>
+                    </div>
+
+                    <div class="project-section">
+                        <h2><i class="fas fa-exclamation-triangle"></i> The Challenge</h2>
+                        <p>The BARN benchmark is specifically designed to find the failure modes of autonomous navigation systems. Environments include extremely narrow passages (less than robot-width clearance), unpredictable obstacle layouts, and dead-end configurations. Many standard planners either fail to find paths or produce unsafe trajectories.</p>
+                        <p>The real-world round added hardware variability, sensor noise, and physical obstacles that simulation cannot fully replicate. The system had to perform reliably without any fine-tuning between the simulated and physical environments — a true test of generalization.</p>
+                    </div>
+
+                    <div class="project-section">
+                        <h2><i class="fas fa-cogs"></i> Technical Approach</h2>
+                        <ul>
+                            <li><span class="highlight-text">Full autonomous navigation stack</span> designed and tuned using ROS, C++, and Python for constraint-dense environments</li>
+                            <li><span class="highlight-text">Local and global planner optimization</span> with custom configurations targeting the BARN environment distribution's failure modes</li>
+                            <li><span class="highlight-text">Parameter optimization methodology</span> developed specifically to generalize across the full BARN environment distribution rather than overfitting to individual maps</li>
+                            <li><span class="highlight-text">Extensive simulation testing</span> in Gazebo across all BARN obstacle configuration categories including narrow corridors and cluttered layouts</li>
+                            <li><span class="highlight-text">Real-world validation</span> with a physical robot in cluttered test environments matching BARN specifications</li>
+                            <li><span class="highlight-text">Custom recovery behaviors</span> implemented for dead-end detection and narrow-passage negotiation scenarios</li>
+                            <li><span class="highlight-text">75% success rate</span> achieved in real-world obstacle-dense environments — a significant result given the difficulty of the BARN benchmark</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-section">
+                        <h2><i class="fas fa-chart-bar"></i> Key Outcomes</h2>
+                        <div class="outcomes-grid">
+                            <div class="outcome-box">
+                                <span class="outcome-number">3rd Global</span>
+                                <span class="outcome-label">Simulation Round</span>
+                            </div>
+                            <div class="outcome-box">
+                                <span class="outcome-number">3rd Global</span>
+                                <span class="outcome-label">Real-world Round</span>
+                            </div>
+                            <div class="outcome-box">
+                                <span class="outcome-number">75%</span>
+                                <span class="outcome-label">Real-world Environments</span>
+                            </div>
+                            <div class="outcome-box">
+                                <span class="outcome-number">ICRA 2023</span>
+                                <span class="outcome-label">Conference Paper</span>
+                            </div>
+                        </div>
+
+                        <div class="award-highlight">
+                            <i class="fas fa-trophy"></i>
+                            <p>Published in the ICRA 2023 proceedings: <strong>"Autonomous Ground Navigation in Highly Constrained Spaces: Lessons learned from the 2nd BARN Challenge at ICRA 2023"</strong></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-sidebar">
+                    <div class="sidebar-card">
+                        <h3>Project Info</h3>
+                        <div class="sidebar-info-item">
+                            <span class="sidebar-label">Status</span>
+                            <span class="sidebar-value">Competition Result + Published</span>
+                        </div>
+                        <div class="sidebar-info-item">
+                            <span class="sidebar-label">Year</span>
+                            <span class="sidebar-value">2023</span>
+                        </div>
+                        <div class="sidebar-info-item">
+                            <span class="sidebar-label">Organization</span>
+                            <span class="sidebar-value">Arizona State University / Teladoc Health</span>
+                        </div>
+                        <div class="sidebar-info-item">
+                            <span class="sidebar-label">Venue</span>
+                            <span class="sidebar-value">ICRA 2023</span>
+                        </div>
+                        <div class="sidebar-info-item">
+                            <span class="sidebar-label">Rank</span>
+                            <span class="sidebar-value">3rd Place Global</span>
+                        </div>
+                        <div class="sidebar-info-item">
+                            <span class="sidebar-label">Success Rate</span>
+                            <span class="sidebar-value">75% real-world</span>
+                        </div>
+                        <div class="sidebar-info-item">
+                            <span class="sidebar-label">Category</span>
+                            <span class="sidebar-value">Robotics</span>
+                        </div>
+                    </div>
+                    <div class="sidebar-card">
+                        <h3>Tech Stack</h3>
+                        <div class="tech-stack-grid">
+                            <span class="tech-tag">ROS</span>
+                            <span class="tech-tag">ROS2</span>
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Autonomous Navigation</span>
+                            <span class="tech-tag">Path Planning</span>
+                            <span class="tech-tag">A* Algorithm</span>
+                            <span class="tech-tag">Gazebo Simulation</span>
+                            <span class="tech-tag">Navigation Stack</span>
+                            <span class="tech-tag">Parameter Optimization</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="related-projects">
+        <div class="container">
+            <h2 class="section-title">Related Projects</h2>
+            <div class="related-projects-grid">
+                <a href="person-following-robot.html" class="related-card">
+                    <span class="related-card-icon">🚶</span>
+                    <h4>Person-Following Robot</h4>
+                    <p>Autonomous person tracking for telepresence</p>
+                </a>
+                <a href="greenhouse-cobot.html" class="related-card">
+                    <span class="related-card-icon">🌱</span>
+                    <h4>Greenhouse Cobot Perception</h4>
+                    <p>ROS2 human detection for agricultural robot</p>
+                </a>
+                <a href="mrpt-ros.html" class="related-card">
+                    <span class="related-card-icon">⚡</span>
+                    <h4>MRPT ROS Package</h4>
+                    <p>Open-source SLAM and navigation</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Shravan S Rai &nbsp;|&nbsp; <a href="../" style="color:#00d4ff;text-decoration:none">← Back to Portfolio</a></p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('open');
+        });
+        window.addEventListener('scroll', () => {
+            document.querySelector('header').style.background = window.scrollY > 100 ? 'rgba(8,8,18,0.99)' : 'rgba(10,10,20,0.95)';
+        });
+    </script>
+</body>
+</html>

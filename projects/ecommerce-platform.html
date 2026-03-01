@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Platform — Shravan S Rai</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="nav-left">
+                <a href="../" style="text-decoration:none"><div class="logo">Shravan S Rai</div></a>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../">Home</a></li>
+                <li><a href="../#experience">Experience</a></li>
+                <li><a href="./index.html">All Projects</a></li>
+                <li><a href="../#publications">Publications</a></li>
+                <li><a href="../#contact">Contact</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </header>
+
+    <section class="project-page-hero">
+        <div class="hero-bg">
+            <div class="circuit-line"></div>
+            <div class="circuit-line"></div>
+        </div>
+        <div class="container">
+            <a href="./index.html" class="back-btn"><i class="fas fa-arrow-left"></i> All Projects</a>
+            <div class="breadcrumb">
+                <a href="../">Home</a> <span>/</span> <a href="./index.html">Projects</a> <span>/</span> E-Commerce Platform
+            </div>
+            <div class="project-page-badges">
+                <span class="badge badge-production">Full-Stack</span>
+            </div>
+            <h1>Full-Stack E-Commerce Marketplace Platform</h1>
+            <p class="project-tagline">Vue.js 3 frontend + Node.js/Express backend with three-tier role system, JWT authentication, and complete order management</p>
+            <div class="tech-tags">
+                <span class="tech-tag">Vue.js 3</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Express</span>
+                <span class="tech-tag">JWT</span>
+                <span class="tech-tag">REST API</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Role-based Access Control</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="project-page-content">
+        <div class="container">
+            <div class="project-layout">
+                <div class="project-main">
+                    <div class="project-section">
+                        <h2><i class="fas fa-info-circle"></i> Overview</h2>
+                        <p>Built a full-stack e-commerce marketplace platform featuring a three-tier role system (Buyer, Seller, Admin), JWT-based authentication, and complete product and order lifecycle management. The platform supports multi-seller marketplace dynamics with role-appropriate views and permissions for each user type.</p>
+                    </div>
+                    <div class="project-section">
+                        <h2><i class="fas fa-exclamation-triangle"></i> The Challenge</h2>
+                        <p>E-commerce platforms must securely serve multiple stakeholder types with radically different interfaces and permissions &mdash; a buyer browsing products, a seller managing inventory and orders, and an admin overseeing the entire marketplace. Doing this with a clean, maintainable architecture requires careful design of the authentication system, API surface, and frontend state management.</p>
+                    </div>
+                    <div class="project-section">
+                        <h2><i class="fas fa-cogs"></i> Technical Approach</h2>
+                        <ul>
+                            <li>Vue.js 3 frontend with Composition API and reactive state management</li>
+                            <li>Node.js + Express REST API backend with modular route structure</li>
+                            <li>JWT-based authentication with role-encoded tokens and middleware enforcement</li>
+                            <li>Three-tier role system: Buyer (browse, cart, checkout), Seller (product management, order fulfillment), Admin (user management, platform oversight)</li>
+                            <li>Product management: create/edit/delete listings, image upload, inventory tracking</li>
+                            <li>Shopping cart with persistent session and checkout flow</li>
+                            <li>Order processing pipeline: placed &rarr; confirmed &rarr; shipped &rarr; delivered</li>
+                        </ul>
+                    </div>
+                    <div class="project-section">
+                        <h2><i class="fas fa-chart-bar"></i> Key Outcomes</h2>
+                        <div class="outcomes-grid">
+                            <div class="outcome-box">
+                                <span class="outcome-number">3-tier</span>
+                                <span class="outcome-label">Buyer / Seller / Admin</span>
+                            </div>
+                            <div class="outcome-box">
+                                <span class="outcome-number">JWT</span>
+                                <span class="outcome-label">Role-based Access Control</span>
+                            </div>
+                            <div class="outcome-box">
+                                <span class="outcome-number">Vue.js 3 + Node</span>
+                                <span class="outcome-label">Full-Stack SPA</span>
+                            </div>
+                            <div class="outcome-box">
+                                <span class="outcome-number">Full CRUD</span>
+                                <span class="outcome-label">Product + Orders</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-sidebar">
+                    <div class="sidebar-card">
+                        <h3>Project Info</h3>
+                        <div class="sidebar-info-item">
+                            <span class="sidebar-label">Status</span>
+                            <span class="sidebar-value">Full-Stack Project</span>
+                        </div>
+                        <div class="sidebar-info-item">
+                            <span class="sidebar-label">Category</span>
+                            <span class="sidebar-value">Web Development</span>
+                        </div>
+                        <div class="sidebar-info-item">
+                            <span class="sidebar-label">Frontend</span>
+                            <span class="sidebar-value">Vue.js 3</span>
+                        </div>
+                        <div class="sidebar-info-item">
+                            <span class="sidebar-label">Backend</span>
+                            <span class="sidebar-value">Node.js + Express</span>
+                        </div>
+                        <div class="sidebar-info-item">
+                            <span class="sidebar-label">Auth</span>
+                            <span class="sidebar-value">JWT</span>
+                        </div>
+                        <div class="sidebar-info-item">
+                            <span class="sidebar-label">Architecture</span>
+                            <span class="sidebar-value">REST API + SPA</span>
+                        </div>
+                        <div class="sidebar-info-item">
+                            <span class="sidebar-label">Roles</span>
+                            <span class="sidebar-value">Buyer / Seller / Admin</span>
+                        </div>
+                    </div>
+                    <div class="sidebar-card">
+                        <h3>Tech Stack</h3>
+                        <div class="tech-stack-grid">
+                            <span class="tech-tag">Vue.js 3</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Express</span>
+                            <span class="tech-tag">JWT</span>
+                            <span class="tech-tag">REST API</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">HTML/CSS</span>
+                            <span class="tech-tag">CRUD</span>
+                            <span class="tech-tag">Role-based Access Control</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="related-projects">
+        <div class="container">
+            <h2 class="section-title">Related Projects</h2>
+            <div class="related-projects-grid">
+                <a href="./splashes-swim-school.html" class="related-card">
+                    <span class="related-card-icon">&#127946;</span>
+                    <h4>Splashes Swim School</h4>
+                    <p>Production multi-location frontend for a swim school chain.</p>
+                </a>
+                <a href="./student-services-assistant.html" class="related-card">
+                    <span class="related-card-icon">&#127891;</span>
+                    <h4>Student Services Assistant</h4>
+                    <p>AI-powered university SPA with human-in-the-loop design.</p>
+                </a>
+                <a href="./bitescan.html" class="related-card">
+                    <span class="related-card-icon">&#127822;</span>
+                    <h4>BiteScan</h4>
+                    <p>AI chat nutrition app built in 48 hours.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Shravan S Rai &nbsp;|&nbsp; <a href="../" style="color:#00d4ff;text-decoration:none">&larr; Back to Portfolio</a></p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('open');
+        });
+        window.addEventListener('scroll', () => {
+            document.querySelector('header').style.background = window.scrollY > 100 ? 'rgba(8,8,18,0.99)' : 'rgba(10,10,20,0.95)';
+        });
+    </script>
+</body>
+</html>

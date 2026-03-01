@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="All projects by Shravan S Rai — AI, robotics, edge computing, and healthcare AI.">
+    <title>Projects — Shravan S Rai</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="nav-left">
+                <a href="../" style="text-decoration:none"><div class="logo">Shravan S Rai</div></a>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../">Home</a></li>
+                <li><a href="../#expertise">Expertise</a></li>
+                <li><a href="../#experience">Experience</a></li>
+                <li><a href="../#projects">Featured</a></li>
+                <li><a href="../#publications">Publications</a></li>
+                <li><a href="../#contact">Contact</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="project-page-hero">
+        <div class="hero-bg">
+            <div class="circuit-line"></div>
+            <div class="circuit-line"></div>
+        </div>
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../">Home</a> <span>/</span> Projects
+            </div>
+            <h1>All Projects</h1>
+            <p class="project-tagline">15 projects spanning healthcare AI, autonomous robotics, edge computing, and full-stack engineering.</p>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <div style="padding: 70px 0 100px;">
+        <div class="container">
+            <div class="all-projects-grid">
+
+                <!-- ── Healthcare AI ── -->
+                <div class="projects-category-label"><i class="fas fa-hospital" style="color:#00d4ff; margin-right:8px"></i>Healthcare AI</div>
+
+                <div class="project-card">
+                    <div class="project-image">🏥</div>
+                    <div class="project-content">
+                        <span class="project-status patent">Patent Pending</span>
+                        <h3>Virtual Sitter AI System</h3>
+                        <p>Production computer vision AI for hospital patient observation. Object detection + pose detection + real-time alerting deployed in US health systems.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Computer Vision</span>
+                            <span class="tech-tag">Edge AI</span>
+                            <span class="tech-tag">Healthcare</span>
+                        </div>
+                        <a href="virtual-sitter.html" class="project-link-btn">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">🔊</div>
+                    <div class="project-content">
+                        <span class="project-status">Production</span>
+                        <h3>Smart Room Voice Assistant</h3>
+                        <p>Real-time ambient voice AI using Whisper + BERT on edge devices. Enables voice-triggered nurse calls and detects staff safety threats.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Whisper</span>
+                            <span class="tech-tag">BERT</span>
+                            <span class="tech-tag">Edge AI</span>
+                        </div>
+                        <a href="smart-room-voice-assistant.html" class="project-link-btn">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">🌐</div>
+                    <div class="project-content">
+                        <span class="project-status">Production</span>
+                        <h3>Translator Voice Agent</h3>
+                        <p>Real-time bidirectional voice-to-voice translation for live telehealth consultations with clinical-grade latency.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Livekit</span>
+                            <span class="tech-tag">STT / TTS</span>
+                            <span class="tech-tag">WebRTC</span>
+                        </div>
+                        <a href="translator-voice-agent.html" class="project-link-btn">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">🤖</div>
+                    <div class="project-content">
+                        <span class="project-status">Edge AI</span>
+                        <h3>Hospital Front-Desk Voice AI</h3>
+                        <p>Fully offline conversational AI on NVIDIA Jetson AGX Orin — Faster-Whisper, Kokoro TTS, Ollama. Zero cloud dependency.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Jetson AGX Orin</span>
+                            <span class="tech-tag">Ollama</span>
+                            <span class="tech-tag">Livekit</span>
+                        </div>
+                        <a href="hospital-frontdesk-ai.html" class="project-link-btn">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">📊</div>
+                    <div class="project-content">
+                        <span class="project-status">Production</span>
+                        <h3>AI Capabilities Demo</h3>
+                        <p>Production web app showcasing AI for enterprise sales. Azure Speech + rPPG vital signs + voice biomarker detection.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Azure Speech</span>
+                            <span class="tech-tag">rPPG</span>
+                            <span class="tech-tag">Biomarkers</span>
+                        </div>
+                        <a href="ai-capabilities-demo.html" class="project-link-btn">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- ── Robotics & Autonomous Systems ── -->
+                <div class="projects-category-label"><i class="fas fa-robot" style="color:#00d4ff; margin-right:8px"></i>Robotics &amp; Autonomous Systems</div>
+
+                <div class="project-card">
+                    <div class="project-image">🏆</div>
+                    <div class="project-content">
+                        <span class="project-status published">3rd Place Global</span>
+                        <h3>ICRA BARN Challenge</h3>
+                        <p>3rd globally in both simulation and real-world rounds of the 2023 AMR navigation challenge. 75% success rate in dense obstacle environments.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">ROS2</span>
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">A* Planning</span>
+                        </div>
+                        <a href="icra-barn-challenge.html" class="project-link-btn">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">🚶</div>
+                    <div class="project-content">
+                        <span class="project-status">Production</span>
+                        <h3>Person-Following Robot</h3>
+                        <p>State-of-the-art person detection, tracking, and ReID integrated into a commercial telepresence robot. 1.2m following distance.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">TensorFlow Lite</span>
+                            <span class="tech-tag">Person ReID</span>
+                            <span class="tech-tag">Depth Sensors</span>
+                        </div>
+                        <a href="person-following-robot.html" class="project-link-btn">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">🌱</div>
+                    <div class="project-content">
+                        <span class="project-status">Research</span>
+                        <h3>Greenhouse Cobot Perception</h3>
+                        <p>ROS2-based human pose + fruit detection for collaborative robot in agricultural greenhouse. TensorRT on Jetson TX2.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">ROS2</span>
+                            <span class="tech-tag">TensorRT</span>
+                            <span class="tech-tag">Jetson TX2</span>
+                        </div>
+                        <a href="greenhouse-cobot.html" class="project-link-btn">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">🚗</div>
+                    <div class="project-content">
+                        <span class="project-status">Research</span>
+                        <h3>Autonomous Parking Controller</h3>
+                        <p>Three-controller comparison (Feedback Linearization, LQR, SMC) for parallel parking. 21% improvement via modified Sliding Mode Controller.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">MATLAB</span>
+                            <span class="tech-tag">CarSim</span>
+                            <span class="tech-tag">LQR / SMC</span>
+                        </div>
+                        <a href="autonomous-parking.html" class="project-link-btn">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- ── AI / ML Research ── -->
+                <div class="projects-category-label"><i class="fas fa-brain" style="color:#00d4ff; margin-right:8px"></i>AI / ML Research</div>
+
+                <div class="project-card">
+                    <div class="project-image">🧠</div>
+                    <div class="project-content">
+                        <span class="project-status published">Published</span>
+                        <h3>RL Obstacle Avoidance</h3>
+                        <p>DDPG-based navigation agent trained over 75,000 episodes. 76% success rate across 200 evaluation runs. Published in Acta Scientific.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">DDPG</span>
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">Reinforcement Learning</span>
+                        </div>
+                        <a href="reinforcement-learning-nav.html" class="project-link-btn">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- ── Open Source ── -->
+                <div class="projects-category-label"><i class="fab fa-github" style="color:#00d4ff; margin-right:8px"></i>Open Source</div>
+
+                <div class="project-card">
+                    <div class="project-image">⚡</div>
+                    <div class="project-content">
+                        <span class="project-status">Open Source</span>
+                        <h3>MRPT ROS Package</h3>
+                        <p>Active contributor to the MRPT robotics library. Led ROS1 → ROS2 port of navigation, SLAM, and localization components.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">ROS/ROS2</span>
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">SLAM</span>
+                        </div>
+                        <a href="mrpt-ros.html" class="project-link-btn">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- ── Hackathon ── -->
+                <div class="projects-category-label"><i class="fas fa-bolt" style="color:#00d4ff; margin-right:8px"></i>Hackathon</div>
+
+                <div class="project-card">
+                    <div class="project-image">🍎</div>
+                    <div class="project-content">
+                        <span class="project-status published">Hackathon Winner</span>
+                        <h3>BiteScan — AI Nutritionist</h3>
+                        <p>OCR + AI nutrition assistant built in 48 hours. Won "Most Innovative &amp; Market Ready Hack." Concept predated VLMs and was later adopted company-wide.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">OCR</span>
+                            <span class="tech-tag">AI Chat</span>
+                            <span class="tech-tag">Mobile/Web</span>
+                        </div>
+                        <a href="bitescan.html" class="project-link-btn">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- ── Web / Full-Stack ── -->
+                <div class="projects-category-label"><i class="fas fa-globe" style="color:#00d4ff; margin-right:8px"></i>Web &amp; Full-Stack</div>
+
+                <div class="project-card">
+                    <div class="project-image">🛒</div>
+                    <div class="project-content">
+                        <span class="project-status">Full-Stack</span>
+                        <h3>E-Commerce Marketplace</h3>
+                        <p>Vue.js 3 + Node.js marketplace with three-tier roles (Buyer, Seller, Admin), JWT auth, and full order management.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Vue.js 3</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">JWT</span>
+                        </div>
+                        <a href="ecommerce-platform.html" class="project-link-btn">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">🏊</div>
+                    <div class="project-content">
+                        <span class="project-status">Production</span>
+                        <h3>Splashes Swim School</h3>
+                        <p>Production frontend for a 21+ location swim school chain. Program discovery, interactive location finder, account management.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Frontend</span>
+                            <span class="tech-tag">Responsive</span>
+                            <span class="tech-tag">Production</span>
+                        </div>
+                        <a href="splashes-swim-school.html" class="project-link-btn">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">🎓</div>
+                    <div class="project-content">
+                        <span class="project-status">Production</span>
+                        <h3>Student Services Assistant</h3>
+                        <p>Secure AI-assisted SPA converting free-text student requests into structured, staff-reviewed service tickets. Human-in-the-loop design.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">AI / NLP</span>
+                            <span class="tech-tag">SPA</span>
+                            <span class="tech-tag">Human-in-the-loop</span>
+                        </div>
+                        <a href="student-services-assistant.html" class="project-link-btn">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Shravan S Rai &nbsp;|&nbsp; <a href="../" style="color:#00d4ff; text-decoration:none">← Back to Portfolio</a></p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('open');
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.05, rootMargin: '0px 0px -30px 0px' });
+
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>

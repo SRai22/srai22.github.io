@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Shravan S Rai - AI, Computer Vision & Autonomous Systems Engineer</title>
+    <meta name="description" content="Shravan S Rai — AI & Computer Vision Engineer, Autonomous Systems Developer. 7+ years building production healthcare AI, autonomous robots, and edge AI systems.">
+    <title>Shravan S Rai — AI, Computer Vision & Autonomous Systems Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -11,20 +15,25 @@
     <header>
         <nav class="container">
             <div class="nav-left">
-                <div class="logo">Shravan Somashekara Rai</div>
+                <div class="logo">Shravan S Rai</div>
             </div>
-            <ul class="nav-links">
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#expertise">Expertise</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#publications">Publications</a></li>
                 <li><a href="#achievements">Achievements</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
         </nav>
     </header>
 
+    <!-- ===== HERO ===== -->
     <section id="home" class="hero">
         <div class="hero-bg">
             <div class="circuit-line"></div>
@@ -32,137 +41,242 @@
             <div class="circuit-line"></div>
             <div class="circuit-line"></div>
         </div>
-        
         <div class="hero-container">
             <div class="hero-profile">
                 <div class="hero-profile-picture">
                     <img src="assets/profile.jpg" alt="Shravan S Rai" id="heroProfileImg">
                 </div>
             </div>
-            
             <div class="hero-content">
                 <h1>AI Computer Vision Engineer</h1>
-                <p class="subtitle">Autonomous Systems • Robotics • Edge AI</p>
+                <p class="subtitle">Autonomous Systems &bull; Robotics &bull; Edge AI &bull; Healthcare AI</p>
                 <p class="hero-description">
-                    Pioneering the future of autonomous systems through cutting-edge computer vision, 
-                    robotics, and AI technologies. 7+ years of experience in deploying production-ready 
-                    AI solutions for healthcare robotics and autonomous navigation.
+                    7+ years shipping production AI at the intersection of computer vision, robotics,
+                    and edge computing — from autonomous mobile robots navigating dense obstacle fields
+                    to deployed healthcare AI protecting patients in hospital systems across the US.
+                    IEEE Standards Vice Chair and active open-source contributor.
                 </p>
                 <div class="cta-buttons">
-                    <a href="#projects" class="btn">View Projects</a>
+                    <a href="projects/" class="btn">View Projects</a>
                     <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">7+</span>
+                        <span class="stat-label">Years<br>Experience</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">3</span>
+                        <span class="stat-label">Published<br>Papers</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">2</span>
+                        <span class="stat-label">Patents<br>Pending</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">3rd</span>
+                        <span class="stat-label">ICRA Global<br>Ranking</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">IEEE</span>
+                        <span class="stat-label">Vice Chair,<br>P3493.1</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- ===== EXPERTISE ===== -->
     <section id="expertise" class="expertise">
         <div class="container">
-            <h2 class="section-title">Technical Expertise</h2>
+            <h2 class="section-title">Technical Expertise<span></span></h2>
             <div class="expertise-grid">
                 <div class="expertise-card">
                     <div class="expertise-icon">🤖</div>
                     <h3>Autonomous Systems</h3>
-                    <p>Advanced robotics navigation, SLAM algorithms, and autonomous mobile robot development</p>
+                    <p>Production AMR navigation, SLAM algorithms, and autonomous mobile robot development for real-world deployments</p>
                     <div class="tech-tags">
                         <span class="tech-tag">ROS/ROS2</span>
                         <span class="tech-tag">SLAM</span>
                         <span class="tech-tag">Navigation</span>
                         <span class="tech-tag">Path Planning</span>
-                        <span class="tech-tag">Localization</span>
+                        <span class="tech-tag">MRPT</span>
                     </div>
                 </div>
-                
                 <div class="expertise-card">
                     <div class="expertise-icon">👁️</div>
                     <h3>Computer Vision</h3>
-                    <p>Deep learning models for object detection, pose estimation, and real-time video processing</p>
+                    <p>Deep learning for object detection, pose estimation, person tracking, and real-time video processing on edge hardware</p>
                     <div class="tech-tags">
                         <span class="tech-tag">OpenCV</span>
                         <span class="tech-tag">TensorFlow</span>
                         <span class="tech-tag">PyTorch</span>
                         <span class="tech-tag">TensorRT</span>
-                        <span class="tech-tag">Object Detection</span>
+                        <span class="tech-tag">ONNX</span>
                     </div>
                 </div>
-                
                 <div class="expertise-card">
-                    <div class="expertise-icon">🚗</div>
-                    <h3>Autonomous Driving</h3>
-                    <p>Sensor fusion, control systems, and simulation for autonomous vehicle development</p>
+                    <div class="expertise-icon">🔊</div>
+                    <h3>Voice AI & NLP</h3>
+                    <p>Real-time speech pipelines, ambient listening systems, and on-device LLM deployment for latency-sensitive environments</p>
                     <div class="tech-tags">
-                        <span class="tech-tag">CARLA</span>
-                        <span class="tech-tag">Sensor Fusion</span>
-                        <span class="tech-tag">Control Systems</span>
-                        <span class="tech-tag">LiDAR</span>
-                        <span class="tech-tag">Kalman Filters</span>
+                        <span class="tech-tag">Whisper</span>
+                        <span class="tech-tag">BERT</span>
+                        <span class="tech-tag">Livekit</span>
+                        <span class="tech-tag">Ollama</span>
+                        <span class="tech-tag">WebRTC</span>
                     </div>
                 </div>
-                
                 <div class="expertise-card">
-                    <div class="expertise-icon">🔗</div>
-                    <h3>IoT & Edge AI</h3>
-                    <p>Edge computing, real-time AI processing, and IoT device integration</p>
+                    <div class="expertise-icon">⚡</div>
+                    <h3>Edge AI & IoT</h3>
+                    <p>Deploying production AI on constrained edge hardware with Azure IoT integration and fleet-scale management</p>
                     <div class="tech-tags">
                         <span class="tech-tag">NVIDIA Jetson</span>
-                        <span class="tech-tag">Edge AI</span>
-                        <span class="tech-tag">Azure IoT</span>
+                        <span class="tech-tag">Azure IoT Edge</span>
+                        <span class="tech-tag">Azure Event Grid</span>
                         <span class="tech-tag">Docker</span>
-                        <span class="tech-tag">CUDA</span>
+                        <span class="tech-tag">OpenVINO</span>
                     </div>
                 </div>
-                
                 <div class="expertise-card">
                     <div class="expertise-icon">🧠</div>
                     <h3>AI & Machine Learning</h3>
-                    <p>LLMs, reinforcement learning, and neural network optimization for embedded systems</p>
+                    <p>From DDPG reinforcement learning to ANN-based motor control — spanning research and production ML systems</p>
                     <div class="tech-tags">
                         <span class="tech-tag">Deep Learning</span>
                         <span class="tech-tag">Reinforcement Learning</span>
                         <span class="tech-tag">LLMs</span>
-                        <span class="tech-tag">ONNX</span>
+                        <span class="tech-tag">CUDA</span>
                         <span class="tech-tag">Model Optimization</span>
                     </div>
                 </div>
-                
                 <div class="expertise-card">
-                    <div class="expertise-icon">⚡</div>
-                    <h3>Real-Time Systems</h3>
-                    <p>Low-latency processing, motor control, and real-time embedded system development</p>
+                    <div class="expertise-icon">🏎️</div>
+                    <h3>Control Systems</h3>
+                    <p>Motor control on FPGAs, autonomous vehicle controllers, and real-time embedded systems from Bosch to autonomous cars</p>
                     <div class="tech-tags">
                         <span class="tech-tag">C++</span>
-                        <span class="tech-tag">Real-Time</span>
-                        <span class="tech-tag">Embedded</span>
-                        <span class="tech-tag">Motor Control</span>
-                        <span class="tech-tag">FPGA</span>
+                        <span class="tech-tag">LQR / SMC</span>
+                        <span class="tech-tag">MATLAB/Simulink</span>
+                        <span class="tech-tag">Digital Twin</span>
+                        <span class="tech-tag">Xilinx Zynq</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- ===== SKILLS ===== -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Skills<span></span></h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-category-name"><i class="fas fa-code"></i> Languages</div>
+                    <div class="skill-tags">
+                        <span class="tech-tag">C++</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">C</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-name"><i class="fas fa-brain"></i> AI / ML</div>
+                    <div class="skill-tags">
+                        <span class="tech-tag">TensorFlow</span>
+                        <span class="tech-tag">PyTorch</span>
+                        <span class="tech-tag">OpenCV</span>
+                        <span class="tech-tag">TensorRT</span>
+                        <span class="tech-tag">ONNX</span>
+                        <span class="tech-tag">OpenVINO</span>
+                        <span class="tech-tag">Whisper</span>
+                        <span class="tech-tag">BERT</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-name"><i class="fas fa-robot"></i> Robotics</div>
+                    <div class="skill-tags">
+                        <span class="tech-tag">ROS</span>
+                        <span class="tech-tag">ROS2</span>
+                        <span class="tech-tag">SLAM</span>
+                        <span class="tech-tag">MRPT</span>
+                        <span class="tech-tag">Navigation</span>
+                        <span class="tech-tag">Path Planning</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-name"><i class="fas fa-cloud"></i> Cloud & DevOps</div>
+                    <div class="skill-tags">
+                        <span class="tech-tag">Azure IoT Hub</span>
+                        <span class="tech-tag">Azure Event Grid</span>
+                        <span class="tech-tag">Azure IoT Edge</span>
+                        <span class="tech-tag">Azure Functions</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">Git</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-name"><i class="fas fa-microchip"></i> Edge & Hardware</div>
+                    <div class="skill-tags">
+                        <span class="tech-tag">NVIDIA Jetson AGX Orin</span>
+                        <span class="tech-tag">Jetson AGX Xavier</span>
+                        <span class="tech-tag">Jetson TX2</span>
+                        <span class="tech-tag">Raspberry Pi</span>
+                        <span class="tech-tag">Xilinx Zynq</span>
+                        <span class="tech-tag">WebRTC</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-name"><i class="fas fa-globe"></i> Web & APIs</div>
+                    <div class="skill-tags">
+                        <span class="tech-tag">ReactJS</span>
+                        <span class="tech-tag">Vue.js 3</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">WebSocket</span>
+                        <span class="tech-tag">WASM</span>
+                        <span class="tech-tag">WebGPU</span>
+                        <span class="tech-tag">Electron</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-name"><i class="fas fa-flask"></i> Simulation</div>
+                    <div class="skill-tags">
+                        <span class="tech-tag">MVSim</span>
+                        <span class="tech-tag">CARLA</span>
+                        <span class="tech-tag">CarSim</span>
+                        <span class="tech-tag">MATLAB/Simulink</span>
+                        <span class="tech-tag">Gazebo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== EXPERIENCE ===== -->
     <section id="experience" class="experience">
         <div class="container">
-            <h2 class="section-title">Professional Experience</h2>
+            <h2 class="section-title">Professional Experience<span></span></h2>
             <div class="experience-timeline">
+
+                <!-- Teladoc -->
                 <div class="experience-item">
                     <div class="experience-header">
                         <div class="company-info">
                             <h3>Teladoc Health</h3>
                             <span class="company-location">Santa Barbara, California</span>
-                            <span class="experience-period">September 2020 – Present</span>
+                            <span class="experience-period">June 2020 – Present</span>
                         </div>
                     </div>
-                    
+
                     <div class="position">
-                        <h4>Software Engineer III</h4>
-                        <span class="position-period">Current Role</span>
+                        <h4>Software Engineer III <span class="position-period">Aug 2024 – Present</span></h4>
                         <div class="responsibilities">
                             <ul>
-                                <li>Spearheading the development & implementation of a computer vision AI assistant for a patient observation system for hospital staff who act as virtual observers working remotely to prevent patient falls in US Health systems.</li>
-                                <li>Developed a real-time Voice Assistant for patients and staff as an initiative towards Smart hospital rooms with Ambient listening using Whisper and BERT on edge devices for enhanced performance and privacy.</li>
-                                <li>Benchmarking SLMs like Qwen 2.5 with vision and audio capabilities, leveraging AI+PC capabilities with NPU for learning about federated inference and hybrid systems for patient observation.</li>
-                                <li>Conceptualized an AI side-car device that works alongside the main telepresence system to perform local AI processing of audio and video enabled through peer-to-peer WebRTC technology.</li>
+                                <li>Spearheading development of a computer vision AI assistant for a patient observation system — hospital staff act as virtual observers remotely to prevent patient falls in US health systems using object detection, pose detection, real-time alerting, and motion sensing.</li>
+                                <li>Developed a real-time Voice Assistant for smart hospital rooms using Whisper and BERT on edge devices to detect abuse or violence against staff and enable patients to trigger nurse calls via voice — enhancing safety, privacy, and rapid response.</li>
+                                <li>Conceptualized an AI side-car device that works alongside the main telepresence system to perform local AI processing of audio and video through peer-to-peer WebRTC technology.</li>
+                                <li>Developed and deployed fleet-wide IoT capability using Azure Event Grid Namespaces and a local bridge broker, laying groundwork for future IoT integrations and accelerating AI development pipelines.</li>
                             </ul>
                         </div>
                         <div class="tech-tags">
@@ -171,47 +285,48 @@
                             <span class="tech-tag">Whisper</span>
                             <span class="tech-tag">BERT</span>
                             <span class="tech-tag">WebRTC</span>
+                            <span class="tech-tag">Azure Event Grid</span>
                         </div>
                     </div>
 
                     <div class="position">
-                        <h4>Robotics & Innovation Engineer II</h4>
-                        <span class="position-period">Previous Role</span>
+                        <h4>Robotics &amp; Innovation Engineer II <span class="position-period">Jun 2021 – Jul 2024</span></h4>
                         <div class="responsibilities">
                             <ul>
-                                <li>Lead the implementation efforts on the Autonomous Mobile Robot Navigation Software project.</li>
-                                <li>Enhanced the robot's mapping capability by transitioning from a Rao-Blackwellized Particle Filter-based SLAM algorithm to a factor-graph based SLAM algorithm using MRPT libraries.</li>
-                                <li>Researched and Developed an A* based local planner for obstacle avoidance and navigation, optimizing the robot's pathfinding capabilities.</li>
-                                <li>Actively collaborated with the creator from University of Almeria, Spain to develop MVSim simulation software for testing and debugging autonomous navigation.</li>
+                                <li>Led implementation of the Autonomous Mobile Robot Navigation Software project — the navigation stack powering Teladoc's commercial telepresence robots.</li>
+                                <li>Enhanced mapping capability by transitioning from Rao-Blackwellized Particle Filter SLAM to a factor-graph based SLAM using MRPT libraries — improving map creation speed and quality.</li>
+                                <li>Researched and developed an A*-based local planner for obstacle avoidance and navigation, optimizing pathfinding in complex hospital environments.</li>
+                                <li>Actively collaborated with the creator at University of Almería, Spain to develop MVSim simulation software for testing and debugging autonomous navigation.</li>
                             </ul>
                         </div>
                         <div class="tech-tags">
                             <span class="tech-tag">ROS/ROS2</span>
                             <span class="tech-tag">SLAM</span>
                             <span class="tech-tag">MRPT</span>
-                            <span class="tech-tag">A* Algorithm</span>
+                            <span class="tech-tag">A* Planning</span>
                             <span class="tech-tag">MVSim</span>
+                            <span class="tech-tag">C++</span>
                         </div>
                     </div>
 
                     <div class="position">
-                        <h4>Robotics Researcher Intern</h4>
-                        <span class="position-period">Initial Role</span>
+                        <h4>Robotics Researcher Intern <span class="position-period">Jun 2020 – Apr 2021</span></h4>
                         <div class="responsibilities">
                             <ul>
-                                <li>Crafted a state-of-the-art person-following system for a Tele-Presence Robot by seamlessly integrating the person-following system into the existing autonomous navigation stack.</li>
-                                <li>Implemented a person detection, tracking, and reidentification system using edge computer vision models with TensorFlow Lite (Tflite) and depth information, achieving real-time detection and maintaining efficient tracking within a 1.2-meter distance.</li>
+                                <li>Crafted a state-of-the-art person-following system for a Tele-Presence Robot, integrating it into the existing autonomous navigation stack to create a fully autonomous following robot.</li>
+                                <li>Implemented person detection, tracking, and re-identification using TensorFlow Lite and depth information — achieving real-time detection and tracking within 1.2-meter following distance.</li>
                             </ul>
                         </div>
                         <div class="tech-tags">
                             <span class="tech-tag">TensorFlow Lite</span>
-                            <span class="tech-tag">Person Detection</span>
+                            <span class="tech-tag">Person ReID</span>
                             <span class="tech-tag">Depth Sensors</span>
-                            <span class="tech-tag">Real-Time Processing</span>
+                            <span class="tech-tag">Real-Time CV</span>
                         </div>
                     </div>
                 </div>
 
+                <!-- Robert Bosch -->
                 <div class="experience-item">
                     <div class="experience-header">
                         <div class="company-info">
@@ -220,14 +335,12 @@
                             <span class="experience-period">September 2017 – July 2019</span>
                         </div>
                     </div>
-                    
                     <div class="position">
-                        <h4>Research Engineer, Motor Control</h4>
-                        <span class="position-period">Full-time Role</span>
+                        <h4>Research Engineer, Motor Control <span class="position-period">Full-time</span></h4>
                         <div class="responsibilities">
                             <ul>
-                                <li>Deployed Artificial Neural Network in the Control Algorithm for Switched Reluctance Motor Control on a Xilinx Zynq Ultra Scale + achieving computations in less than 5us.</li>
-                                <li>Developed Virtual System Model (Digital Twin) of Switched Reluctance Motor and its Control in MATLAB/Simulink, aiding the rapid prototype development as part of the R&D project.</li>
+                                <li>Deployed Artificial Neural Network in the Control Algorithm for Switched Reluctance Motor Control on a Xilinx Zynq UltraScale+, achieving computations in under 5μs.</li>
+                                <li>Developed a Virtual System Model (Digital Twin) of a Switched Reluctance Motor and its control in MATLAB/Simulink, enabling rapid prototype development.</li>
                                 <li>Developed Field Oriented Control algorithm for Permanent Magnet Synchronous Motor and BLDC motor for automotive applications.</li>
                             </ul>
                         </div>
@@ -240,13 +353,72 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Open Source -->
+                <div class="experience-item open-source-entry">
+                    <div class="experience-header">
+                        <div class="company-info">
+                            <h3>MRPT Robotics Library</h3>
+                            <span class="company-location">Open Source</span>
+                            <span class="experience-period">April 2023 – Present</span>
+                        </div>
+                    </div>
+                    <div class="position">
+                        <h4>Open-Source Developer — MRPT ROS Package <span class="open-source-badge">Open Source</span></h4>
+                        <div class="responsibilities">
+                            <ul>
+                                <li>Active contributor to the MRPT ROS ecosystem, supporting both ROS1 and ROS2.</li>
+                                <li>Led porting of autonomous navigation components from ROS1 to ROS2, including localization and navigation pipelines.</li>
+                                <li>Currently working on porting SLAM modules to ROS2, expanding the active user base of the library.</li>
+                            </ul>
+                        </div>
+                        <div class="tech-tags">
+                            <span class="tech-tag">ROS1</span>
+                            <span class="tech-tag">ROS2</span>
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">SLAM</span>
+                            <span class="tech-tag">Open Source</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IEEE -->
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div class="company-info">
+                            <h3>IEEE Standards Association</h3>
+                            <span class="company-location">Professional Leadership</span>
+                            <span class="experience-period">Present</span>
+                        </div>
+                    </div>
+                    <div class="position">
+                        <h4>Vice Chair — IEEE Standard P3493.1 <span class="position-period">Leadership</span></h4>
+                        <div class="responsibilities">
+                            <ul>
+                                <li>Standard for Secure, Compliant, Coordinated, and Inclusive Healthcare Data Recycling.</li>
+                                <li>Lead modeling efforts for cancer prevention and early detection standard aligned with ISO 13940 (ContSys).</li>
+                                <li>Oversee terminology harmonization and ontological alignment across modules.</li>
+                                <li>Coordinate multi-stakeholder contributors across clinical, AI, and regulatory domains.</li>
+                                <li>Shape conformance language and AI-native metadata frameworks for digital health interoperability.</li>
+                            </ul>
+                        </div>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Healthcare Standards</span>
+                            <span class="tech-tag">AI Governance</span>
+                            <span class="tech-tag">ISO 13940</span>
+                            <span class="tech-tag">Digital Health</span>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
+    <!-- ===== EDUCATION ===== -->
     <section id="education" class="education">
         <div class="container">
-            <h2 class="section-title">Education</h2>
+            <h2 class="section-title">Education<span></span></h2>
             <div class="education-timeline">
                 <div class="education-item">
                     <div class="education-logo">
@@ -254,13 +426,13 @@
                     </div>
                     <div class="education-content">
                         <div class="education-header">
-                            <h3>Master of Science in Web Development & Health Informatics</h3>
+                            <h3>MS in Web Development &amp; Health Informatics</h3>
                             <span class="education-period">May 2024 – May 2026</span>
                         </div>
-                        <h4>Westcliff University - Irvine, California</h4>
+                        <h4>Westcliff University — Irvine, California</h4>
                         <div class="education-gpa">GPA: 3.86/4.0</div>
                         <p class="education-courses">
-                            <strong>Key Courses:</strong> Big Data Analytics and Visualization, Information Systems, 
+                            <strong>Key Courses:</strong> Big Data Analytics &amp; Visualization, Information Systems,
                             Front-end Web Development, Back-end Web Development
                         </p>
                     </div>
@@ -272,15 +444,15 @@
                     </div>
                     <div class="education-content">
                         <div class="education-header">
-                            <h3>Master of Science in Robotics and Autonomous Systems</h3>
+                            <h3>MS in Robotics and Autonomous Systems</h3>
                             <span class="education-period">Aug 2019 – May 2021</span>
                         </div>
-                        <h4>Arizona State University - Tempe, Arizona</h4>
+                        <h4>Arizona State University — Tempe, Arizona</h4>
                         <div class="education-gpa">GPA: 3.94/4.0</div>
                         <p class="education-courses">
-                            <strong>Key Courses:</strong> Vehicle Dynamics & Control, Multivariable Controls, 
-                            Modelling & Control of Robots, Computer Vision & Pattern Recognition, Robot Learning, 
-                            Optimal Control & Reinforcement Learning, Linear Systems Theory
+                            <strong>Key Courses:</strong> Vehicle Dynamics &amp; Control, Multivariable Controls,
+                            Modelling &amp; Control of Robots, Computer Vision &amp; Pattern Recognition, Robot Learning,
+                            Optimal Control &amp; Reinforcement Learning, Linear Systems Theory
                         </p>
                     </div>
                 </div>
@@ -291,14 +463,14 @@
                     </div>
                     <div class="education-content">
                         <div class="education-header">
-                            <h3>Bachelor of Engineering, Electronics & Communication Engineering</h3>
+                            <h3>BE, Electronics &amp; Communication Engineering</h3>
                             <span class="education-period">Aug 2013 – Aug 2017</span>
                         </div>
-                        <h4>The National Institute of Engineering, Karnataka – India</h4>
+                        <h4>The National Institute of Engineering — Karnataka, India</h4>
                         <div class="education-gpa">GPA: 4.0/4.0</div>
                         <p class="education-courses">
-                            <strong>Key Courses:</strong> Robotics, C++ and Data Structures, Control Systems, 
-                            Operating Systems, Computer Vision & Image Processing
+                            <strong>Key Courses:</strong> Robotics, C++ and Data Structures, Control Systems,
+                            Operating Systems, Computer Vision &amp; Image Processing
                         </p>
                     </div>
                 </div>
@@ -306,137 +478,270 @@
         </div>
     </section>
 
+    <!-- ===== PROJECTS ===== -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
+            <h2 class="section-title">Featured Projects<span></span></h2>
+            <div class="bento-grid">
+
+                <!-- Featured wide card -->
+                <div class="project-card bento-wide">
                     <div class="project-image">🏥</div>
                     <div class="project-content">
                         <span class="project-status patent">Patent Pending</span>
-                        <h3>Auto Rounding for Virtual Nurse</h3>
-                        <p>Multi-modal AI system combining vision, SLM/LLM, and voice for automated patient rounding. Achieved 90% accuracy in vital sign extraction using edge AI processing.</p>
+                        <h3>Virtual Sitter AI System — Patient Fall Prevention</h3>
+                        <p>Production computer vision AI for hospital patient observation. Object detection + pose detection + real-time alerting deployed in US health systems, enabling remote virtual observation to prevent patient falls.</p>
                         <div class="tech-tags">
                             <span class="tech-tag">Computer Vision</span>
-                            <span class="tech-tag">LLM</span>
+                            <span class="tech-tag">Pose Detection</span>
                             <span class="tech-tag">Edge AI</span>
+                            <span class="tech-tag">WebRTC</span>
                             <span class="tech-tag">Healthcare</span>
                         </div>
+                        <a href="projects/virtual-sitter.html" class="project-link-btn">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-                
+
+                <!-- ICRA BARN -->
                 <div class="project-card">
-                    <div class="project-image">🤖</div>
+                    <div class="project-image">🏆</div>
                     <div class="project-content">
                         <span class="project-status published">3rd Place Global</span>
                         <h3>ICRA BARN Challenge</h3>
-                        <p>Autonomous mobile robot navigation system achieving 3rd place globally in both simulation and real-world rounds. Advanced path planning and obstacle avoidance.</p>
+                        <p>3rd globally in both simulation and real-world rounds. 75% success rate in dense obstacle environments. Published at ICRA 2023.</p>
                         <div class="tech-tags">
                             <span class="tech-tag">ROS2</span>
-                            <span class="tech-tag">Navigation</span>
-                            <span class="tech-tag">Path Planning</span>
-                            <span class="tech-tag">SLAM</span>
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">A* Planning</span>
                         </div>
+                        <a href="projects/icra-barn-challenge.html" class="project-link-btn">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-                
+
+                <!-- Translator Voice Agent -->
                 <div class="project-card">
-                    <div class="project-image">🎯</div>
+                    <div class="project-image">🌐</div>
                     <div class="project-content">
                         <span class="project-status">Production</span>
-                        <h3>Virtual Sitter AI System</h3>
-                        <p>Edge AI application for patient fall prevention with real-time video processing. Deployed in hospitals with 40% reduction in false alarms.</p>
+                        <h3>Translator Voice Agent</h3>
+                        <p>Real-time bidirectional voice-to-voice translation for live telehealth consultations. Streaming STT → translation → TTS pipeline via Livekit.</p>
                         <div class="tech-tags">
-                            <span class="tech-tag">Edge AI</span>
-                            <span class="tech-tag">Computer Vision</span>
-                            <span class="tech-tag">Healthcare</span>
-                            <span class="tech-tag">Real-Time</span>
+                            <span class="tech-tag">Livekit</span>
+                            <span class="tech-tag">STT / TTS</span>
+                            <span class="tech-tag">WebRTC</span>
                         </div>
+                        <a href="projects/translator-voice-agent.html" class="project-link-btn">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-                
+
+                <!-- Hospital Front-Desk AI -->
                 <div class="project-card">
-                    <div class="project-image">🚶</div>
+                    <div class="project-image">🤖</div>
                     <div class="project-content">
-                        <span class="project-status">Research</span>
-                        <h3>Person-Following Robot</h3>
-                        <p>Autonomous person tracking system using TensorFlow Lite and depth sensors. Maintains 1.2m following distance with 95% accuracy.</p>
+                        <span class="project-status">Edge AI</span>
+                        <h3>Hospital Front-Desk AI</h3>
+                        <p>Fully offline conversational AI on NVIDIA Jetson AGX Orin. Faster-Whisper + Kokoro TTS + Ollama — zero cloud dependency, complete patient privacy.</p>
                         <div class="tech-tags">
-                            <span class="tech-tag">Person Tracking</span>
-                            <span class="tech-tag">TensorFlow Lite</span>
-                            <span class="tech-tag">Depth Sensors</span>
-                            <span class="tech-tag">Robotics</span>
+                            <span class="tech-tag">Jetson AGX Orin</span>
+                            <span class="tech-tag">Ollama</span>
+                            <span class="tech-tag">Livekit</span>
                         </div>
+                        <a href="projects/hospital-frontdesk-ai.html" class="project-link-btn">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-                
+
+                <!-- AI Capabilities Demo -->
+                <div class="project-card">
+                    <div class="project-image">📊</div>
+                    <div class="project-content">
+                        <span class="project-status">Production</span>
+                        <h3>AI Capabilities Demo</h3>
+                        <p>Production web app showcasing AI for enterprise customers. Integrated Azure Speech, rPPG vital signs, and voice biomarker detection. Core sales enablement tool.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Azure Speech</span>
+                            <span class="tech-tag">rPPG</span>
+                            <span class="tech-tag">Biomarkers</span>
+                        </div>
+                        <a href="projects/ai-capabilities-demo.html" class="project-link-btn">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- BiteScan -->
                 <div class="project-card">
                     <div class="project-image">🍎</div>
                     <div class="project-content">
-                        <span class="project-status">Hackathon Winner</span>
-                        <h3>BiteScan - AI Nutritionist</h3>
-                        <p>OCR-based nutritional assistant with real-time personalized advice. Winner of "Most Innovative and Market Ready Hack" at company hackathon.</p>
+                        <span class="project-status published">Hackathon Winner</span>
+                        <h3>BiteScan — AI Nutritionist</h3>
+                        <p>OCR + AI nutrition assistant built in 48 hours. Won "Most Innovative &amp; Market Ready Hack." Concept predated VLMs and was later adopted company-wide.</p>
                         <div class="tech-tags">
                             <span class="tech-tag">OCR</span>
                             <span class="tech-tag">AI Chat</span>
-                            <span class="tech-tag">Mobile App</span>
-                            <span class="tech-tag">Nutrition</span>
+                            <span class="tech-tag">Mobile/Web</span>
                         </div>
+                        <a href="projects/bitescan.html" class="project-link-btn">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-                
+
+                <!-- MRPT ROS -->
                 <div class="project-card">
                     <div class="project-image">⚡</div>
                     <div class="project-content">
                         <span class="project-status">Open Source</span>
-                        <h3>MRPT-ROS Package</h3>
-                        <p>Advanced auto-navigation systems with efficient localization and dynamic path planning. Active contributor to open-source robotics community.</p>
+                        <h3>MRPT ROS Package</h3>
+                        <p>Active contributor to the MRPT robotics library. Led ROS1 → ROS2 port of autonomous navigation, SLAM, and localization components.</p>
                         <div class="tech-tags">
                             <span class="tech-tag">ROS/ROS2</span>
-                            <span class="tech-tag">Open Source</span>
+                            <span class="tech-tag">C++</span>
                             <span class="tech-tag">SLAM</span>
-                            <span class="tech-tag">Navigation</span>
+                        </div>
+                        <a href="projects/mrpt-ros.html" class="project-link-btn">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- RL Navigation -->
+                <div class="project-card">
+                    <div class="project-image">🧠</div>
+                    <div class="project-content">
+                        <span class="project-status published">Published</span>
+                        <h3>RL Obstacle Avoidance</h3>
+                        <p>DDPG-based navigation agent trained over 75,000 episodes. 76% success rate across 200 evaluation runs. Published in Acta Scientific journal.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">DDPG</span>
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">Robotics</span>
+                        </div>
+                        <a href="projects/reinforcement-learning-nav.html" class="project-link-btn">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- View All -->
+                <a href="projects/" class="project-card view-all-card">
+                    <div class="view-all-icon"><i class="fas fa-th-large"></i></div>
+                    <div class="view-all-text">View All Projects</div>
+                    <div class="view-all-sub">15 projects total →</div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PUBLICATIONS ===== -->
+    <section id="publications" class="publications">
+        <div class="container">
+            <h2 class="section-title">Publications<span></span></h2>
+            <div class="publications-inner">
+
+                <div class="publications-list">
+                    <div class="publication-item">
+                        <div class="publication-num">1</div>
+                        <div class="publication-body">
+                            <div class="publication-title">Autonomous Ground Navigation in Highly Constrained Spaces: Lessons learned from the 2nd BARN Challenge at ICRA 2023</div>
+                            <div class="publication-meta">
+                                <span class="publication-venue">ICRA 2023 — International Conference on Robotics and Automation</span>
+                                <span class="publication-type conference">Conference</span>
+                            </div>
                         </div>
                     </div>
+
+                    <div class="publication-item">
+                        <div class="publication-num">2</div>
+                        <div class="publication-body">
+                            <div class="publication-title">Autonomous Mobile Robot Obstacle Avoidance with Reinforcement Learning</div>
+                            <div class="publication-meta">
+                                <span class="publication-venue">Acta Scientific — International Journal</span>
+                                <span class="publication-type journal">Journal</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="publication-item">
+                        <div class="publication-num">3</div>
+                        <div class="publication-body">
+                            <div class="publication-title">AI Driven Smart Ambulance Traffic Management System for Urban Environments</div>
+                            <div class="publication-meta">
+                                <span class="publication-venue">International Conference Proceedings</span>
+                                <span class="publication-type conference">Conference</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="publications-subsection-title">
+                    <i class="fab fa-medium"></i> Medium Articles
+                </div>
+                <div class="articles-list">
+                    <div class="article-item">
+                        <i class="fab fa-medium"></i>
+                        <span class="article-title">Navigating the Intricacies of Person-Following Autonomous Mobile Robots</span>
+                    </div>
+                    <div class="article-item">
+                        <i class="fab fa-medium"></i>
+                        <span class="article-title">The Freezing Robot Problem in a Hospital Setting with a Telepresence Mobile Robot</span>
+                    </div>
+                </div>
+
+                <div style="margin-top: 30px;">
+                    <a href="https://scholar.google.com/citations?user=cqqJtCIAAAAJ&hl=en" class="scholar-link" target="_blank">
+                        <i class="fas fa-graduation-cap"></i> View on Google Scholar
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PATENTS ===== -->
+    <section id="patents" class="patents">
+        <div class="container">
+            <h2 class="section-title">Patents<span></span></h2>
+            <div class="patents-grid">
+                <div class="patent-card">
+                    <span class="patent-icon">⚖️</span>
+                    <span class="patent-status-badge">Patent Pending</span>
+                    <h3>Telehealth System and Method for Automatic Detection of Patient Availability Status</h3>
+                    <p>Novel system combining computer vision and AI to automatically determine patient availability and engagement status in telehealth sessions — improving the virtual care workflow for both patients and providers.</p>
+                </div>
+                <div class="patent-card">
+                    <span class="patent-icon">🎯</span>
+                    <span class="patent-status-badge">Patent Pending</span>
+                    <h3>Method for Mitigating Demographic Biases in Facial Recognition Systems</h3>
+                    <p>A methodology addressing fairness and accuracy disparities in facial recognition across demographic groups — targeting equitable AI performance in real-world healthcare and security deployments.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- ===== ACHIEVEMENTS ===== -->
     <section id="achievements" class="achievements">
         <div class="container">
-            <h2 class="section-title">Awards & Achievements</h2>
+            <h2 class="section-title">Awards &amp; Achievements<span></span></h2>
             <div class="achievements-grid">
-                
-                <!-- Leadership & Service -->
+
                 <div class="achievement-category">
                     <h3 class="category-title">
-                        <i class="fas fa-users"></i>
-                        Leadership & Service
+                        <i class="fas fa-users"></i> Leadership &amp; Service
                     </h3>
                     <div class="achievement-items">
                         <div class="achievement-item">
                             <div class="achievement-icon">🏛️</div>
                             <div class="achievement-content">
                                 <h4>Vice-Chair, IEEE Standards Association</h4>
-                                <p>Standard P3493.1 - Secure, Compliant, Coordinated, and Inclusive Healthcare Data Recycling</p>
+                                <p>Standard P3493.1 — Secure, Compliant, Coordinated, and Inclusive Healthcare Data Recycling</p>
                                 <span class="achievement-type volunteer">Leadership</span>
                             </div>
                         </div>
-                        
                         <div class="achievement-item">
                             <div class="achievement-icon">⚖️</div>
                             <div class="achievement-content">
-                                <h4>Judge - ATA Nexus Innovators Challenge</h4>
-                                <p>American Telemedicine Association (ATA) Nexus'24 and Nexus 2025</p>
+                                <h4>Judge — ATA Nexus Innovators Challenge</h4>
+                                <p>American Telemedicine Association Nexus'24 and Nexus 2025</p>
                                 <span class="achievement-type judge">Judge</span>
                             </div>
                         </div>
-                        
                         <div class="achievement-item">
                             <div class="achievement-icon">⚖️</div>
                             <div class="achievement-content">
-                                <h4>Judge - IEEE SA Telehealth Challenge 2025</h4>
+                                <h4>Judge — IEEE SA Telehealth Challenge 2025</h4>
                                 <p>Evaluating innovative telehealth solutions and technologies</p>
                                 <span class="achievement-type judge">Judge</span>
                             </div>
@@ -444,71 +749,63 @@
                     </div>
                 </div>
 
-                <!-- Academic Recognition -->
                 <div class="achievement-category">
                     <h3 class="category-title">
-                        <i class="fas fa-graduation-cap"></i>
-                        Academic Recognition
+                        <i class="fas fa-graduation-cap"></i> Academic Recognition
                     </h3>
                     <div class="achievement-items">
                         <div class="achievement-item">
                             <div class="achievement-icon">📝</div>
                             <div class="achievement-content">
-                                <h4>Peer Reviewer - Top Conferences</h4>
-                                <p>AISSS-2023, IPMV'24, BMVC-2024, BMVC-2025, RSS-2024, IJCNN2025, ICMI-2025</p>
+                                <h4>Peer Reviewer — Top Conferences</h4>
+                                <p>AISSS-2023, IPMV'24, BMVC-2024/2025, RSS-2024, IJCNN 2025/2026, ICMI-2025, IROS-2025</p>
                                 <span class="achievement-type academic">Academic</span>
                             </div>
                         </div>
-                        
                         <div class="achievement-item">
-                            <div class="achievement-icon">📝</div>
+                            <div class="achievement-icon">📖</div>
                             <div class="achievement-content">
                                 <h4>Journal Reviewer</h4>
                                 <p>WIJAR, BMJ AI and Healthcare</p>
                                 <span class="achievement-type academic">Academic</span>
                             </div>
                         </div>
-                        
                         <div class="achievement-item">
                             <div class="achievement-icon">🎓</div>
                             <div class="achievement-content">
                                 <h4>National Merit Scholarship</h4>
-                                <p>Ministry of Education, Govt. of India (Aug 2013 – Aug 2017) - 4-year scholarship for academic excellence</p>
+                                <p>Ministry of Education, Govt. of India (2013–2017) — 4-year scholarship for academic excellence</p>
                                 <span class="achievement-type scholarship">Scholarship</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Competition Awards -->
                 <div class="achievement-category">
                     <h3 class="category-title">
-                        <i class="fas fa-trophy"></i>
-                        Competition Awards
+                        <i class="fas fa-trophy"></i> Competition Awards
                     </h3>
                     <div class="achievement-items">
                         <div class="achievement-item">
                             <div class="achievement-icon">🏆</div>
                             <div class="achievement-content">
-                                <h4>ICRA-2023 BARN Challenge - 3rd Place Global</h4>
-                                <p>Autonomous Mobile Robot Navigation Challenge - Both Simulation and Real-world rounds</p>
+                                <h4>ICRA-2023 BARN Challenge — 3rd Place Global</h4>
+                                <p>AMR Navigation Challenge — both Simulation and Real-world rounds</p>
                                 <span class="achievement-type competition">Global Competition</span>
                             </div>
                         </div>
-                        
                         <div class="achievement-item">
                             <div class="achievement-icon">🥇</div>
                             <div class="achievement-content">
-                                <h4>Teladoc Hackathon Winner - BiteScan</h4>
-                                <p>"Most Innovative and Market Ready Hack" - AI Nutritionist (July '23)</p>
+                                <h4>Teladoc Hackathon Winner — BiteScan</h4>
+                                <p>"Most Innovative and Market Ready Hack" (July '23)</p>
                                 <span class="achievement-type hackathon">Hackathon Winner</span>
                             </div>
                         </div>
-                        
                         <div class="achievement-item">
                             <div class="achievement-icon">🥈</div>
                             <div class="achievement-content">
-                                <h4>Teladoc Hackathon Runner-up - CareVision</h4>
+                                <h4>Teladoc Hackathon Runner-up — CareVision</h4>
                                 <p>Company-wide technology hackathon (July '24)</p>
                                 <span class="achievement-type hackathon">Hackathon</span>
                             </div>
@@ -516,26 +813,23 @@
                     </div>
                 </div>
 
-                <!-- Professional Recognition -->
                 <div class="achievement-category">
                     <h3 class="category-title">
-                        <i class="fas fa-briefcase"></i>
-                        Professional Recognition
+                        <i class="fas fa-briefcase"></i> Professional Recognition
                     </h3>
                     <div class="achievement-items">
                         <div class="achievement-item">
                             <div class="achievement-icon">🎤</div>
                             <div class="achievement-content">
-                                <h4>Technical Speaker - ECU-Tech Day</h4>
+                                <h4>Technical Speaker — ECU-Tech Day</h4>
                                 <p>Robert Bosch Internal Conference, Germany (Apr 2018)</p>
                                 <span class="achievement-type speaker">Speaker</span>
                             </div>
                         </div>
-                        
                         <div class="achievement-item">
                             <div class="achievement-icon">⭐</div>
                             <div class="achievement-content">
-                                <h4>2x Spot Awards - Robert Bosch</h4>
+                                <h4>2× Spot Awards — Robert Bosch</h4>
                                 <p>Excellence in project performance (May 2018, Nov 2018)</p>
                                 <span class="achievement-type award">Corporate Award</span>
                             </div>
@@ -547,27 +841,30 @@
         </div>
     </section>
 
+    <!-- ===== CONTACT ===== -->
     <section id="contact" class="contact">
         <div class="container">
             <div class="contact-content">
-                <h2 class="section-title">Let's Connect</h2>
+                <h2 class="section-title">Let's Connect<span></span></h2>
                 <p>
-                    Interested in collaborating on cutting-edge AI and robotics projects? 
-                    I'm always open to discussing new opportunities, research collaborations, 
-                    or consulting engagements in autonomous systems and computer vision.
+                    Available for senior AI/robotics engineering roles, research collaborations, and consulting.
+                    Based in California — open to remote opportunities worldwide.
                 </p>
                 <div class="contact-links">
                     <a href="mailto:shravansomashekara.rai@gmail.com" class="contact-link">
                         <i class="fas fa-envelope"></i> Email
                     </a>
-                    <a href="https://linkedin.com/in/shravan-s-rai" class="contact-link">
+                    <a href="https://linkedin.com/in/shravan-s-rai" class="contact-link" target="_blank">
                         <i class="fab fa-linkedin"></i> LinkedIn
                     </a>
-                    <a href="https://github.com/SRai22" class="contact-link">
+                    <a href="https://github.com/SRai22" class="contact-link" target="_blank">
                         <i class="fab fa-github"></i> GitHub
                     </a>
-                    <a href="https://scholar.google.com/citations?user=cqqJtCIAAAAJ&hl=en" class="contact-link">
-                        <i class="fas fa-graduation-cap"></i> Google Scholar
+                    <a href="https://scholar.google.com/citations?user=cqqJtCIAAAAJ&hl=en" class="contact-link" target="_blank">
+                        <i class="fas fa-graduation-cap"></i> Scholar
+                    </a>
+                    <a href="ieee/" class="contact-link">
+                        <i class="fas fa-landmark"></i> IEEE Work
                     </a>
                 </div>
             </div>
@@ -576,41 +873,34 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Shravan S Rai. All rights reserved. | AI Computer Vision Engineer | Autonomous Systems Developer</p>
+            <p>&copy; 2025 Shravan S Rai. All rights reserved. &nbsp;|&nbsp; AI Computer Vision Engineer &nbsp;|&nbsp; Autonomous Systems &nbsp;|&nbsp; Edge AI</p>
         </div>
     </footer>
 
     <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
+        // Hamburger menu
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('open');
+        });
+        navLinks.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('open');
             });
         });
 
-        // Header background change on scroll
-        window.addEventListener('scroll', function() {
+        // Header on scroll
+        window.addEventListener('scroll', () => {
             const header = document.querySelector('header');
-            if (window.scrollY > 100) {
-                header.style.background = 'rgba(10, 10, 20, 0.98)';
-            } else {
-                header.style.background = 'rgba(10, 10, 20, 0.95)';
-            }
+            header.style.background = window.scrollY > 100
+                ? 'rgba(8, 8, 18, 0.99)'
+                : 'rgba(10, 10, 20, 0.95)';
         });
 
-        // Add intersection observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
+        // Scroll-in animations
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -618,14 +908,25 @@
                     entry.target.style.transform = 'translateY(0)';
                 }
             });
-        }, observerOptions);
+        }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 
-        // Observe all cards for animation
-        document.querySelectorAll('.expertise-card, .education-item, .project-card, .achievement-category').forEach(card => {
+        document.querySelectorAll(
+            '.expertise-card, .education-item, .project-card, .achievement-category, ' +
+            '.skill-category, .publication-item, .article-item, .patent-card'
+        ).forEach(card => {
             card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
-            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            card.style.transform = 'translateY(22px)';
+            card.style.transition = 'opacity 0.55s ease, transform 0.55s ease';
             observer.observe(card);
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
         });
     </script>
 </body>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RL-Based Robot Navigation — Shravan S Rai</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="nav-left">
+                <a href="../" style="text-decoration:none"><div class="logo">Shravan S Rai</div></a>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../">Home</a></li>
+                <li><a href="../#experience">Experience</a></li>
+                <li><a href="./index.html">All Projects</a></li>
+                <li><a href="../#publications">Publications</a></li>
+                <li><a href="../#contact">Contact</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </header>
+
+    <section class="project-page-hero">
+        <div class="hero-bg">
+            <div class="circuit-line"></div>
+            <div class="circuit-line"></div>
+        </div>
+        <div class="container">
+            <a href="./index.html" class="back-btn"><i class="fas fa-arrow-left"></i> All Projects</a>
+            <div class="breadcrumb">
+                <a href="../">Home</a> <span>/</span> <a href="./index.html">Projects</a> <span>/</span> RL Obstacle Avoidance
+            </div>
+            <div class="project-page-badges">
+                <span class="badge badge-published">Published</span>
+                <span class="badge badge-research">Research</span>
+            </div>
+            <h1>Reinforcement Learning–Based Mobile Robot Obstacle Avoidance</h1>
+            <p class="project-tagline">DDPG-based navigation agent trained over 75,000 episodes achieving 76% success rate — published in academic journal</p>
+            <div class="tech-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">TensorFlow</span>
+                <span class="tech-tag">DDPG</span>
+                <span class="tech-tag">Reinforcement Learning</span>
+                <span class="tech-tag">Actor-Critic</span>
+                <span class="tech-tag">Experience Replay</span>
+                <span class="tech-tag">Robotics Simulation</span>
+                <span class="tech-tag">Ultrasonic Sensors</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="project-page-content">
+        <div class="container">
+            <div class="project-layout">
+                <div class="project-main">
+                    <div class="project-section">
+                        <h2><i class="fas fa-info-circle"></i> Overview</h2>
+                        <p>Implemented a Deep Deterministic Policy Gradient (DDPG) based navigation agent for a mobile robot navigating a grid environment using ultrasonic sensors for obstacle detection. The agent learned a continuous control policy from scratch, without any hand-crafted rules, and was validated across 200 evaluation runs.</p>
+                        <p>The work demonstrated that model-free deep reinforcement learning can learn effective obstacle avoidance policies for mobile robots entirely from trial-and-error interaction with a simulated environment — no human-designed heuristics, no explicit path planning. The results were validated and published in an international academic journal.</p>
+                    </div>
+
+                    <div class="project-section">
+                        <h2><i class="fas fa-exclamation-triangle"></i> The Challenge</h2>
+                        <p>Model-free reinforcement learning for robot navigation presents significant training challenges: sparse rewards in large environments, the sim-to-real gap when sensor models are simplified, and the need for thousands of episodes before useful behavior emerges. DDPG was chosen for its ability to handle continuous action spaces — essential for smooth robot motion — but required careful reward shaping and hyperparameter tuning to achieve stable convergence.</p>
+                        <p>The Actor-Critic architecture of DDPG introduces additional training complexity: both networks must converge together, and instabilities in one network can destabilize the other. Managing this required careful learning rate scheduling, target network update frequency tuning, and experience replay buffer design.</p>
+                    </div>
+
+                    <div class="project-section">
+                        <h2><i class="fas fa-cogs"></i> Technical Approach</h2>
+                        <ul>
+                            <li><span class="highlight-text">DDPG (Deep Deterministic Policy Gradient)</span> implementation for continuous action control — outputs smooth velocity commands rather than discrete turn/move decisions</li>
+                            <li><span class="highlight-text">Actor-Critic neural network architecture</span> with separate actor (policy) and critic (value) networks, both trained end-to-end from ultrasonic sensor observations</li>
+                            <li><span class="highlight-text">Experience replay buffer</span> storing past transitions for off-policy learning, breaking temporal correlations that destabilize online training</li>
+                            <li><span class="highlight-text">Ultrasonic sensor simulation</span> providing the agent with obstacle proximity readings in all directions — a realistic sensor model matching common mobile robot hardware</li>
+                            <li><span class="highlight-text">Reward shaping</span>: positive reward for goal-directed progress, negative penalties for collisions and hazardous proximity to obstacles, encouraging safe and efficient navigation</li>
+                            <li><span class="highlight-text">Training pipeline in TensorFlow</span> over 75,000+ episodes — comprehensive training duration to ensure policy convergence across diverse environment configurations</li>
+                            <li><span class="highlight-text">Rigorous evaluation protocol</span>: 200 independent evaluation runs across varied starting positions and obstacle layouts, providing statistically meaningful success rate measurements</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-section">
+                        <h2><i class="fas fa-chart-bar"></i> Key Outcomes</h2>
+                        <div class="outcomes-grid">
+                            <div class="outcome-box">
+                                <span class="outcome-number">76%</span>
+                                <span class="outcome-label">Across 200 Evaluation Runs</span>
+                            </div>
+                            <div class="outcome-box">
+                                <span class="outcome-number">75,000+</span>
+                                <span class="outcome-label">Episodes</span>
+                            </div>
+                            <div class="outcome-box">
+                                <span class="outcome-number">DDPG</span>
+                                <span class="outcome-label">Continuous Action Space</span>
+                            </div>
+                            <div class="outcome-box">
+                                <span class="outcome-number">Acta Scientific</span>
+                                <span class="outcome-label">International Journal</span>
+                            </div>
+                        </div>
+
+                        <div class="award-highlight">
+                            <i class="fas fa-book-open"></i>
+                            <p>Published: <strong>"Autonomous Mobile Robot Obstacle Avoidance with Reinforcement Learning"</strong> — Acta Scientific International Journal</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-sidebar">
+                    <div class="sidebar-card">
+                        <h3>Project Info</h3>
+                        <div class="sidebar-info-item">
+                            <span class="sidebar-label">Status</span>
+                            <span class="sidebar-value">Published</span>
+                        </div>
+                        <div class="sidebar-info-item">
+                            <span class="sidebar-label">Year</span>
+                            <span class="sidebar-value">2020–2021</span>
+                        </div>
+                        <div class="sidebar-info-item">
+                            <span class="sidebar-label">Institution</span>
+                            <span class="sidebar-value">Arizona State University</span>
+                        </div>
+                        <div class="sidebar-info-item">
+                            <span class="sidebar-label">Algorithm</span>
+                            <span class="sidebar-value">DDPG</span>
+                        </div>
+                        <div class="sidebar-info-item">
+                            <span class="sidebar-label">Training</span>
+                            <span class="sidebar-value">75,000+ episodes</span>
+                        </div>
+                        <div class="sidebar-info-item">
+                            <span class="sidebar-label">Category</span>
+                            <span class="sidebar-value">AI / ML Research</span>
+                        </div>
+                    </div>
+                    <div class="sidebar-card">
+                        <h3>Tech Stack</h3>
+                        <div class="tech-stack-grid">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">DDPG</span>
+                            <span class="tech-tag">Reinforcement Learning</span>
+                            <span class="tech-tag">Actor-Critic</span>
+                            <span class="tech-tag">Experience Replay</span>
+                            <span class="tech-tag">Robotics Simulation</span>
+                            <span class="tech-tag">Ultrasonic Sensors</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="related-projects">
+        <div class="container">
+            <h2 class="section-title">Related Projects</h2>
+            <div class="related-projects-grid">
+                <a href="icra-barn-challenge.html" class="related-card">
+                    <span class="related-card-icon">🏆</span>
+                    <h4>ICRA BARN Challenge</h4>
+                    <p>AMR navigation competition</p>
+                </a>
+                <a href="autonomous-parking.html" class="related-card">
+                    <span class="related-card-icon">🚗</span>
+                    <h4>Autonomous Parking</h4>
+                    <p>Control systems for self-driving vehicles</p>
+                </a>
+                <a href="mrpt-ros.html" class="related-card">
+                    <span class="related-card-icon">⚡</span>
+                    <h4>MRPT ROS Package</h4>
+                    <p>Open-source navigation stack contributions</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Shravan S Rai &nbsp;|&nbsp; <a href="../" style="color:#00d4ff;text-decoration:none">← Back to Portfolio</a></p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('open');
+        });
+        window.addEventListener('scroll', () => {
+            document.querySelector('header').style.background = window.scrollY > 100 ? 'rgba(8,8,18,0.99)' : 'rgba(10,10,20,0.95)';
+        });
+    </script>
+</body>
+</html>
